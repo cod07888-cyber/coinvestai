@@ -10,8 +10,7 @@
     <style>
         :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:12px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
         *{margin:0;padding:0;box-sizing:border-box;}body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.7;}
-        h1,h2,h3{font-family:var(--font-heading);font-weight:700;}a{text-decoration:none;color:inherit;}
-        .container{max-width:900px;margin:0 auto;padding:0 24px;}
+        h1,h2,h3{font-family:var(--font-heading);font-weight:700;}a{text-decoration:none;color:inherit;}.container{max-width:900px;margin:0 auto;padding:0 24px;}
         .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
         .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}.header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}.logo{font-family:var(--font-heading);font-size:24px;font-weight:700;}.nav-links{display:flex;gap:4px;list-style:none;}.nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--gray);}.nav-links a:hover{background:rgba(37,99,235,0.08);color:var(--secondary);}
         .breadcrumbs{padding:20px 0;font-size:14px;color:var(--gray);}.breadcrumbs a{color:var(--secondary);}
@@ -24,11 +23,16 @@
 </head>
 <body>
 
+<!-- ========== NAV ========== -->
 <header class="header"><div class="container"><div class="header-inner">
     <a href="index.html" class="logo gradient-text">CoinvestAI</a>
     <nav><ul class="nav-links">
         <li><a href="blog.html">Blog</a></li>
         <li><a href="ai-tools.html">AI Tools</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="fintech.html">Fintech</a></li>
+        <li><a href="crypto-ai.html">Crypto AI</a></li>
+        <li><a href="guides.html">Guides</a></li>
         <li><a href="about.html">About</a></li>
     </ul></nav>
 </div></div></header>
@@ -42,12 +46,7 @@
         <div class="role">Editorial Staff</div>
         <p class="bio">The CoinvestAI Editorial Team produces independent educational content covering artificial intelligence, investing technology, fintech, cryptocurrency, and the evolving relationship between AI and finance.</p>
         <div class="expertise-tags">
-            <span class="expertise-tag">AI in Finance</span>
-            <span class="expertise-tag">Investment Technology</span>
-            <span class="expertise-tag">Fintech</span>
-            <span class="expertise-tag">Cryptocurrency</span>
-            <span class="expertise-tag">Trading Tools</span>
-            <span class="expertise-tag">Market Analysis</span>
+            <span class="expertise-tag">AI in Finance</span><span class="expertise-tag">Investment Technology</span><span class="expertise-tag">Fintech</span><span class="expertise-tag">Cryptocurrency</span><span class="expertise-tag">Trading Tools</span><span class="expertise-tag">Market Analysis</span>
         </div>
     </div>
 </div></div>
@@ -67,24 +66,20 @@
     <li><a href="blog-blockchain-data-analytics-ai.html">Blockchain Data Analytics with AI (2026)</a><div class="article-meta">Published: August 8, 2026 · 8 min read</div></li>
 </ul></div></div>
 
+<!-- ========== FOOTER ========== -->
 <footer class="footer"><div class="container"><div class="footer-grid">
     <div><h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3><p style="color:rgba(255,255,255,0.5);font-size:14px;">Independent insights.</p></div>
     <div><h3>Explore</h3><ul>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="ai-tools.html">AI Tools</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="guides.html">Guides</a></li>
+        <li><a href="blog.html">Blog</a></li><li><a href="ai-tools.html">AI Tools</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="guides.html">Guides</a></li><li><a href="news.html">News</a></li>
+    </ul></div>
+    <div><h3>Topics</h3><ul>
+        <li><a href="fintech.html">Fintech AI</a></li><li><a href="crypto-ai.html">Crypto AI</a></li><li><a href="authors.html">Authors</a></li>
     </ul></div>
     <div><h3>Company</h3><ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="authors.html">Authors</a></li>
-    </ul></div>
-    <div><h3>Legal</h3><ul>
-        <li><a href="privacy-policy.html">Privacy</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="terms.html">Terms</a></li>
-        <li><a href="cookie-policy.html">Cookies</a></li>
+        <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="editorial-guidelines.html">Editorial Guidelines</a></li><li><a href="review-methodology.html">Review Methodology</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="terms.html">Terms of Service</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li>
     </ul></div>
 </div><div class="footer-bottom"><p>© <script>document.write(new Date().getFullYear())</script> CoinvestAI.</p></div></div></footer>
 </body>
