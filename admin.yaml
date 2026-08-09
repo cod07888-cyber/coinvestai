@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Articles"
+    folder: "_drafts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Article Title", name: "title", widget: "string"}
+      - {label: "URL Slug (no spaces, lowercase, dashes only)", name: "slug", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["AI Tools", "Fintech", "Crypto AI", "Guides", "News"]}
+      - {label: "Meta Description (150-160 characters)", name: "description", widget: "string"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Reading Time (minutes)", name: "reading_time", widget: "number", default: 7}
+      - {label: "Introduction Paragraph", name: "intro", widget: "text"}
+      - {label: "Article Body", name: "body", widget: "markdown"}
+      - {label: "Key Takeaway / Callout Box", name: "callout", widget: "text", required: false}
+      - label: "FAQ"
+        name: "faq"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Question", name: "question", widget: "string"}
+          - {label: "Answer", name: "answer", widget: "text"}
