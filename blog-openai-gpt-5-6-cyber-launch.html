@@ -51,8 +51,8 @@
         .progress-bar{position:fixed;top:0;left:0;height:4px;background:linear-gradient(135deg,var(--secondary),var(--accent));z-index:1001;width:0%;transition:width 0.1s;}
         .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}.header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}.logo{font-family:var(--font-heading);font-size:24px;font-weight:700;}.nav-links{display:flex;gap:4px;list-style:none;}.nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--gray);}.nav-links a:hover{background:rgba(37,99,235,0.08);color:var(--secondary);}
         .breadcrumbs{padding:20px 0;font-size:14px;color:var(--gray);}.breadcrumbs a{color:var(--secondary);}
-        .article-header{padding:20px 0 40px;}.category-tag{display:inline-block;padding:6px 14px;background:#eff6ff;color:var(--secondary);border-radius:50px;font-size:13px;font-weight:600;margin-bottom:16px;}.article-header h1{font-size:38px;line-height:1.2;margin-bottom:18px;}.article-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:14px;color:var(--gray);}.article-meta a{color:var(--secondary);}
-        .featured-image{height:280px;border-radius:16px;background:linear-gradient(135deg,#0F172A,#1e293b);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.25);font-size:60px;margin-bottom:40px;}
+        .article-header{padding:20px 0 10px;}.category-tag{display:inline-block;padding:6px 14px;background:#eff6ff;color:var(--secondary);border-radius:50px;font-size:13px;font-weight:600;margin-bottom:16px;}.article-header h1{font-size:38px;line-height:1.2;margin-bottom:18px;}.article-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:14px;color:var(--gray);}.article-meta a{color:var(--secondary);}
+        .featured-image{height:280px;border-radius:16px;background:linear-gradient(135deg,#0F172A,#1e293b);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.25);font-size:60px;margin-bottom:30px;}
         .toc{background:var(--light-gray);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin-bottom:36px;}.toc h3{font-size:15px;margin-bottom:12px;}.toc ul{list-style:none;}.toc li{margin-bottom:8px;}.toc a{color:var(--secondary);font-size:14px;}
         .content h2{font-size:26px;margin:36px 0 14px;color:var(--primary);}.content p{color:var(--text);margin-bottom:16px;font-size:16px;}.content ul{color:var(--text);margin:0 0 16px 24px;}
         .callout{background:#eff6ff;border-left:4px solid var(--secondary);padding:20px 24px;margin:28px 0;border-radius:0 8px 8px 0;}.callout strong{display:block;color:var(--primary);font-family:var(--font-heading);margin-bottom:6px;font-size:15px;}.callout p{color:#1e40af;margin:0;font-size:15px;}
@@ -65,9 +65,8 @@
         @media(max-width:768px){.article-header h1{font-size:26px;}.nav-links{display:none;}.related-grid{grid-template-columns:1fr;}.newsletter-cta form{flex-direction:column;}.footer-grid{grid-template-columns:1fr;}}
     </style>
 
-   <!-- Google AdSense Code -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060"
-     crossorigin="anonymous"></script>
+    <!-- Google AdSense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -92,7 +91,18 @@
     <div class="article-header">
         <span class="category-tag">AI News</span>
         <h1>OpenAI Launches GPT-5.6-Cyber: What It Means for AI Security</h1>
-        <div class="article-meta">By <strong>CoinvestAI Editorial Team</strong> · Published: August 11, 2026 · 7 min read</div>
+        
+        <!-- Last Updated Date & Editorial Author -->
+        <div class="article-meta" style="margin-top:10px;margin-bottom:15px;display:flex;gap:15px;align-items:center;flex-wrap:wrap;">
+            <span>📅 <strong>Last Updated:</strong> August 11, 2026</span>
+            <span>✍️ <strong>Reviewed by:</strong> <a href="authors-coinvestai-editorial-team.html">CoinvestAI Editorial Team</a></span>
+            <span>⏱️ 7 min read</span>
+        </div>
+    </div>
+
+    <!-- Top Disclaimer Box (Above the Fold) -->
+    <div style="background:#fffbeb;border-left:4px solid #f59e0b;padding:14px 18px;margin-bottom:28px;border-radius:0 8px 8px 0;font-size:14px;color:#92400e;line-height:1.6;">
+        <strong>⚠️ Educational & Legal Disclaimer:</strong> Content on CoinvestAI is strictly for educational, scientific, and cybersecurity research purposes only. It does not constitute formal financial, investment, legal, or IT security advice. Always consult certified security professionals prior to conducting system risk assessments.
     </div>
 
     <div class="featured-image">🛡️</div>
@@ -105,6 +115,7 @@
             <li><a href="#the-numbers">The Numbers Behind the Shift</a></li>
             <li><a href="#who-can-access">Who Can Actually Access It</a></li>
             <li><a href="#why-it-matters">Why This Matters for AI-Driven Finance</a></li>
+            <li><a href="#sources">References & Data Sources</a></li>
             <li><a href="#faq">FAQ</a></li>
         </ul>
     </div>
@@ -142,6 +153,16 @@
         <p>For readers following AI's role in finance and fintech, this development is worth watching for a specific reason: financial institutions are frequent targets of the exact attack categories this model is designed to help find and fix — authentication bypass, privilege escalation, and exploit chains targeting production systems. Tools like GPT-5.6-Cyber, if adopted by banks, exchanges, and fintech security teams, could meaningfully shorten the window between a vulnerability existing and it being patched.</p>
         <p>At the same time, the same capability gap that motivated this release — AI-accelerated attackers versus under-resourced defenders — is a live risk factor for any AI-adjacent financial platform, including exchanges, robo-advisors, and AI trading tools. Expect vendor security claims and AI-assisted penetration testing to become a more common talking point in fintech vendor evaluations going forward.</p>
 
+        <!-- References & Data Sources Section -->
+        <div id="sources" style="margin-top:40px;padding-top:20px;border-top:1px solid var(--border);font-size:14px;color:var(--gray);">
+            <h4 style="font-size:16px;color:var(--text);margin-bottom:12px;">📚 References & Data Sources:</h4>
+            <ul style="list-style:none;padding:0;line-height:1.9;">
+                <li>• <a href="https://openai.com/research/" target="_blank" rel="nofollow" style="color:var(--secondary);text-decoration:underline;">OpenAI Research — Cyber Capability Benchmarks & Trusted Access Frameworks</a></li>
+                <li>• <a href="https://www.cisa.gov/" target="_blank" rel="nofollow" style="color:var(--secondary);text-decoration:underline;">Cybersecurity & Infrastructure Security Agency (CISA) — Vulnerability Disclosure Guidelines</a></li>
+                <li>• <a href="https://www.investopedia.com/" target="_blank" rel="nofollow" style="color:var(--secondary);text-decoration:underline;">Investopedia — Cybersecurity Risks in AI Financial Infrastructure</a></li>
+            </ul>
+        </div>
+
         <div class="faq" id="faq">
             <h2 style="font-size:26px;margin:36px 0 14px;color:var(--primary);">FAQ</h2>
             <div class="faq-item">
@@ -174,7 +195,7 @@
         </div>
     </div>
 
-    <p class="disclaimer-note"><strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute financial, investment, or cybersecurity advice. See our <a href="disclaimer.html">Disclaimer</a> for details.</p>
+    <p class="disclaimer-note"><strong>Disclaimer:</strong> This article is for informational and educational purposes only and does not constitute financial, investment, or cybersecurity advice. See our <a href="disclaimer.html">Disclaimer</a> for details.</p>
 
     <div class="newsletter-cta">
         <h3>Stay Ahead of AI in Finance</h3>
@@ -188,7 +209,13 @@
     <div><h3>Explore</h3><ul><li><a href="blog.html">Blog</a></li><li><a href="ai-tools.html">AI Tools</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="guides.html">Guides</a></li><li><a href="news.html">News</a></li></ul></div>
     <div><h3>Topics</h3><ul><li><a href="fintech.html">Fintech AI</a></li><li><a href="crypto-ai.html">Crypto AI</a></li><li><a href="authors.html">Authors</a></li></ul></div>
     <div><h3>Company</h3><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li></ul></div>
-</div><div class="footer-bottom"><p>© 2026 CoinvestAI. All rights reserved.</p></div></div></footer>
+</div>
+<div class="footer-bottom">
+    <p style="font-size:12px;color:rgba(255,255,255,0.45);max-width:700px;margin:0 auto 15px;line-height:1.6;">
+        <strong>Disclaimer:</strong> CoinvestAI provides independent news, research, and analysis for educational purposes only. Nothing herein is financial advice.
+    </p>
+    <p>© 2026 CoinvestAI. All rights reserved.</p>
+</div></div></footer>
 
 <script>
 window.addEventListener('scroll', function() {
