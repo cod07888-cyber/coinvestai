@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Policy — CoinvestAI | 2026</title>
-    <meta name="description" content="CoinvestAI Cookie Policy — Learn about cookies we use: essential, analytics, Google AdSense advertising, and how to manage preferences.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy — CoinvestAI | 2026 Privacy & Compliance</title>
+    <meta name="description" content="CoinvestAI Cookie Policy: Learn about the essential, analytical, and advertising cookies (Google AdSense) used on our site and how to manage your privacy settings.">
     <link rel="canonical" href="https://coinvestai.com/cookie-policy.html">
     
     <!-- Structured Data for Policy Page -->
@@ -13,32 +14,85 @@
       "@type": "WebPage",
       "name": "Cookie Policy",
       "url": "https://coinvestai.com/cookie-policy.html",
-      "description": "Learn about the cookies used on CoinvestAI, including analytics and advertising cookies."
+      "description": "Learn about the cookies used on CoinvestAI, including essential, analytics, and advertising cookies.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "CoinvestAI",
+        "url": "https://coinvestai.com"
+      }
     }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Clean & Standard Google Fonts Import (Fixes 404 Font Issues) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google AdSense Code with defer -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous" defer></script>
+
     <style>
-        :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--border:#e5e7eb;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
-        *{margin:0;padding:0;box-sizing:border-box;}body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.8;}
-        h1,h2,h3{font-family:var(--font-heading);font-weight:700;}a{text-decoration:none;color:inherit;}.container{max-width:900px;margin:0 auto;padding:0 24px;}
-        .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-        .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}.header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}.logo{font-family:var(--font-heading);font-size:24px;font-weight:700;}.nav-links{display:flex;gap:4px;list-style:none;}.nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--gray);}.nav-links a:hover{background:rgba(37,99,235,0.08);color:var(--secondary);}
-        .breadcrumbs{padding:20px 0;font-size:14px;color:var(--gray);}.breadcrumbs a{color:var(--secondary);}
-        .page-hero{background:linear-gradient(135deg,var(--primary),#020617);padding:60px 0;text-align:center;color:white;}.page-hero h1{font-size:40px;}.page-hero .date{color:rgba(255,255,255,0.6);font-size:14px;}
-        .content{padding:60px 0;max-width:800px;margin:0 auto;}.content h2{font-size:28px;margin:40px 0 16px;}.content p{color:var(--gray);margin-bottom:16px;}.content ul{color:var(--gray);margin-bottom:16px;padding-left:24px;}.content a{color:var(--secondary);text-decoration:underline;}
-        .info-box{background:#eff6ff;border-left:4px solid var(--secondary);padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0;}.info-box p{color:#1e40af;margin:0;}
-        .footer{background:var(--primary);color:white;padding:60px 0 30px;margin-top:60px;}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}.footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-bottom:18px;}.footer ul{list-style:none;}.footer li{margin-bottom:10px;}.footer a{color:rgba(255,255,255,0.55);font-size:14px;}.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.35);font-size:14px;}
-        @media(max-width:768px){.page-hero h1{font-size:28px;}.nav-links{display:none;}.footer-grid{grid-template-columns:1fr;}}
+        :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:12px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        html{scroll-behavior:smooth;}
+        body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.8;}
+        h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;}a{text-decoration:none;color:inherit;}
+        
+        .container{max-width:900px;margin:0 auto;padding:0 24px;}
+        .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+
+        /* Header Navigation */
+        .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+        .header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+        .logo{font-family:var(--font-heading);font-size:24px;font-weight:700;}
+        .nav-links{display:flex;gap:4px;list-style:none;}
+        .nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--gray);}
+        .nav-links a:hover,.nav-links a.active{background:rgba(37,99,235,0.08);color:var(--secondary);}
+
+        .breadcrumbs{padding:20px 0;font-size:14px;color:var(--gray);}
+        .breadcrumbs a{color:var(--secondary);}
+
+        /* Hero */
+        .page-hero{background:linear-gradient(135deg,var(--primary),#020617);padding:60px 0;text-align:center;color:white;}
+        .page-hero h1{font-size:40px;margin-bottom:8px;line-height:1.2;}
+        .page-hero .date{color:rgba(255,255,255,0.65);font-size:14px;}
+
+        /* Content Area */
+        .content{padding:60px 0;max-width:850px;margin:0 auto;}
+        .content h2{font-size:24px;margin:36px 0 14px;color:var(--primary);border-bottom:1px solid var(--border);padding-bottom:8px;}
+        .content h2:first-of-type{margin-top:0;}
+        .content p{color:#334155;margin-bottom:16px;font-size:16px;}
+        .content ul{color:#334155;margin-bottom:20px;padding-left:24px;}
+        .content li{margin-bottom:8px;}
+        .content a{color:var(--secondary);font-weight:600;text-decoration:underline;}
+
+        .info-box{background:#eff6ff;border-left:4px solid var(--secondary);padding:20px 24px;margin:28px 0;border-radius:0 8px 8px 0;}
+        .info-box p{color:#1e40af;margin:0;font-weight:500;}
+
+        /* Ad Banner Slot */
+        .ad-slot{margin:36px 0;padding:16px 0;text-align:center;background:var(--light-gray);border-radius:var(--radius);border:1px dashed var(--border);}
+        .ad-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gray);margin-bottom:8px;}
+
+        /* Footer */
+        .footer{background:var(--primary);color:white;padding:60px 0 30px;margin-top:60px;}
+        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
+        .footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-bottom:18px;}
+        .footer ul{list-style:none;}
+        .footer li{margin-bottom:10px;}
+        .footer a{color:rgba(255,255,255,0.55);font-size:14px;}
+        .footer a:hover{color:white;}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.35);font-size:14px;}
+
+        @media(max-width:768px){
+            .page-hero h1{font-size:28px;}
+            .nav-links{display:none;}
+            .footer-grid{grid-template-columns:1fr;}
+        }
     </style>
-    <!-- Google AdSense Code -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060"
-     crossorigin="anonymous"></script>
 </head>
 <body>
 
-<!-- ========== NAV ========== -->
+<!-- Header Navigation -->
 <header class="header"><div class="container"><div class="header-inner">
     <a href="index.html" class="logo gradient-text">CoinvestAI</a>
     <nav><ul class="nav-links">
@@ -54,31 +108,113 @@
 
 <div class="container"><nav class="breadcrumbs"><a href="index.html">Home</a> › Cookie Policy</nav></div>
 
-<section class="page-hero"><div class="container"><h1>Cookie Policy</h1><p class="date">Last Updated: January 15, 2026</p></div></section>
+<!-- Hero Banner -->
+<section class="page-hero">
+    <div class="container">
+        <h1>Cookie Policy</h1>
+        <p class="date">Last Updated: August 13, 2026</p>
+    </div>
+</section>
 
+<!-- Content Section -->
 <div class="content"><div class="container">
-    <h2>1. What Are Cookies?</h2><p>Cookies are small text files placed on your device when you visit a website.</p>
-    <h2>2. Types We Use</h2><p>Essential cookies, Analytics cookies (Google Analytics), Advertising cookies (Google AdSense), and Preference cookies.</p>
-    <h2>3. Managing Cookies</h2><p>Control cookies through browser settings. Opt out of personalized ads at <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>.</p>
-    <div class="info-box"><p>Disabling cookies may affect Site functionality.</p></div>
-    <h2>4. Contact</h2><p>Questions? privacy@coinvestai.com.</p>
+
+    <h2>1. What Are Cookies?</h2>
+    <p>Cookies are small text files stored on your computer, smartphone, or tablet when you visit websites. They are widely utilized to make digital platforms function smoothly, improve browsing performance, provide personalized content, and furnish operational telemetry to website operators.</p>
+
+    <!-- In-Article Ad Banner -->
+    <div class="ad-slot">
+        <div class="ad-label">Advertisement</div>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7088247829787060"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <h2>2. Categories of Cookies We Deploy</h2>
+    <p>CoinvestAI uses distinct categories of first-party and third-party cookies across our website:</p>
+    
+    <ul>
+        <li><strong>Strictly Necessary Cookies:</strong> Essential for underlying platform security, session integrity, page navigation, and basic feature execution.</li>
+        <li><strong>Performance & Analytics Cookies:</strong> Placed via Google Analytics to aggregate anonymous metrics on reader engagement, popular research topics, and page loading speeds.</li>
+        <li><strong>Advertising & Targeting Cookies:</strong> Placed by third-party advertising networks, primarily <strong>Google AdSense</strong>, to serve relevant advertisements aligned with user interests and browsing telemetry across internet properties.</li>
+        <li><strong>Preference Cookies:</strong> Store user choices such as search queries in our AI Tools Directory or category filter selections.</li>
+    </ul>
+
+    <h2>3. Third-Party Advertising & Google AdSense</h2>
+    <p>Third-party vendors, including Google, utilize cookies to serve ads based on a user's prior visits to CoinvestAI or other websites on the internet. Google's use of advertising cookies enables it and its partners to serve ads to users based on their browsing activity across digital properties.</p>
+    
+    <p>Users may opt out of personalized advertising by managing their preferences directly through <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a> or by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">AboutAds.info</a>.</p>
+
+    <div class="info-box">
+        <p>Operational Notice: Disabling or clearing specific functional or performance cookies via your web browser settings may impact certain user interface features, such as filtering tools in our interactive directory.</p>
+    </div>
+
+    <h2>4. How to Control & Opt-Out of Cookies</h2>
+    <p>You maintain full authority to manage or disable cookie preferences directly within your internet browser software. Most modern web browsers allow you to inspect stored cookies, clear cached data, or block third-party cookies automatically:</p>
+    
+    <ul>
+        <li><strong>Google Chrome:</strong> Settings → Privacy and security → Third-party cookies.</li>
+        <li><strong>Mozilla Firefox:</strong> Options → Privacy & Security → Enhanced Tracking Protection.</li>
+        <li><strong>Apple Safari:</strong> Preferences → Privacy → Manage Website Data.</li>
+        <li><strong>Microsoft Edge:</strong> Settings → Cookies and site permissions.</li>
+    </ul>
+
+    <h2>5. Updates to This Cookie Policy</h2>
+    <p>We may periodically update this Cookie Policy to reflect changes in our technological stack, regulatory requirements (such as GDPR or CCPA), or advertising partner frameworks. Any revisions will be published on this page with an updated modification date.</p>
+
+    <h2>6. Contact Us</h2>
+    <p>If you have any questions regarding our use of cookies or privacy practices, please contact our editorial and compliance team via email at <a href="mailto:privacy@coinvestai.com">privacy@coinvestai.com</a> or visit our <a href="contact.html">Contact Page</a>.</p>
+
 </div></div>
 
-<!-- ========== FOOTER ========== -->
+<!-- Footer -->
 <footer class="footer"><div class="container"><div class="footer-grid">
-    <div><h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3><p style="color:rgba(255,255,255,0.5);font-size:14px;">Independent insights.</p></div>
-    <div><h3>Explore</h3><ul>
-        <li><a href="blog.html">Blog</a></li><li><a href="ai-tools.html">AI Tools</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="guides.html">Guides</a></li><li><a href="news.html">News</a></li>
-    </ul></div>
-    <div><h3>Topics</h3><ul>
-        <li><a href="fintech.html">Fintech AI</a></li><li><a href="crypto-ai.html">Crypto AI</a></li><li><a href="authors.html">Authors</a></li>
-    </ul></div>
-    <div><h3>Company</h3><ul>
-        <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
-        <li><a href="editorial-guidelines.html">Editorial Guidelines</a></li><li><a href="review-methodology.html">Review Methodology</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="terms.html">Terms of Service</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li>
-    </ul></div>
-</div><div class="footer-bottom"><p>© 2026 CoinvestAI. All rights reserved.</p></div></div></footer>
+    <div>
+        <h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:14px;">Independent research on AI-driven financial tools, quantitative intelligence, and fintech technology.</p>
+    </div>
+    <div>
+        <h3>Explore</h3>
+        <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="ai-tools.html">AI Tools Directory</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="news.html">News</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3>Topics</h3>
+        <ul>
+            <li><a href="fintech.html">Fintech AI</a></li>
+            <li><a href="crypto-ai.html">Crypto AI</a></li>
+            <li><a href="authors.html">Authors</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3>Company</h3>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="editorial-guidelines.html">Editorial Guidelines</a></li>
+            <li><a href="review-methodology.html">Review Methodology</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p style="font-size:12px;color:rgba(255,255,255,0.45);max-width:700px;margin:0 auto 12px;line-height:1.6;">
+        <strong>Disclaimer:</strong> CoinvestAI provides independent news, research, and analysis for educational purposes only. Nothing herein is financial, investment, or legal advice.
+    </p>
+    <p>© 2026 CoinvestAI. All rights reserved.</p>
+</div></div></footer>
+
 </body>
 </html>
