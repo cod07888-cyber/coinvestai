@@ -24,18 +24,24 @@
         {
           "@type": "ListItem",
           "position": 2,
+          "name": "Manus AI",
+          "url": "https://coinvestai.com/ai-tools-manus-ai.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
           "name": "DeepSeek AI",
           "url": "https://coinvestai.com/ai-tools-deepseek.html"
         },
         {
           "@type": "ListItem",
-          "position": 3,
+          "position": 4,
           "name": "ChatGPT",
           "url": "https://coinvestai.com/ai-tools-chatgpt.html"
         },
         {
           "@type": "ListItem",
-          "position": 4,
+          "position": 5,
           "name": "TradingView",
           "url": "https://coinvestai.com/ai-tools-tradingview.html"
         }
@@ -43,11 +49,10 @@
     }
     </script>
 
-    <!-- Optimized Google Fonts Loading -->
+    <!-- Clean & Standard Google Fonts Import (Fixes 404 Font Issues) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:14px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
@@ -98,6 +103,7 @@
         
         /* Icon Gradients */
         .tc-liquid{background:linear-gradient(135deg,#0f9c8e,#2563eb);}
+        .tc-manus{background:linear-gradient(135deg,#06b6d4,#2563eb);}
         .tc-deepseek{background:linear-gradient(135deg,#2563EB,#1d4ed8);}
         .tc-chatgpt{background:linear-gradient(135deg,#10a37f,#0e8065);}
         .tc-tradingview{background:linear-gradient(135deg,#2962ff,#1e4bd8);}
@@ -238,7 +244,27 @@
             </div>
         </div>
 
-        <!-- Tool 2: DeepSeek AI -->
+        <!-- Tool 2: Manus AI -->
+        <div class="tool-card" data-cat="research portfolio auditing" data-name="manus ai">
+            <span class="badge-tag badge-featured">Featured</span>
+            <div class="tool-top">
+                <div class="ticon tc-manus">M</div>
+                <div class="tinfo">
+                    <h3>Manus AI</h3>
+                    <div class="cat">Agentic AI &amp; Automation</div>
+                </div>
+            </div>
+            <p class="desc">Autonomous cloud agent operating inside sandboxed environments to execute end-to-end financial workflows and due diligence briefings.</p>
+            <div class="tbottom">
+                <div class="trating"><span>★</span> 4.8 / 5</div>
+                <div class="tprice">Freemium / Credits</div>
+            </div>
+            <div style="margin-top:14px;">
+                <a href="ai-tools-manus-ai.html" class="btn-link">Read Full Review →</a>
+            </div>
+        </div>
+
+        <!-- Tool 3: DeepSeek AI -->
         <div class="tool-card" data-cat="research auditing" data-name="deepseek ai">
             <span class="badge-tag badge-popular">Popular</span>
             <div class="tool-top">
@@ -258,7 +284,19 @@
             </div>
         </div>
 
-        <!-- Tool 3: ChatGPT -->
+        <!-- AD SLOT 2: In-Grid In-Feed Ad Banner -->
+        <div class="ad-slot ad-slot-grid">
+            <div class="ad-label">Sponsored Result</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-7088247829787060"
+                 data-ad-slot="2233445566"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Tool 4: ChatGPT -->
         <div class="tool-card" data-cat="research" data-name="chatgpt openai">
             <span class="badge-tag badge-popular">Popular</span>
             <div class="tool-top">
@@ -278,19 +316,7 @@
             </div>
         </div>
 
-        <!-- AD SLOT 2: In-Grid In-Feed Ad Banner (Splits top tools from lower tools) -->
-        <div class="ad-slot ad-slot-grid">
-            <div class="ad-label">Sponsored Result</div>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-7088247829787060"
-                 data-ad-slot="2233445566"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
-        <!-- Tool 4: TradingView -->
+        <!-- Tool 5: TradingView -->
         <div class="tool-card" data-cat="trading crypto" data-name="tradingview">
             <span class="badge-tag badge-popular">Popular</span>
             <div class="tool-top">
@@ -310,7 +336,7 @@
             </div>
         </div>
 
-        <!-- Tool 5: AlphaSense -->
+        <!-- Tool 6: AlphaSense -->
         <div class="tool-card" data-cat="research auditing" data-name="alphasense">
             <div class="tool-top">
                 <div class="ticon tc-alphasense">A</div>
@@ -329,7 +355,7 @@
             </div>
         </div>
 
-        <!-- Tool 6: TrendSpider -->
+        <!-- Tool 7: TrendSpider -->
         <div class="tool-card" data-cat="trading" data-name="trendspider">
             <div class="tool-top">
                 <div class="ticon tc-trendspider">TS</div>
@@ -348,7 +374,7 @@
             </div>
         </div>
 
-        <!-- Tool 7: Kavout -->
+        <!-- Tool 8: Kavout -->
         <div class="tool-card" data-cat="portfolio research" data-name="kavout">
             <div class="tool-top">
                 <div class="ticon tc-kavout">K</div>
@@ -367,7 +393,7 @@
             </div>
         </div>
 
-        <!-- Tool 8: Claude -->
+        <!-- Tool 9: Claude -->
         <div class="tool-card" data-cat="research auditing" data-name="claude anthropic">
             <div class="tool-top">
                 <div class="ticon tc-claude">Cl</div>
