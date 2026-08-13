@@ -5,8 +5,13 @@
     <title>Blog — CoinvestAI | AI Finance & Investment Research 2026</title>
     <meta name="description" content="Research and insights on AI trading tools, fintech innovation, cryptocurrency intelligence, and machine learning in finance. Updated for 2026.">
     <link rel="canonical" href="https://coinvestai.com/blog.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Optimized Google Fonts Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+
     <style>
         :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:12px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
         *{margin:0;padding:0;box-sizing:border-box;}body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.7;}
@@ -24,10 +29,17 @@
         .acard-body{padding:22px;}.acard-body h3{font-size:18px;margin-bottom:10px;}.acard-body p{color:var(--gray);font-size:14px;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
         .acard-meta{display:flex;gap:14px;font-size:13px;color:var(--gray);margin-bottom:14px;}.acard-meta a{color:var(--secondary);}.acard-link{color:var(--secondary);font-weight:600;font-size:14px;}
         .footer{background:var(--primary);color:white;padding:60px 0 30px;margin-top:80px;}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}.footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-bottom:18px;}.footer ul{list-style:none;}.footer li{margin-bottom:10px;}.footer a{color:rgba(255,255,255,0.55);font-size:14px;}.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.35);font-size:14px;}
+        
+        /* Render performance optimization */
+        .footer, .acard {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 400px;
+        }
+
         @media(max-width:768px){.page-header h1{font-size:30px;}.grid{grid-template-columns:1fr;}.nav-links{display:none;}.footer-grid{grid-template-columns:1fr;}}
     </style>
-    <!-- Google AdSense Code -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous"></script>
+    <!-- Google AdSense Code with defer -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous" defer></script>
 </head>
 <body>
 
@@ -71,9 +83,19 @@
     
     <div class="grid" id="grid">
 
-        <!-- Newest Article -->
+        <!-- Latest Review Article -->
+        <article class="acard" data-cat="ai-tools">
+            <div class="acard-img a1"><span class="acard-cat">AI Tools</span></div>
+            <div class="acard-body">
+                <h3>Liquid Co-Invest Review — AI Trading & Research Tool (2026)</h3>
+                <p>An independent, deep-dive review of Liquid Co-Invest covering AI-assisted research, order confirmations, and paper trading.</p>
+                <div class="acard-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 13, 2026</div>
+                <a href="ai-tools-liquid-coinvest.html" class="acard-link">Read Review →</a>
+            </div>
+        </article>
+
         <article class="acard" data-cat="crypto">
-            <div class="acard-img a1"><span class="acard-cat">Crypto AI</span></div>
+            <div class="acard-img a3"><span class="acard-cat">Crypto AI</span></div>
             <div class="acard-body">
                 <h3>AI-Driven Crypto Insights: Navigating 2026 Volatility</h3>
                 <p>How predictive models, sentiment tracking, and on-chain analytics assist traders in managing market volatility.</p>
