@@ -49,11 +49,10 @@
 }
 </script>
 
-<!-- Google Fonts Optimization -->
+<!-- Clean & Standard Google Fonts Import (Fixes 404 Font Issues) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Google AdSense Code with defer -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous" defer></script>
@@ -166,8 +165,8 @@ footer.site a{color:var(--muted);text-decoration:none;}
 
 /* Performance rendering optimization */
 .ad-slot, footer.site, .proscons, table {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 400px;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 400px;
 }
 
 @media(max-width:600px){
