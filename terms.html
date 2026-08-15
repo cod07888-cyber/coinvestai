@@ -1,44 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service — CoinvestAI | 2026</title>
-    <meta name="description" content="CoinvestAI Terms of Service — Website usage terms, intellectual property, no financial advice disclaimer, and limitation of liability.">
+    <meta name="description" content="CoinvestAI Terms of Service — Website usage terms, intellectual property, algorithmic risk disclosures, and limitation of liability.">
     <link rel="canonical" href="https://coinvestai.com/terms.html">
     
-    <!-- Terms of Service Schema -->
+    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Terms of Service",
+      "name": "Terms of Service — CoinvestAI",
       "url": "https://coinvestai.com/terms.html",
-      "description": "Terms of service and usage conditions for CoinvestAI."
+      "description": "Terms of service, intellectual property guidelines, and usage conditions for CoinvestAI.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "CoinvestAI",
+        "url": "https://coinvestai.com",
+        "logo": "https://coinvestai.com/logo.png"
+      }
     }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Clean Google Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google AdSense Code with defer -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous" defer></script>
+
     <style>
-        :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--border:#e5e7eb;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
-        *{margin:0;padding:0;box-sizing:border-box;}body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.8;}
-        h1,h2{font-family:var(--font-heading);font-weight:700;}a{text-decoration:none;color:inherit;}.container{max-width:900px;margin:0 auto;padding:0 24px;}
+        :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:12px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        html{scroll-behavior:smooth;}
+        body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.8;}
+        h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;}
+        a{text-decoration:none;color:inherit;}
+        .container{max-width:900px;margin:0 auto;padding:0 24px;}
         .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-        .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}.header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}.logo{font-family:var(--font-heading);font-size:24px;font-weight:700;}.nav-links{display:flex;gap:4px;list-style:none;}.nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--gray);}.nav-links a:hover{background:rgba(37,99,235,0.08);color:var(--secondary);}
-        .breadcrumbs{padding:20px 0;font-size:14px;color:var(--gray);}.breadcrumbs a{color:var(--secondary);}
-        .page-hero{background:linear-gradient(135deg,var(--primary),#020617);padding:60px 0;text-align:center;color:white;}.page-hero h1{font-size:40px;}.page-hero .date{color:rgba(255,255,255,0.6);font-size:14px;}
-        .content{padding:60px 0;max-width:800px;margin:0 auto;}.content h2{font-size:28px;margin:40px 0 16px;}.content p{color:var(--gray);margin-bottom:16px;}.content a{color:var(--secondary);text-decoration:underline;}
-        .warning-box{background:#fef2f2;border-left:4px solid #ef4444;padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0;}.warning-box p{color:#991b1b;font-weight:700;margin:0;}
-        .footer{background:var(--primary);color:white;padding:60px 0 30px;margin-top:60px;}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}.footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-bottom:18px;}.footer ul{list-style:none;}.footer li{margin-bottom:10px;}.footer a{color:rgba(255,255,255,0.55);font-size:14px;}.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.35);font-size:14px;}
-        @media(max-width:768px){.page-hero h1{font-size:28px;}.nav-links{display:none;}.footer-grid{grid-template-columns:1fr;}}
+        
+        /* Navigation */
+        .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+        .header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+        .logo{font-family:var(--font-heading);font-size:24px;font-weight:700;}
+        .nav-links{display:flex;gap:4px;list-style:none;}
+        .nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--gray);}
+        .nav-links a:hover,.nav-links a.active{background:rgba(37,99,235,0.08);color:var(--secondary);}
+        
+        .breadcrumbs{padding:20px 0;font-size:14px;color:var(--gray);}
+        .breadcrumbs a{color:var(--secondary);}
+        
+        /* Hero */
+        .page-hero{background:linear-gradient(135deg,var(--primary),#020617);padding:60px 0;text-align:center;color:white;}
+        .page-hero h1{font-size:40px;margin-bottom:8px;line-height:1.2;}
+        .page-hero .date{color:rgba(255,255,255,0.65);font-size:14px;}
+        
+        /* Legal Content */
+        .content{padding:50px 0 70px;}
+        .content h2{font-size:24px;margin:36px 0 14px;color:var(--primary);padding-top:16px;border-top:1px solid var(--border);}
+        .content h2:first-of-type{border-top:none;padding-top:0;}
+        .content p{color:#334155;margin-bottom:16px;font-size:15px;line-height:1.8;}
+        .content ul{color:#334155;margin-bottom:18px;padding-left:24px;font-size:15px;}
+        .content li{margin-bottom:8px;}
+        .content a{color:var(--secondary);text-decoration:underline;}
+        
+        .warning-box{background:#fef2f2;border-left:4px solid #ef4444;padding:20px 24px;margin:24px 0;border-radius:0 8px 8px 0;font-size:14px;color:#991b1b;line-height:1.7;}
+        .info-box{background:#eff6ff;border-left:4px solid var(--secondary);padding:18px 22px;margin:24px 0;border-radius:0 8px 8px 0;font-size:14px;color:#1e40af;line-height:1.7;}
+
+        /* Footer */
+        .footer{background:var(--primary);color:white;padding:60px 0 30px;margin-top:60px;}
+        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
+        .footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-bottom:18px;}
+        .footer ul{list-style:none;}
+        .footer li{margin-bottom:10px;}
+        .footer a{color:rgba(255,255,255,0.55);font-size:14px;}
+        .footer a:hover{color:white;}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.35);font-size:14px;}
+        
+        /* Render Performance Optimization */
+        .footer {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 300px;
+        }
+
+        @media(max-width:768px){
+            .page-hero h1{font-size:30px;}
+            .nav-links{display:none;}
+            .footer-grid{grid-template-columns:1fr;}
+        }
     </style>
-   <!-- Google AdSense Code -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060"
-     crossorigin="anonymous"></script>
 </head>
 <body>
 
-<!-- ========== NAV ========== -->
+<!-- ========== NAVIGATION ========== -->
 <header class="header"><div class="container"><div class="header-inner">
     <a href="index.html" class="logo gradient-text">CoinvestAI</a>
     <nav><ul class="nav-links">
@@ -54,31 +111,111 @@
 
 <div class="container"><nav class="breadcrumbs"><a href="index.html">Home</a> › Terms of Service</nav></div>
 
-<section class="page-hero"><div class="container"><h1>Terms of Service</h1><p class="date">Last Updated: January 15, 2026</p></div></section>
+<!-- ========== HERO ========== -->
+<section class="page-hero">
+    <div class="container">
+        <h1>Terms of Service</h1>
+        <p class="date">Last Updated: August 15, 2026</p>
+    </div>
+</section>
 
+<!-- ========== CONTENT ========== -->
 <div class="content"><div class="container">
-    <h2>1. Acceptance of Terms</h2><p>By using CoinvestAI, you accept these Terms. If you do not agree, do not use the Site.</p>
-    <h2>2. Use of Website</h2><p>You may use the Site for personal, non-commercial purposes. Do not reproduce content without permission.</p>
-    <h2>3. No Financial Advice</h2><div class="warning-box"><p>⚠️ All content is educational. Nothing on this Site constitutes financial, investment, or legal advice.</p></div>
-    <h2>4. Limitation of Liability</h2><p>The Site is provided "AS IS." CoinvestAI is not liable for damages arising from use of the Site.</p>
-    <h2>5. Contact</h2><p>Questions? legal@coinvestai.com or <a href="contact.html">Contact Us</a>.</p>
+    
+    <div class="info-box">
+        Please read these Terms of Service ("Terms", "Agreement") carefully before accessing or using <strong>CoinvestAI</strong> (accessible at <a href="https://coinvestai.com/">https://coinvestai.com/</a>). By browsing, accessing, or utilizing our website, tools directory, and publications, you agree to be legally bound by these Terms.
+    </div>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing and utilizing CoinvestAI, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service and our associated <a href="privacy-policy.html">Privacy Policy</a>, <a href="disclaimer.html">Disclaimer</a>, and <a href="cookie-policy.html">Cookie Policy</a>. If you do not agree with any part of these terms, you must immediately discontinue use of the website.</p>
+
+    <h2>2. Educational and Research Purpose Only (No Financial Advice)</h2>
+    <div class="warning-box">
+        <strong>⚠️ Critical Risk Disclosure:</strong> All materials, tool reviews, quantitative analyses, and market commentary published on CoinvestAI are prepared strictly for educational, scientific, and informational research purposes. <strong>Nothing contained on this website constitutes financial, investment, trading, tax, or legal advice.</strong>
+    </div>
+    <p>Financial trading, digital assets, leveraged contracts, and automated machine learning trading algorithms involve extreme risk of capital loss. Past performance metrics, simulation models, and backtested results are not guarantees of future returns. Always seek the advice of a certified financial advisor before deploying real capital.</p>
+
+    <h2>3. Intellectual Property Rights</h2>
+    <p>All original content, quantitative methodologies, editorial reviews, graphic layouts, design assets, and code on CoinvestAI are the exclusive property of CoinvestAI and are protected by international copyright, trademark, and intellectual property laws.</p>
+    <ul>
+        <li>You may access and read our materials for personal, non-commercial research purposes.</li>
+        <li>You may not republish, distribute, scrape, reproduce, or modify entire articles or directory databases without explicit prior written authorization from CoinvestAI.</li>
+    </ul>
+
+    <h2>4. Independent Tool Reviews &amp; Third-Party Services</h2>
+    <p>Our website features independent reviews and directory listings of third-party AI software, brokerage platforms, and quantitative tools (e.g., TradingView, AlphaSense, TrendSpider, DeepSeek). We do not own, operate, or endorse third-party software, and we make no representations regarding their reliability, performance, or security. Your engagement with any external platform is governed strictly by their respective terms of service and privacy agreements.</p>
+
+    <h2>5. User Conduct and Acceptable Use</h2>
+    <p>When using CoinvestAI, including posting comments or interacting with community features, you agree not to:</p>
+    <ul>
+        <li>Deploy automated bots, scrapers, or extraction crawlers that disrupt site performance or bypass rate limits.</li>
+        <li>Post abusive, fraudulent, defamatory, spammy, or commercially promotional comments.</li>
+        <li>Introduce malicious code, trojans, or attempt unauthorized access to our hosting infrastructure.</li>
+    </ul>
+
+    <h2>6. Disclaimer of Warranties</h2>
+    <p>CoinvestAI is provided strictly on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, whether express or implied. While our editorial team strives for high accuracy and rigorous fact-checking, we do not warrant that site information is complete, error-free, uninterrupted, or free of technical inaccuracies.</p>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, CoinvestAI, its authors, editors, and affiliates shall not be liable for any direct, indirect, incidental, consequential, or punitive damages resulting from your use of, or inability to use, this website, including but not limited to financial losses, lost profits, or data corruption arising from trading decisions or reliance on site publications.</p>
+
+    <h2>8. Changes and Amendments</h2>
+    <p>We reserve the right to modify or replace these Terms of Service at any time. Any changes will be posted on this page with an updated revision date. Your continued use of the website following the posting of changes constitutes acceptance of those revisions.</p>
+
+    <h2>9. Contact &amp; Legal Inquiries</h2>
+    <p>If you have any questions, clarifications, or legal inquiries regarding these Terms of Service, please contact our team:</p>
+    <ul>
+        <li><strong>Email:</strong> legal@coinvestai.com</li>
+        <li><strong>Contact Page:</strong> <a href="contact.html">coinvestai.com/contact.html</a></li>
+        <li><strong>Editorial Guidelines:</strong> <a href="editorial-guidelines.html">coinvestai.com/editorial-guidelines.html</a></li>
+    </ul>
+
 </div></div>
 
 <!-- ========== FOOTER ========== -->
 <footer class="footer"><div class="container"><div class="footer-grid">
-    <div><h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3><p style="color:rgba(255,255,255,0.5);font-size:14px;">Independent insights.</p></div>
-    <div><h3>Explore</h3><ul>
-        <li><a href="blog.html">Blog</a></li><li><a href="ai-tools.html">AI Tools</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="guides.html">Guides</a></li><li><a href="news.html">News</a></li>
-    </ul></div>
-    <div><h3>Topics</h3><ul>
-        <li><a href="fintech.html">Fintech AI</a></li><li><a href="crypto-ai.html">Crypto AI</a></li><li><a href="authors.html">Authors</a></li>
-    </ul></div>
-    <div><h3>Company</h3><ul>
-        <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
-        <li><a href="editorial-guidelines.html">Editorial Guidelines</a></li><li><a href="review-methodology.html">Review Methodology</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="terms.html">Terms of Service</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li>
-    </ul></div>
-</div><div class="footer-bottom"><p>© 2026 CoinvestAI. All rights reserved.</p></div></div></footer>
+    <div>
+        <h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:14px;">Independent research and quantitative analysis on AI-powered financial tools and blockchain intelligence.</p>
+    </div>
+    <div>
+        <h3>Explore</h3>
+        <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="ai-tools.html">AI Tools Directory</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="news.html">News</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3>Topics</h3>
+        <ul>
+            <li><a href="fintech.html">Fintech AI</a></li>
+            <li><a href="crypto-ai.html">Crypto AI</a></li>
+            <li><a href="authors.html">Authors</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3>Company</h3>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="editorial-guidelines.html">Editorial Guidelines</a></li>
+            <li><a href="review-methodology.html">Review Methodology</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p style="font-size:12px;color:rgba(255,255,255,0.45);max-width:700px;margin:0 auto 12px;line-height:1.6;">
+        <strong>Disclaimer:</strong> CoinvestAI provides independent research and educational content only. Nothing herein constitutes financial or investment advice.
+    </p>
+    <p>© 2026 CoinvestAI. All rights reserved.</p>
+</div></div></footer>
+
 </body>
 </html>
