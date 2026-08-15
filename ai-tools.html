@@ -44,12 +44,48 @@
           "position": 5,
           "name": "TradingView",
           "url": "https://coinvestai.com/ai-tools-tradingview.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Trade Ideas",
+          "url": "https://coinvestai.com/ai-tools-trade-ideas.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Macroaxis",
+          "url": "https://coinvestai.com/ai-tools-macroaxis.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "AlphaSense",
+          "url": "https://coinvestai.com/ai-tools-alphasense.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "TrendSpider",
+          "url": "https://coinvestai.com/ai-tools-trendspider.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Kavout",
+          "url": "https://coinvestai.com/ai-tools-kavout.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Claude",
+          "url": "https://coinvestai.com/ai-tools-claude.html"
         }
       ]
     }
     </script>
 
-    <!-- Clean & Standard Google Fonts Import (Fixes 404 Font Issues) -->
+    <!-- Google Fonts Import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -84,6 +120,7 @@
         
         /* Directory Search & Filters */
         .directory-controls{background:var(--light-gray);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;margin-bottom:32px;}
+        .directory-title{font-size:22px;color:var(--primary);text-align:center;margin-bottom:20px;}
         .search-box{position:relative;max-width:600px;margin:0 auto 24px;}
         .search-box input{width:100%;padding:16px 20px 16px 52px;border:2px solid var(--border);border-radius:50px;font-size:16px;outline:none;font-family:var(--font-body);transition:border-color 0.2s;}
         .search-box input:focus{border-color:var(--secondary);}
@@ -107,6 +144,8 @@
         .tc-deepseek{background:linear-gradient(135deg,#2563EB,#1d4ed8);}
         .tc-chatgpt{background:linear-gradient(135deg,#10a37f,#0e8065);}
         .tc-tradingview{background:linear-gradient(135deg,#2962ff,#1e4bd8);}
+        .tc-tradeideas{background:linear-gradient(135deg,#0284c7,#2563eb);}
+        .tc-macroaxis{background:linear-gradient(135deg,#059669,#10b981);}
         .tc-alphasense{background:linear-gradient(135deg,#22C55E,#16a34a);}
         .tc-trendspider{background:linear-gradient(135deg,#f59e0b,#d97706);}
         .tc-kavout{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
@@ -181,7 +220,7 @@
 
 <!-- ========== HEADER SECTION ========== -->
 <section class="page-header"><div class="container">
-    <h1>AI Finance & Trading Tools Directory 2026</h1>
+    <h1>AI Finance &amp; Trading Tools Directory 2026</h1>
     <p>Discover, filter, and compare artificial intelligence platforms powering modern financial research, quantitative trading, and crypto analytics.</p>
     
     <div class="disclaimer-banner">
@@ -206,9 +245,10 @@
 
     <!-- Search & Category Filters -->
     <div class="directory-controls">
+        <h2 class="directory-title">Explore Curated AI Financial Solutions</h2>
         <div class="search-box">
             <span>🔍</span>
-            <input type="text" id="toolSearch" placeholder="Search by tool name, category, or keyword..." oninput="filterTools()">
+            <input type="text" id="toolSearch" placeholder="Search by tool name, category, or keyword..." aria-label="Search AI tools directory" oninput="filterTools()">
         </div>
         
         <div class="filter-tabs">
@@ -336,7 +376,46 @@
             </div>
         </div>
 
-        <!-- Tool 6: AlphaSense -->
+        <!-- Tool 6: Trade Ideas -->
+        <div class="tool-card" data-cat="trading" data-name="trade ideas ai holly scanner">
+            <span class="badge-tag badge-popular">Popular</span>
+            <div class="tool-top">
+                <div class="ticon tc-tradeideas">TI</div>
+                <div class="tinfo">
+                    <h3>Trade Ideas</h3>
+                    <div class="cat">AI Market Scanner</div>
+                </div>
+            </div>
+            <p class="desc">Algorithmic stock scanning engine powered by Holly AI, simulating dozens of quantitative investment strategies before every market open.</p>
+            <div class="tbottom">
+                <div class="trating"><span>★</span> 4.6 / 5</div>
+                <div class="tprice">From $84/mo</div>
+            </div>
+            <div style="margin-top:14px;">
+                <a href="ai-tools-trade-ideas.html" class="btn-link">Read Full Review →</a>
+            </div>
+        </div>
+
+        <!-- Tool 7: Macroaxis -->
+        <div class="tool-card" data-cat="portfolio research auditing" data-name="macroaxis wealth optimization">
+            <div class="tool-top">
+                <div class="ticon tc-macroaxis">MA</div>
+                <div class="tinfo">
+                    <h3>Macroaxis</h3>
+                    <div class="cat">Wealth &amp; Portfolio Optimization</div>
+                </div>
+            </div>
+            <p class="desc">Quantitative portfolio engineering and wealth optimization platform calculating systemic correlation, volatility risk, and mean-variance frontiers.</p>
+            <div class="tbottom">
+                <div class="trating"><span>★</span> 4.5 / 5</div>
+                <div class="tprice">Freemium / Premium</div>
+            </div>
+            <div style="margin-top:14px;">
+                <a href="ai-tools-macroaxis.html" class="btn-link">Read Full Review →</a>
+            </div>
+        </div>
+
+        <!-- Tool 8: AlphaSense -->
         <div class="tool-card" data-cat="research auditing" data-name="alphasense">
             <div class="tool-top">
                 <div class="ticon tc-alphasense">A</div>
@@ -355,7 +434,7 @@
             </div>
         </div>
 
-        <!-- Tool 7: TrendSpider -->
+        <!-- Tool 9: TrendSpider -->
         <div class="tool-card" data-cat="trading" data-name="trendspider">
             <div class="tool-top">
                 <div class="ticon tc-trendspider">TS</div>
@@ -374,7 +453,7 @@
             </div>
         </div>
 
-        <!-- Tool 8: Kavout -->
+        <!-- Tool 10: Kavout -->
         <div class="tool-card" data-cat="portfolio research" data-name="kavout">
             <div class="tool-top">
                 <div class="ticon tc-kavout">K</div>
@@ -393,7 +472,7 @@
             </div>
         </div>
 
-        <!-- Tool 9: Claude -->
+        <!-- Tool 11: Claude -->
         <div class="tool-card" data-cat="research auditing" data-name="claude anthropic">
             <div class="tool-top">
                 <div class="ticon tc-claude">Cl</div>
