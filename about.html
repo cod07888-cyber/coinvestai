@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About CoinvestAI — Our Mission & Editorial Standards 2026</title>
-    <meta name="description" content="Learn about CoinvestAI: an independent publication dedicated to quantitative research, AI trading tools evaluation, fintech innovation, and cryptocurrency intelligence.">
-    <meta property="og:title" content="About CoinvestAI — Our Mission & Editorial Standards 2026">
-    <meta property="og:description" content="Discover CoinvestAI's commitment to independent financial AI research, methodology transparency, and editorial integrity.">
+    <title>About CoinvestAI — Mission, Quantitative Research & Editorial Standards 2026</title>
+    <meta name="description" content="Learn about CoinvestAI: an independent research collective evaluating financial artificial intelligence platforms, quantitative trading algorithms, fintech automation, and on-chain intelligence.">
+    <meta property="og:title" content="About CoinvestAI — Mission, Quantitative Research & Editorial Standards 2026">
+    <meta property="og:description" content="Discover CoinvestAI's commitment to independent financial AI research, methodology transparency, and rigorous empirical software evaluation.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://coinvestai.com/about.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -19,7 +19,7 @@
       "@type": "AboutPage",
       "name": "About CoinvestAI",
       "url": "https://coinvestai.com/about.html",
-      "description": "CoinvestAI is an independent research publication exploring artificial intelligence applications in financial markets, quantitative trading, and fintech automation.",
+      "description": "CoinvestAI is an independent financial technology publication and quantitative research collective exploring AI applications in capital markets, algorithmic trading, and fintech automation.",
       "mainEntity": {
         "@type": "Organization",
         "name": "CoinvestAI",
@@ -28,15 +28,24 @@
         "foundingDate": "2026",
         "knowsAbout": [
           "Artificial Intelligence in Finance",
-          "Algorithmic Crypto Trading",
+          "Algorithmic Trading Software Benchmarks",
           "Quantitative Market Microstructure",
-          "Fintech Automation & Auditing"
+          "Machine Learning Portfolio Optimization",
+          "Corporate Financial NLP Auditing",
+          "DeFi Protocol Risk Mitigation"
         ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "contact@coinvestai.com",
-          "contactType": "editorial inquiries"
-        }
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "contact@coinvestai.com",
+            "contactType": "general inquiries"
+          },
+          {
+            "@type": "ContactPoint",
+            "email": "editorial@coinvestai.com",
+            "contactType": "editorial and corrections"
+          }
+        ]
       }
     }
     </script>
@@ -54,9 +63,10 @@
         *{margin:0;padding:0;box-sizing:border-box;}
         html{scroll-behavior:smooth;}
         body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.8;}
-        h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;}a{text-decoration:none;color:inherit;}
+        h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;}
+        a{text-decoration:none;color:inherit;}
         
-        .container{max-width:920px;margin:0 auto;padding:0 24px;}
+        .container{max-width:960px;margin:0 auto;padding:0 24px;}
         .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
         
         .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--radius);font-weight:600;font-size:16px;background:var(--secondary);color:white;transition:all 0.3s;}
@@ -76,15 +86,15 @@
         /* Page Hero */
         .page-hero{background:linear-gradient(135deg,var(--primary),#020617);padding:70px 0;text-align:center;color:white;}
         .page-hero h1{font-size:42px;margin-bottom:12px;line-height:1.2;}
-        .page-hero p{color:rgba(255,255,255,0.8);font-size:18px;max-width:680px;margin:0 auto;}
+        .page-hero p{color:rgba(255,255,255,0.85);font-size:18px;max-width:720px;margin:0 auto;}
 
         /* Content Area */
         .content{padding:50px 0 70px;}
-        .content h2{font-size:26px;margin:40px 0 16px;color:var(--primary);border-bottom:1px solid var(--border);padding-bottom:10px;}
+        .content h2{font-size:26px;margin:42px 0 16px;color:var(--primary);border-bottom:1px solid var(--border);padding-bottom:10px;}
         .content h2:first-of-type{margin-top:0;}
         .content h3{font-size:19px;margin:24px 0 12px;color:var(--secondary);}
-        .content p{color:#334155;margin-bottom:18px;font-size:16px;}
-        .content ul{margin:0 0 20px 24px;color:#334155;}
+        .content p{color:#334155;margin-bottom:18px;font-size:16px;line-height:1.8;}
+        .content ul{margin:0 0 20px 24px;color:#334155;font-size:15px;}
         .content li{margin-bottom:8px;}
         .content a{color:var(--secondary);font-weight:600;}
         .content a:hover{text-decoration:underline;}
@@ -92,11 +102,17 @@
         .info-box{background:#eff6ff;border-left:4px solid var(--secondary);padding:22px 26px;margin:28px 0;border-radius:0 8px 8px 0;font-size:15px;line-height:1.7;}
         .info-box p{color:#1e40af;margin:0;font-weight:500;}
 
+        /* Grid Layouts */
         .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin:30px 0;}
         .value-card{background:var(--light-gray);border:1px solid var(--border);padding:24px;border-radius:var(--radius);transition:all 0.2s;}
-        .value-card:hover{border-color:var(--secondary);transform:translateY(-2px);}
+        .value-card:hover{border-color:var(--secondary);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.04);}
         .value-card h3{font-size:18px;margin-bottom:8px;color:var(--primary);}
         .value-card p{font-size:14px;color:var(--gray);margin:0;line-height:1.6;}
+
+        .desk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin:24px 0;}
+        .desk-card{background:white;border:1px solid var(--border);border-radius:var(--radius);padding:22px;}
+        .desk-card h4{font-size:16px;color:var(--primary);margin-bottom:8px;}
+        .desk-card p{font-size:13px;color:var(--gray);margin:0;line-height:1.6;}
 
         /* Ad Slot */
         .ad-slot{margin:36px 0;padding:16px 0;text-align:center;background:var(--light-gray);border-radius:var(--radius);border:1px dashed var(--border);}
@@ -117,7 +133,7 @@
         .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.35);font-size:14px;}
 
         /* Render Performance Optimization */
-        .footer, .cta-section, .values-grid, .ad-slot {
+        .footer, .cta-section, .values-grid, .ad-slot, .desk-grid {
             content-visibility: auto;
             contain-intrinsic-size: 1px 300px;
         }
@@ -151,17 +167,17 @@
 <section class="page-hero">
     <div class="container">
         <h1>About CoinvestAI</h1>
-        <p>Independent research and quantitative analysis on how artificial intelligence is transforming modern finance, trading algorithms, and blockchain intelligence in 2026.</p>
+        <p>Independent research, quantitative benchmarks, and empirical analysis on how artificial intelligence is transforming capital markets, investment tools, and fintech architecture in 2026.</p>
     </div>
 </section>
 
 <!-- Content Section -->
 <div class="content"><div class="container">
 
-    <h2>Our Mission &amp; Vision</h2>
-    <p>CoinvestAI was established with a clear mission: to provide rigorous, unbiased, and technically sound research on the artificial intelligence platforms shaping modern capital markets, algorithmic trading systems, digital asset analytics, and corporate financial automation.</p>
+    <h2>Our Mission &amp; Purpose</h2>
+    <p><strong>CoinvestAI</strong> was founded with a singular purpose: to provide transparent, scientifically rigorous, and unbiased intelligence at the rapidly expanding intersection of artificial intelligence and modern finance. As quantitative algorithms, autonomous reasoning models, and agentic workflows reshape investment management, market participants require objective evaluations that cut through promotional hype to analyze real-world performance, execution latency, and systemic risk controls.</p>
     
-    <p>As quantitative algorithms and agentic AI models become deeply embedded into financial workflows, market participants require transparent assessments that look beyond marketing claims to analyze live execution mechanics, backtesting validity, data latency, and operational risk controls.</p>
+    <p>Our publication serves quantitative analysts, institutional researchers, financial developers, and discerning retail investors who require empirical evidence before integrating artificial intelligence into their research stacks.</p>
 
     <!-- In-Article Ad Banner -->
     <div class="ad-slot">
@@ -175,38 +191,60 @@
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <h2>Core Pillars of CoinvestAI</h2>
+    <h2>Core Pillars of Our Research</h2>
     <div class="values-grid">
         <div class="value-card">
             <h3>1. Uncompromising Independence</h3>
-            <p>Our software evaluations, algorithmic reviews, and technical teardowns are conducted with strict editorial autonomy without sponsored ranking placements.</p>
+            <p>Our software evaluations, quantitative ratings, and technical teardowns are conducted with strict editorial autonomy. Software vendors cannot purchase favorable scores or sponsored placements.</p>
         </div>
         <div class="value-card">
             <h3>2. Quantitative &amp; Empirical Rigor</h3>
-            <p>We analyze financial AI platforms against live order book telemetry, human-in-the-loop safeguards, and statistical backtesting models.</p>
+            <p>We test financial AI software against verified exchange telemetry, sandbox task execution, historical backtesting datasets, and human-in-the-loop audit trails.</p>
         </div>
         <div class="value-card">
-            <h3>3. Risk Disclosure &amp; Safety</h3>
-            <p>We actively illuminate structural market risks, model overfitting vulnerabilities, liquidity drawdown factors, and international regulatory standards.</p>
+            <h3>3. Transparent Risk Disclosures</h3>
+            <p>We actively highlight structural vulnerabilities in algorithmic systems, including data overfitting, execution slippage, regime shifts, and international compliance boundaries.</p>
         </div>
     </div>
 
-    <h2>Editorial Independence &amp; Research Integrity</h2>
-    <div class="info-box">
-        <p><strong>Editorial Commitment:</strong> CoinvestAI enforces strict separation between commercial operations and research evaluations. Software vendors and platform creators cannot pay to modify ratings, suppress limitations, or influence review conclusions.</p>
+    <h2>Our Specialized Research Desks</h2>
+    <p>CoinvestAI's publications and tool evaluations are produced across four dedicated analytical desks:</p>
+
+    <div class="desk-grid">
+        <div class="desk-card">
+            <h4>🤖 AI Trading &amp; Quant Algorithms</h4>
+            <p>Benchmarking automated execution engines, order routing bots, multi-factor ranking algorithms, and machine learning backtesting frameworks.</p>
+        </div>
+        <div class="desk-card">
+            <h4>📄 Financial Document NLP &amp; Auditing</h4>
+            <p>Analyzing large language models and semantic retrieval tools parsing corporate SEC filings, earnings call transcripts, and corporate balance sheets.</p>
+        </div>
+        <div class="desk-card">
+            <h4>⛓️ On-Chain &amp; Crypto Telemetry</h4>
+            <p>Tracking decentralized protocol analytics, AI-driven risk mitigation in DeFi, smart contract vulnerability detection, and liquidity flows.</p>
+        </div>
+        <div class="desk-card">
+            <h4>🏦 Fintech &amp; Banking Automation</h4>
+            <p>Covering the institutional integration of generative AI into corporate auditing, fraud detection, and multi-agent wealth management systems.</p>
+        </div>
     </div>
 
-    <p>To learn more about how our editorial staff and research desks conduct tests, structure benchmarks, and score tools, explore our transparent documentation:</p>
+    <h2>Editorial Integrity &amp; Review Standards</h2>
+    <div class="info-box">
+        <p><strong>Editorial Policy:</strong> CoinvestAI strictly enforces separation between commercial operations and research evaluations. Software vendors and platform creators cannot pay to alter numerical star ratings, suppress technical limitations, or dictate our editorial conclusions.</p>
+    </div>
+
+    <p>To inspect the exact criteria, weightings, and validation workflows we apply to every published guide and software review, explore our foundational documentation:</p>
     <ul>
-        <li><a href="review-methodology.html">Review Methodology &amp; Scoring Framework</a></li>
-        <li><a href="editorial-guidelines.html">Editorial Standards &amp; Fact-Checking Policy</a></li>
-        <li><a href="authors.html">Meet the CoinvestAI Authors &amp; Research Desks</a></li>
+        <li><a href="review-methodology.html">Review Methodology &amp; 7-Factor Scoring Matrix</a></li>
+        <li><a href="editorial-guidelines.html">Editorial Guidelines &amp; Fact-Checking Policy</a></li>
+        <li><a href="authors.html">Author Profiles &amp; Research Staff Archives</a></li>
     </ul>
 
-    <h2>Transparency &amp; Disclosures</h2>
-    <p>CoinvestAI is an educational research publication. Content published across our directory and blog is intended strictly for educational, scientific, and technical analysis purposes. We do not provide personalized financial, investment, trading, or legal advice.</p>
+    <h2>Educational Scope &amp; Legal Disclaimers</h2>
+    <p>CoinvestAI is an educational and scientific research publication. Content published across our directory and blog is intended strictly for informational analysis. We do not provide personalized financial, investment, trading, accounting, or legal advice.</p>
     
-    <p>For complete legal statements, reader rights, and privacy practices, please review our <a href="disclaimer.html">Disclaimer</a>, <a href="privacy-policy.html">Privacy Policy</a>, and <a href="terms.html">Terms of Service</a>.</p>
+    <p>For complete legal notices and data governance practices, please review our <a href="disclaimer.html">Financial Disclaimer</a>, <a href="privacy-policy.html">Privacy Policy</a>, and <a href="terms.html">Terms of Service</a>.</p>
 
 </div></div>
 
