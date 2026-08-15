@@ -32,7 +32,7 @@
         :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:12px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
         *{margin:0;padding:0;box-sizing:border-box;}
         body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.7;}
-        h1,h2{font-family:var(--font-heading);font-weight:700;}a{text-decoration:none;color:inherit;}
+        h1,h2,h3{font-family:var(--font-heading);font-weight:700;}a{text-decoration:none;color:inherit;}
         .container{max-width:1280px;margin:0 auto;padding:0 24px;}
         .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 
@@ -53,13 +53,25 @@
         .cat-btn.active{background:var(--secondary);color:white;border-color:var(--secondary);}
 
         .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;}
-        .acard{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:0.3s;}
+        .acard{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:0.3s;background:white;display:flex;flex-direction:column;justify-content:space-between;}
         .acard:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,0.05);}
-        .acard-img{height:200px;background:#e2e8f0;display:flex;align-items:center;justify-content:center;font-size:40px;}
+        .acard-img{height:180px;background:linear-gradient(135deg,var(--primary),#1e293b);display:flex;align-items:center;justify-content:center;font-size:40px;}
         .acard-body{padding:24px;}
+        .acard-body h3{font-size:20px;margin-bottom:10px;color:var(--primary);}
+        .acard-body p{color:var(--gray);font-size:15px;margin-bottom:16px;}
+        .acard-meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--gray);border-top:1px solid var(--border);padding-top:14px;margin-top:14px;}
+        .acard-link{color:var(--secondary);font-weight:600;}
+        .acard-link:hover{text-decoration:underline;}
         
         .footer{background:var(--primary);color:white;padding:60px 0;margin-top:80px;}
-        @media(max-width:768px){.nav-links{display:none;}}
+        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
+        .footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-bottom:18px;}
+        .footer ul{list-style:none;}
+        .footer li{margin-bottom:10px;}
+        .footer a{color:rgba(255,255,255,0.55);font-size:14px;}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.35);font-size:14px;}
+
+        @media(max-width:768px){.nav-links{display:none;}.footer-grid{grid-template-columns:1fr;}}
     </style>
     <!-- AdSense Lazy-Load -->
     <script>
@@ -84,6 +96,9 @@
         <li><a href="blog.html" class="active">Blog</a></li>
         <li><a href="ai-tools.html">AI Tools</a></li>
         <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="fintech.html">Fintech</a></li>
+        <li><a href="crypto-ai.html">Crypto AI</a></li>
+        <li><a href="guides.html">Guides</a></li>
         <li><a href="about.html">About</a></li>
     </ul></nav>
 </div></div></header>
@@ -102,19 +117,165 @@
     </div>
 
     <div class="grid" id="grid">
-        <!-- Article Card Example -->
+        <!-- Article 1 -->
         <article class="acard" data-cat="crypto">
             <div class="acard-img">🤖</div>
             <div class="acard-body">
                 <h3>AI Trading Algorithms in Crypto Markets</h3>
-                <p>Analyzing the mechanics of real-time signals.</p>
-                <a href="blog-ai-crypto-trading-algorithms.html">Read Analysis →</a>
+                <p>Analyzing the mechanics of real-time signals, high-frequency execution, and quantitative models.</p>
+                <div class="acard-meta">
+                    <span>Aug 8, 2026 · 9 min</span>
+                    <a href="blog-ai-crypto-trading-algorithms.html" class="acard-link">Read Analysis →</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="acard" data-cat="fintech">
+            <div class="acard-img">🏦</div>
+            <div class="acard-body">
+                <h3>The Rise of AI-Native Financial Services</h3>
+                <p>How AI is enabling a new generation of financial products built from the ground up with machine learning.</p>
+                <div class="acard-meta">
+                    <span>Aug 11, 2026 · 9 min</span>
+                    <a href="blog-ai-native-financial-services.html" class="acard-link">Read Analysis →</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="acard" data-cat="fintech">
+            <div class="acard-img">🛡️</div>
+            <div class="acard-body">
+                <h3>AI in Fraud Detection & Financial Security</h3>
+                <p>How ML models detect and prevent financial fraud in real-time across banking and payments.</p>
+                <div class="acard-meta">
+                    <span>Aug 9, 2026 · 6 min</span>
+                    <a href="blog-ai-fraud-detection-finance.html" class="acard-link">Read Analysis →</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="acard" data-cat="fintech">
+            <div class="acard-img">📋</div>
+            <div class="acard-body">
+                <h3>How Generative AI Is Transforming Corporate Auditing</h3>
+                <p>Corporate auditing giants deploy continuous 100% population AI testing across enterprise ledgers.</p>
+                <div class="acard-meta">
+                    <span>Aug 13, 2026 · 9 min</span>
+                    <a href="blog-generative-ai-corporate-financial-auditing.html" class="acard-link">Read Analysis →</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="acard" data-cat="crypto">
+            <div class="acard-img">⚖️</div>
+            <div class="acard-body">
+                <h3>AI Risk Management in Decentralized Finance</h3>
+                <p>Global regulators align on AI risk frameworks and automated smart contract boundaries.</p>
+                <div class="acard-meta">
+                    <span>Aug 13, 2026 · 10 min</span>
+                    <a href="blog-ai-risk-management-defi-2026.html" class="acard-link">Read Analysis →</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="acard" data-cat="ai-tools">
+            <div class="acard-img">🔍</div>
+            <div class="acard-body">
+                <h3>DeepSeek AI in Finance: Open-Weights Revolution</h3>
+                <p>Open-weights reasoning models gain traction in private quantitative trading desks.</p>
+                <div class="acard-meta">
+                    <span>Aug 12, 2026 · 8 min</span>
+                    <a href="blog-deepseek-ai-finance-2026.html" class="acard-link">Read Analysis →</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Article 7 -->
+        <article class="acard" data-cat="ai-tools">
+            <div class="acard-img">📊</div>
+            <div class="acard-body">
+                <h3>How to Evaluate AI Trading Platforms in 2026</h3>
+                <p>Key criteria for assessing AI-powered trading and investment research platforms.</p>
+                <div class="acard-meta">
+                    <span>Aug 11, 2026 · 7 min</span>
+                    <a href="blog-evaluate-ai-trading-platforms.html" class="acard-link">Read Analysis →</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Article 8 -->
+        <article class="acard" data-cat="crypto">
+            <div class="acard-img">📈</div>
+            <div class="acard-body">
+                <h3>ML Applications in Cryptocurrency Market Analysis</h3>
+                <p>How machine learning models process on-chain data, order flow, and market sentiment.</p>
+                <div class="acard-meta">
+                    <span>Aug 11, 2026 · 8 min</span>
+                    <a href="blog-ml-crypto-market-analysis.html" class="acard-link">Read Analysis →</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Article 9 -->
+        <article class="acard" data-cat="ai-tools">
+            <div class="acard-img">📑</div>
+            <div class="acard-body">
+                <h3>NLP for Financial Document Analysis</h3>
+                <p>Natural language processing architectures parse SEC 10-K filings with sub-second latency.</p>
+                <div class="acard-meta">
+                    <span>Aug 11, 2026 · 8 min</span>
+                    <a href="blog-nlp-financial-document-analysis.html" class="acard-link">Read Analysis →</a>
+                </div>
             </div>
         </article>
     </div>
 </div>
 
-<footer class="footer"><div class="container">© 2026 CoinvestAI. All rights reserved.</div></footer>
+<footer class="footer"><div class="container"><div class="footer-grid">
+    <div>
+        <h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:14px;">Independent research on AI-driven financial tools, quantitative analytics, and fintech innovation.</p>
+    </div>
+    <div>
+        <h3>Explore</h3>
+        <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="ai-tools.html">AI Tools</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="news.html">News</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3>Topics</h3>
+        <ul>
+            <li><a href="fintech.html">Fintech AI</a></li>
+            <li><a href="crypto-ai.html">Crypto AI</a></li>
+            <li><a href="authors.html">Authors</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3>Company</h3>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="editorial-guidelines.html">Editorial Guidelines</a></li>
+            <li><a href="review-methodology.html">Review Methodology</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>© 2026 CoinvestAI. All rights reserved.</p>
+</div></div></footer>
 
 <script>
 function filterCat(c, btn){
