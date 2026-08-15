@@ -12,18 +12,19 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Privacy Policy",
+      "name": "Privacy Policy — CoinvestAI",
       "url": "https://coinvestai.com/privacy-policy.html",
-      "description": "CoinvestAI privacy policy detailing data collection, cookies usage, Google AdSense compliance, and user rights under GDPR and CCPA.",
+      "description": "CoinvestAI privacy policy detailing data collection, cookies usage, Google AdSense compliance, Cusdis comments, and user rights under GDPR and CCPA.",
       "publisher": {
         "@type": "Organization",
         "name": "CoinvestAI",
-        "url": "https://coinvestai.com"
+        "url": "https://coinvestai.com",
+        "logo": "https://coinvestai.com/logo.png"
       }
     }
     </script>
 
-    <!-- Clean & Standard Google Fonts Import (Fixes 404 Font Issues) -->
+    <!-- Clean Google Fonts Import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,7 +40,7 @@
         h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;}a{text-decoration:none;color:inherit;}
         
         .container{max-width:900px;margin:0 auto;padding:0 24px;}
-        .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+        .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 
         /* Header Navigation */
         .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
@@ -58,17 +59,17 @@
         .page-hero .date{color:rgba(255,255,255,0.65);font-size:14px;}
 
         /* Content Area */
-        .content{padding:60px 0;max-width:850px;margin:0 auto;}
-        .content h2{font-size:24px;margin:36px 0 14px;color:var(--primary);border-bottom:1px solid var(--border);padding-bottom:8px;}
+        .content{padding:50px 0 70px;max-width:850px;margin:0 auto;}
+        .content h2{font-size:24px;margin:38px 0 14px;color:var(--primary);border-bottom:1px solid var(--border);padding-bottom:8px;}
         .content h2:first-of-type{margin-top:0;}
         .content h3{font-size:18px;margin:24px 0 10px;color:var(--secondary);}
-        .content p{color:#334155;margin-bottom:16px;font-size:16px;}
-        .content ul{color:#334155;margin-bottom:20px;padding-left:24px;}
+        .content p{color:#334155;margin-bottom:16px;font-size:15px;line-height:1.8;}
+        .content ul{color:#334155;margin-bottom:20px;padding-left:24px;font-size:15px;}
         .content li{margin-bottom:8px;}
         .content a{color:var(--secondary);font-weight:600;text-decoration:underline;}
 
-        .info-box{background:#eff6ff;border-left:4px solid var(--secondary);padding:20px 24px;margin:28px 0;border-radius:0 8px 8px 0;}
-        .info-box p{color:#1e40af;margin:0;font-weight:500;}
+        .info-box{background:#eff6ff;border-left:4px solid var(--secondary);padding:20px 24px;margin:28px 0;border-radius:0 8px 8px 0;font-size:14px;color:#1e40af;line-height:1.7;}
+        .warning-box{background:#fffbeb;border-left:4px solid #f59e0b;padding:18px 22px;margin:24px 0;border-radius:0 8px 8px 0;font-size:14px;color:#92400e;line-height:1.7;}
 
         /* Ad Banner Slot */
         .ad-slot{margin:36px 0;padding:16px 0;text-align:center;background:var(--light-gray);border-radius:var(--radius);border:1px dashed var(--border);}
@@ -83,6 +84,12 @@
         .footer a{color:rgba(255,255,255,0.55);font-size:14px;}
         .footer a:hover{color:white;}
         .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.35);font-size:14px;}
+
+        /* Render Performance Optimization */
+        .footer, .ad-slot, .info-box {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 300px;
+        }
 
         @media(max-width:768px){
             .page-hero h1{font-size:28px;}
@@ -114,17 +121,17 @@
 <section class="page-hero">
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="date">Last Updated: August 13, 2026</p>
+        <p class="date">Last Updated: August 15, 2026</p>
     </div>
 </section>
 
 <!-- Content Section -->
 <div class="content"><div class="container">
 
-    <h2>1. Introduction</h2>
-    <p>Welcome to <strong>CoinvestAI</strong> ("we," "our," or "us"). We are committed to safeguarding the privacy and personal data of our visitors. This Privacy Policy outlines how we collect, process, utilize, and protect your information when you access and browse <strong>coinvestai.com</strong>.</p>
+    <h2>1. Introduction &amp; Overview</h2>
+    <p>Welcome to <strong>CoinvestAI</strong> (accessible at <a href="https://coinvestai.com/">https://coinvestai.com/</a>). We are dedicated to maintaining the highest standards of data transparency, user privacy, and integrity. This Privacy Policy details how we collect, handle, store, and safeguard your personal information when you access our independent financial research publication, directory, and interactive articles.</p>
     
-    <p>By using our website, you signify your acceptance of the practices described in this policy. If you do not agree with these terms, please discontinue using CoinvestAI.</p>
+    <p>By using CoinvestAI, you agree to the collection and use of information in accordance with this policy. If you disagree with any terms herein, please discontinue the use of our services.</p>
 
     <!-- In-Article Ad Banner -->
     <div class="ad-slot">
@@ -139,60 +146,74 @@
     </div>
 
     <h2>2. Information We Collect</h2>
-    <p>We collect information through two primary methods: direct voluntary submission and automated digital logging.</p>
+    <p>We collect information to deliver high-quality quantitative research, ensure platform security, and improve reader experience. Information is obtained through direct submissions and automated telemetry.</p>
 
     <h3>A. Information You Voluntarily Provide</h3>
     <ul>
-        <li><strong>Contact Information:</strong> Your name, email address, or message content submitted via our contact forms or editorial inquiries.</li>
-        <li><strong>Newsletter Subscriptions:</strong> Email address provided if you elect to subscribe to CoinvestAI research updates.</li>
+        <li><strong>Contact &amp; Editorial Inquiries:</strong> Your name, email address, and message contents submitted via our contact forms or author communications.</li>
+        <li><strong>Newsletter Subscriptions:</strong> Your email address when you voluntarily subscribe to our market research and AI fintech briefings.</li>
+        <li><strong>Community Comments &amp; Discussions:</strong> Public nickname and optional email address submitted when engaging in article discussion sections.</li>
     </ul>
 
-    <h3>B. Automatically Collected Information</h3>
+    <h3>B. Automatically Collected Technical Data</h3>
     <ul>
-        <li><strong>Log & Device Telemetry:</strong> Internet Protocol (IP) address, browser type, operating system, geographical country code, referring URLs, time stamps, and pages viewed.</li>
-        <li><strong>Cookies & Analytics Data:</strong> Usage metrics collected via analytics providers to measure platform performance and reader engagement.</li>
+        <li><strong>Server Log Telemetry:</strong> Internet Protocol (IP) address, browser client version, operating system, referring URL source, timestamp, and requested page paths.</li>
+        <li><strong>Aggregated Analytical Metrics:</strong> Session duration, viewport resolution, scroll depth, and interaction frequencies used to optimize our interface.</li>
     </ul>
 
-    <h2>3. How We Use Your Information</h2>
-    <p>We utilize collected data strictly for legitimate operational purposes, including:</p>
+    <h2>3. Discussion &amp; Comment System (Cusdis Privacy Integration)</h2>
+    <p>CoinvestAI employs <strong>Cusdis</strong>, an open-source, privacy-first comment system designed specifically to respect reader autonomy. Unlike traditional comment widgets:</p>
     <ul>
-        <li>Delivering and maintaining the functionality of our educational articles and AI tools directory.</li>
-        <li>Analyzing site telemetry to optimize page speed, user interface design, and mobile responsiveness.</li>
-        <li>Responding directly to user inquiries, technical reports, or editorial feedback.</li>
-        <li>Serving contextual and personalized digital advertisements via network partners.</li>
+        <li>Cusdis does <strong>not</strong> track users across third-party websites or build cross-domain behavioral profiles.</li>
+        <li>Users do not need to connect external social media accounts or create third-party logins to participate.</li>
+        <li>Any optional email address provided during comment submission is utilized solely for comment moderation notifications and is never monetized or shared.</li>
     </ul>
 
-    <h2>4. Cookies, Tracking & Google AdSense Compliance</h2>
-    <p>CoinvestAI uses cookies and similar tracking technologies to enhance user experience and serve advertisements. For detailed information on managing cookie preferences, please consult our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+    <h2>4. Cookies, Tracking &amp; Google AdSense Compliance</h2>
+    <p>CoinvestAI uses cookies and similar web technologies to analyze network traffic and serve advertisements. For full technical details and browser configuration options, visit our dedicated <a href="cookie-policy.html">Cookie Policy</a>.</p>
 
     <div class="info-box">
-        <p>Google AdSense Disclosure: Third-party vendors, including Google, use cookies (such as the DoubleClick cookie) to serve ads based on your prior visits to CoinvestAI or other websites on the Internet.</p>
+        <strong>Google AdSense &amp; Third-Party Advertising Disclosure:</strong><br>
+        Third-party vendors, including Google, use cookies (including the DoubleClick / DART cookie) to serve relevant advertisements based on a user's prior visits to CoinvestAI or other websites on the Internet.
     </div>
 
-    <p>Google's use of advertising cookies enables it and its partners to serve ads tailored to your browsing activity. You may opt out of personalized advertising at any time by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a> or <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">AboutAds.info</a>.</p>
-
-    <h2>5. Data Privacy Rights (GDPR, CCPA & CPRA)</h2>
-    <p>Depending on your legal jurisdiction (including the European Economic Area under GDPR, or California under CCPA/CPRA), you are entitled to key privacy rights regarding your personal data:</p>
-
+    <p>Google's use of advertising cookies enables it and its advertising network partners to serve personalized and non-personalized ads tailored to user browsing trends. You can manage or opt out of personalized Google advertising at any time by visiting:</p>
     <ul>
-        <li><strong>Right to Access:</strong> Request copies of personal data stored by CoinvestAI.</li>
-        <li><strong>Right to Erasure (Right to be Forgotten):</strong> Request deletion of your contact information from our databases.</li>
-        <li><strong>Right to Rectification:</strong> Request correction of inaccurate personal data.</li>
-        <li><strong>Right to Opt-Out:</strong> Direct us not to sell or share personal data (Note: CoinvestAI does not sell personal user data to third-party data brokers).</li>
+        <li><a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a></li>
+        <li><a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">AboutAds.info Consumer Choice Portal</a></li>
+        <li><a href="https://www.youronlinechoices.com/" target="_blank" rel="noopener">European Interactive Digital Advertising Alliance (EDAA)</a></li>
     </ul>
 
-    <p>To exercise any of these privacy rights, please submit a request to our compliance officer at <a href="mailto:privacy@coinvestai.com">privacy@coinvestai.com</a>.</p>
+    <h2>5. Legal Frameworks: GDPR, CCPA &amp; Global Privacy Rights</h2>
+    <p>CoinvestAI upholds statutory privacy rights under the European Union's General Data Protection Regulation (<strong>GDPR</strong>), California Consumer Privacy Act (<strong>CCPA/CPRA</strong>), and UK Data Protection Laws.</p>
 
-    <h2>6. Data Security & Third-Party Links</h2>
-    <p>We implement appropriate technical and organizational security measures to protect your information against unauthorized access or alteration. However, no internet transmission is 100% secure.</p>
+    <h3>Your Statutory Rights Include:</h3>
+    <ul>
+        <li><strong>Right to Access:</strong> Request full confirmation of what personal data we hold about you.</li>
+        <li><strong>Right to Erasure ("Right to Be Forgotten"):</strong> Request the permanent deletion of your email address, contact history, or posted comments.</li>
+        <li><strong>Right to Rectification:</strong> Request corrections to any outdated or inaccurate personal records.</li>
+        <li><strong>Right to Restrict or Object to Processing:</strong> Object to specific data processing activities.</li>
+        <li><strong>Right to Opt-Out of Sale / Sharing:</strong> CoinvestAI does <strong>not sell, rent, or trade</strong> your personal information or contact details to third-party data brokers.</li>
+    </ul>
+    <p>To exercise any of these privacy rights, please submit an official request to our Data Protection team at <a href="mailto:privacy@coinvestai.com">privacy@coinvestai.com</a>.</p>
 
-    <p>Our website contains external links to third-party financial platforms, AI software providers, and reference databases. CoinvestAI is not responsible for the privacy practices or content of third-party websites.</p>
+    <h2>6. Children's Online Privacy Protection (COPPA)</h2>
+    <p>CoinvestAI provides specialized financial technology, quantitative trading, and blockchain intelligence intended for adults and institutional readers. We do not knowingly solicit or collect personal information from children under the age of 13 (or under 16 within the European Economic Area). If you believe a child has submitted personal data to our website, please contact us immediately for swift deletion.</p>
 
-    <h2>7. Updates to This Privacy Policy</h2>
-    <p>We reserve the right to revise or update this Privacy Policy at any time. Any changes will be reflected on this page with an updated modification date.</p>
+    <h2>7. Data Security &amp; Third-Party Links</h2>
+    <p>We deploy robust organizational and technical safeguards, including HTTPS protocol encryption, restricted database access, and continuous server monitoring. However, no digital transmission over the global Internet is 100% invulnerable.</p>
+    <p>Our publications frequently contain hyperlinks to external financial providers, developer repositories, and academic research papers. CoinvestAI holds no responsibility or liability for the content, security, or privacy policies of third-party platforms.</p>
 
-    <h2>8. Contact Us</h2>
-    <p>If you have any questions or concerns regarding our Privacy Policy or data security practices, please contact us via email at <a href="mailto:privacy@coinvestai.com">privacy@coinvestai.com</a> or visit our <a href="contact.html">Contact Page</a>.</p>
+    <h2>8. Policy Amendments</h2>
+    <p>We periodically update this Privacy Policy to reflect advancements in technology, legal requirements, or changes to our editorial workflows. Any revisions will be published on this page accompanied by an updated "Last Updated" timestamp.</p>
+
+    <h2>9. Contact Our Data Compliance Team</h2>
+    <p>For questions, privacy inquiries, or data access requests, please contact our team directly:</p>
+    <ul>
+        <li><strong>Email:</strong> privacy@coinvestai.com</li>
+        <li><strong>Contact Portal:</strong> <a href="contact.html">coinvestai.com/contact.html</a></li>
+        <li><strong>Editorial Guidelines:</strong> <a href="editorial-guidelines.html">coinvestai.com/editorial-guidelines.html</a></li>
+    </ul>
 
 </div></div>
 
