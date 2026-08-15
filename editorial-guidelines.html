@@ -1,236 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editorial Guidelines & Integrity Standards — CoinvestAI 2026</title>
-    <meta name="description" content="CoinvestAI Editorial Guidelines — Our commitment to independence, technical accuracy, fact-checking, AI disclosure, and responsible financial research.">
-    <link rel="canonical" href="https://coinvestai.com/editorial-guidelines.html">
-    
-    <!-- Schema.org Data for Policy Page -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Editorial Guidelines & Integrity Policy — CoinvestAI",
-      "url": "https://coinvestai.com/editorial-guidelines.html",
-      "description": "Editorial standards, fact-checking methodology, and publishing guidelines governing CoinvestAI research publications.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "CoinvestAI",
-        "url": "https://coinvestai.com",
-        "logo": "https://coinvestai.com/logo.png"
-      },
-      "datePublished": "2026-08-13",
-      "dateModified": "2026-08-15"
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editorial Guidelines | CoinvestAI</title>
+<meta name="description" content="Learn about CoinvestAI's editorial standards, fact-checking processes, independence, and commitment to accurate financial and AI research.">
+<link rel="canonical" href="https://coinvestai.com/editorial-guidelines.html">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    :root{
+        --primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:12px;
+        --font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;
     }
-    </script>
 
-    <!-- Clean Google Fonts Import -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    body.dark-mode {
+        --primary:#F8FAFC;--secondary:#3B82F6;--bg:#0B132B;--text:#F1F5F9;--gray:#94A3B8;--light-gray:#1E293B;--border:#334155;
+    }
 
-    <!-- Google AdSense Code with defer -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous" defer></script>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.8;transition:background 0.3s, color 0.3s;}
 
-    <style>
-        :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:12px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
-        *{margin:0;padding:0;box-sizing:border-box;}
-        html{scroll-behavior:smooth;}
-        body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.8;}
-        h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;}
-        a{text-decoration:none;color:inherit;}
-        
-        .container{max-width:900px;margin:0 auto;padding:0 24px;}
-        .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .header{position:sticky;top:0;z-index:1000;background:var(--bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:background 0.3s, border-color 0.3s;}
+    .header-inner{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:16px 24px;}
+    .logo{font-family:var(--font-heading);font-size:24px;font-weight:700;background:linear-gradient(135deg,#2563EB,#22C55E);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
+    .nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--gray);transition:all 0.2s;}
+    .nav-links a:hover,.nav-links a.active{background:rgba(37,99,235,0.08);color:var(--secondary);}
 
-        /* Header Navigation */
-        .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-        .header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
-        .logo{font-family:var(--font-heading);font-size:24px;font-weight:700;}
-        .nav-links{display:flex;gap:4px;list-style:none;}
-        .nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--gray);}
-        .nav-links a:hover,.nav-links a.active{background:rgba(37,99,235,0.08);color:var(--secondary);}
+    .dark-mode-btn {
+        background: var(--light-gray); border: 1px solid var(--border); color: var(--text);
+        padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.2s; margin-left: 8px;
+    }
+    .dark-mode-btn:hover { background: var(--secondary); color: white; border-color: var(--secondary); }
 
-        .breadcrumbs{padding:20px 0;font-size:14px;color:var(--gray);}
-        .breadcrumbs a{color:var(--secondary);}
+    .wrap { max-width: 800px; margin: 0 auto; padding: 60px 24px; }
+    h1 { font-family: var(--font-heading); font-size: 38px; font-weight: 700; color: var(--text); margin-bottom: 16px; }
+    .lead { font-size: 19px; color: var(--gray); margin-bottom: 40px; line-height: 1.6; }
+    
+    h2 { font-family: var(--font-heading); font-size: 24px; color: var(--text); margin: 36px 0 16px 0; border-left: 4px solid var(--secondary); padding-left: 14px; }
+    p { font-size: 17px; color: var(--gray); margin-bottom: 20px; }
+    ul { margin: 0 0 24px 24px; color: var(--gray); }
+    li { font-size: 16.5px; margin-bottom: 10px; }
 
-        /* Hero */
-        .page-hero{background:linear-gradient(135deg,var(--primary),#020617);padding:60px 0;text-align:center;color:white;}
-        .page-hero h1{font-size:40px;margin-bottom:8px;line-height:1.2;}
-        .page-hero .date{color:rgba(255,255,255,0.65);font-size:14px;}
+    .footer{background:var(--primary);color:white;padding:60px 0 30px;margin-top:60px;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
+    .footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-bottom:18px;}
+    .footer ul{list-style:none;}
+    .footer li{margin-bottom:10px;}
+    .footer a{color:rgba(255,255,255,0.55);font-size:14px;}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.75);font-size:14px;}
 
-        /* Content Area */
-        .content{padding:50px 0 70px;max-width:850px;margin:0 auto;}
-        .content h2{font-size:24px;margin:38px 0 16px;color:var(--primary);border-bottom:1px solid var(--border);padding-bottom:8px;}
-        .content h2:first-of-type{margin-top:0;}
-        .content p{color:#334155;margin-bottom:16px;font-size:16px;line-height:1.8;}
-        .content ul{color:#334155;margin-bottom:20px;padding-left:24px;font-size:15px;}
-        .content li{margin-bottom:8px;}
-        .content a{color:var(--secondary);font-weight:600;text-decoration:underline;}
-
-        .info-box{background:#eff6ff;border-left:4px solid var(--secondary);padding:20px 24px;margin:28px 0;border-radius:0 8px 8px 0;font-size:15px;line-height:1.7;}
-        .info-box p{color:#1e40af;margin:0;font-weight:500;}
-
-        /* Ad Banner Slot */
-        .ad-slot{margin:36px 0;padding:16px 0;text-align:center;background:var(--light-gray);border-radius:var(--radius);border:1px dashed var(--border);}
-        .ad-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gray);margin-bottom:8px;}
-
-        /* Footer */
-        .footer{background:var(--primary);color:white;padding:60px 0 30px;margin-top:60px;}
-        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
-        .footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-bottom:18px;}
-        .footer ul{list-style:none;}
-        .footer li{margin-bottom:10px;}
-        .footer a{color:rgba(255,255,255,0.55);font-size:14px;}
-        .footer a:hover{color:white;}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.35);font-size:14px;}
-
-        /* Render Performance Optimization */
-        .footer, .ad-slot, .info-box {
-            content-visibility: auto;
-            contain-intrinsic-size: 1px 300px;
-        }
-
-        @media(max-width:768px){
-            .page-hero h1{font-size:28px;}
-            .content h2{font-size:22px;}
-            .nav-links{display:none;}
-            .footer-grid{grid-template-columns:1fr;}
-        }
-    </style>
+    @media (max-width:768px){ .nav-links{display:none;} .footer-grid{grid-template-columns:1fr;} }
+</style>
 </head>
 <body>
 
-<!-- Header Navigation -->
-<header class="header"><div class="container"><div class="header-inner">
-    <a href="index.html" class="logo gradient-text">CoinvestAI</a>
-    <nav><ul class="nav-links">
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="ai-tools.html">AI Tools</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="fintech.html">Fintech</a></li>
-        <li><a href="crypto-ai.html">Crypto AI</a></li>
-        <li><a href="guides.html">Guides</a></li>
-        <li><a href="about.html">About</a></li>
-    </ul></nav>
-</div></div></header>
-
-<div class="container"><nav class="breadcrumbs"><a href="index.html">Home</a> › Editorial Guidelines</nav></div>
-
-<!-- Hero Banner -->
-<section class="page-hero">
-    <div class="container">
-        <h1>Editorial Guidelines &amp; Integrity Standards</h1>
-        <p class="date">Last Updated: August 15, 2026</p>
-    </div>
-</section>
-
-<!-- Content Section -->
-<div class="content"><div class="container">
-
-    <div class="info-box">
-        <p><strong>Core Mission:</strong> CoinvestAI is dedicated to publishing rigorous, transparent, and independent research at the intersection of artificial intelligence, quantitative finance, cryptocurrency markets, and digital asset analytics.</p>
-    </div>
-
-    <h2>1. Editorial Independence &amp; Objectivity</h2>
-    <p>CoinvestAI maintains absolute separation between editorial judgment and commercial considerations. Our analysts, researchers, and contributing authors operate independently of advertisers, affiliate partners, and third-party software developers.</p>
-    
-    <p>No commercial relationship or advertising arrangement can secure a favorable product rating, bypass technical evaluation, or alter research conclusions published on our platform.</p>
-
-    <!-- In-Article Ad Banner -->
-    <div class="ad-slot">
-        <div class="ad-label">Advertisement</div>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7088247829787060"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
-    <h2>2. Fact-Checking &amp; Technical Verification</h2>
-    <p>Financial technology content demands exceptional technical accuracy. Every publication undergoes a multi-layer verification workflow before release:</p>
-
-    <ul>
-        <li><strong>Primary Source Citation:</strong> Claims regarding AI model architectures, smart contract exploits, or financial telemetry must reference official documentation, peer-reviewed whitepapers, SEC filings, or verifiable on-chain data telemetry.</li>
-        <li><strong>Hands-On Software Testing:</strong> Software reviews (such as Liquid Co-Invest, Manus AI, or Trade Ideas) incorporate practical testing within live market feeds or sandboxed execution environments.</li>
-        <li><strong>Internal Peer Review:</strong> Technical guides and algorithmic breakdowns undergo internal review by quantitative research staff prior to publication.</li>
-    </ul>
-
-    <h2>3. Responsible AI &amp; Content Creation Policy</h2>
-    <p>While CoinvestAI reports on artificial intelligence, we adhere to strict standards regarding AI usage in content creation:</p>
-
-    <ul>
-        <li><strong>Mandatory Human Oversight:</strong> All articles are written, reviewed, and approved by qualified human editors and subject-matter analysts.</li>
-        <li><strong>No Synthetic Hallucinations:</strong> AI assistance tools used during research must have all generated data points independently verified against primary financial records and live market telemetry.</li>
-        <li><strong>Algorithmic Transparency:</strong> When evaluating AI trading algorithms or LLMs, we explicitly highlight model limitations, hallucination risks, data latency, and execution slippage.</li>
-    </ul>
-
-    <h2>4. Corrections &amp; Updates Policy</h2>
-    <p>Financial markets and software specifications evolve rapidly. When a factual error or outdated specification is identified, CoinvestAI updates the article promptly:</p>
-
-    <ul>
-        <li><strong>Minor Typographical Updates:</strong> Minor spelling or formatting adjustments are corrected silently to maintain reader flow.</li>
-        <li><strong>Substantive Corrections:</strong> Significant updates, technical adjustments, or numerical corrections are accompanied by an updated timestamp and a clear revision note.</li>
-    </ul>
-
-    <p>Readers can submit correction reports or technical feedback directly via our <a href="contact.html">Contact Page</a> or by emailing <a href="mailto:editorial@coinvestai.com">editorial@coinvestai.com</a>.</p>
-
-    <h2>5. Advertising &amp; Affiliate Transparency</h2>
-    <p>To fund our independent research infrastructure, CoinvestAI participates in digital advertising programs (such as <strong>Google AdSense</strong>) and selective affiliate partnerships. All affiliate links are clearly distinguished, and full disclosures are available on our <a href="disclaimer.html">Disclaimer</a> page.</p>
-
-    <h2>6. Educational Boundaries &amp; YMYL Compliance</h2>
-    <p>Articles on CoinvestAI are prepared exclusively for educational and informational research. We do not provide personalized financial, legal, or investment advice, nor do we issue guaranteed market forecasts. For complete methodology details, please visit our <a href="review-methodology.html">Review Methodology</a> and explore our <a href="authors.html">Author Profiles</a>.</p>
-
-</div></div>
-
-<!-- Footer -->
-<footer class="footer"><div class="container"><div class="footer-grid">
-    <div>
-        <h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3>
-        <p style="color:rgba(255,255,255,0.5);font-size:14px;">Independent research on AI-driven financial tools, quantitative analytics, and fintech innovation.</p>
-    </div>
-    <div>
-        <h3>Explore</h3>
-        <ul>
+<header class="header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">CoinvestAI</a>
+        <nav><ul class="nav-links">
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="ai-tools.html">AI Tools Directory</a></li>
+            <li><a href="ai-tools.html">AI Tools</a></li>
             <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="guides.html">Guides</a></li>
-            <li><a href="news.html">News</a></li>
-        </ul>
-    </div>
-    <div>
-        <h3>Topics</h3>
-        <ul>
-            <li><a href="fintech.html">Fintech AI</a></li>
+            <li><a href="fintech.html">Fintech</a></li>
             <li><a href="crypto-ai.html">Crypto AI</a></li>
-            <li><a href="authors.html">Authors</a></li>
-        </ul>
-    </div>
-    <div>
-        <h3>Company</h3>
-        <ul>
+            <li><a href="guides.html">Guides</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="editorial-guidelines.html">Editorial Guidelines</a></li>
-            <li><a href="review-methodology.html">Review Methodology</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="disclaimer.html">Disclaimer</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="cookie-policy.html">Cookie Policy</a></li>
-        </ul>
+            <li><button class="dark-mode-btn" onclick="toggleDarkMode()">🌓 Mode</button></li>
+        </ul></nav>
     </div>
-</div>
-<div class="footer-bottom">
-    <p style="font-size:12px;color:rgba(255,255,255,0.45);max-width:700px;margin:0 auto 12px;line-height:1.6;">
-        <strong>Disclaimer:</strong> CoinvestAI provides independent news, research, and analysis for educational purposes only. Nothing herein constitutes financial or investment advice.
-    </p>
-    <p>© 2026 CoinvestAI. All rights reserved.</p>
-</div></div></footer>
+</header>
 
+<main>
+    <div class="wrap">
+        <h1>Editorial Guidelines</h1>
+        <p class="lead">At CoinvestAI, we are committed to delivering independent, accurate, and rigorous research on AI-driven financial tools, algorithmic trading, and fintech innovation.</p>
+
+        <h2>1. Accuracy & Fact-Checking</h2>
+        <p>Our editorial team verifies data, financial metrics, and technological claims before publication. We cross-reference metrics with primary industry sources, official documentation, and empirical backtests to ensure our insights reflect real-world functionality.</p>
+
+        <h2>2. Independence & Integrity</h2>
+        <p>Our research and reviews remain strictly independent. While we may utilize affiliate links or partner programs, commercial relationships never dictate our ratings, scoring methodologies, or analytical conclusions. An AI tool or platform earns its reputation strictly through performance, usability, and transparency.</p>
+
+        <h2>3. Transparency in AI Usage</h2>
+        <p>As a platform dedicated to AI and financial technology, we leverage advanced machine learning tools for data gathering, structural optimization, and market research. However, every article, review, and publication is rigorously overseen, reviewed, and finalized by human editors to maintain professional standards.</p>
+
+        <h2>4. Corrections Policy</h2>
+        <p>If financial data, statistics, or software details change, we update our publications promptly. Should an error occur, we correct it transparently with a clear note indicating the update to maintain full accountability with our readers.</p>
+
+        <h2>5. Financial Disclaimer</h2>
+        <p>CoinvestAI provides research, analytical insights, and educational content only. Nothing published on this platform constitutes formal financial, investment, or legal advice. Always conduct independent research or consult qualified professionals before making financial decisions.</p>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container" style="max-width:1100px;margin:0 auto;padding:0 24px;">
+        <div class="footer-grid">
+            <div>
+                <h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3>
+                <p style="color:rgba(255,255,255,0.5);font-size:14px;">Independent research on AI-driven financial tools, quantitative analytics, and fintech innovation.</p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="ai-tools.html">AI Tools Directory</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="guides.html">Guides</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Topics</h3>
+                <ul>
+                    <li><a href="fintech.html">Fintech AI</a></li>
+                    <li><a href="crypto-ai.html">Crypto AI</a></li>
+                    <li><a href="authors.html">Authors</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="editorial-guidelines.html">Editorial Guidelines</a></li>
+                    <li><a href="review-methodology.html">Review Methodology</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 CoinvestAI. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+</script>
 </body>
 </html>
