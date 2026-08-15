@@ -33,8 +33,9 @@ a { text-decoration: none; color: var(--secondary); transition: 0.2s; }
 .dark-mode-btn { background: var(--light-gray); border: 1px solid var(--border); color: var(--text); padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.2s; margin-left: 8px; }
 .dark-mode-btn:hover { background: var(--secondary); color: white; border-color: var(--secondary); }
 
-/* --- Footer --- */
-.footer { background: var(--primary); color: white; padding: 60px 0 30px; margin-top: 80px; }
+/* --- Footer (Fixed for Dark Mode) --- */
+.footer { background: #0F172A; color: white; padding: 60px 0 30px; margin-top: 80px; transition: background 0.3s; }
+body.dark-mode .footer { background: #020617; border-top: 1px solid var(--border); }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
 .footer h3 { font-size: 12px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
 .footer ul { list-style: none; }
@@ -57,7 +58,7 @@ a { text-decoration: none; color: var(--secondary); transition: 0.2s; }
 .acard { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--bg); transition: 0.3s; }
 .acard:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 .acard-body { padding: 24px; }
-.acard-meta { display: flex; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 14px; margin-top: 14px; font-size: 13px; color: var(--gray); }
+.acard-meta { display: footer-meta; display: flex; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 14px; margin-top: 14px; font-size: 13px; color: var(--gray); }
 
 /* --- Responsive --- */
 @media(max-width:768px) { .nav-links { display: none; } .footer-grid { grid-template-columns: 1fr; } }
