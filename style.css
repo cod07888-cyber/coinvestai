@@ -39,8 +39,18 @@ a { text-decoration: none; color: var(--secondary); transition: 0.2s; }
 .footer h3 { font-size: 12px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
 .footer ul { list-style: none; }
 .footer li { margin-bottom: 10px; }
-.footer a { color: rgba(255,255,255,0.55); font-size: 14px; }
+.footer a { color: rgba(255,255,255,0.55); font-size: 14px; transition: color 0.2s; }
+.footer a:hover { color: white; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); margin-top: 40px; padding-top: 24px; text-align: center; color: rgba(255,255,255,0.75); font-size: 14px; }
+
+/* --- Footer Social Links --- */
+.footer-social { display: flex; gap: 10px; margin-top: 15px; }
+.footer-social a { 
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 6px 14px; background: rgba(255,255,255,0.08); border-radius: 6px;
+    color: rgba(255,255,255,0.85); font-size: 13px; font-weight: 500; transition: 0.2s;
+}
+.footer-social a:hover { background: var(--secondary); color: white; transform: translateY(-2px); }
 
 /* --- Blog Cards (Grid) --- */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
