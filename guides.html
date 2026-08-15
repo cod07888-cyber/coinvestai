@@ -6,6 +6,11 @@
     <title>AI Finance Guides & Educational Resources 2026 | CoinvestAI</title>
     <meta name="description" content="Step-by-step educational guides on AI investing, quantitative portfolio management, machine learning models, and trading platform evaluations in 2026.">
     <link rel="canonical" href="https://coinvestai.com/guides.html">
+    <meta property="og:title" content="AI Finance Guides & Educational Resources 2026 | CoinvestAI">
+    <meta property="og:description" content="Educational guides and step-by-step walkthroughs on AI investing, quantitative portfolio management, and trading platform evaluation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://coinvestai.com/guides.html">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Schema.org CollectionPage & ItemList Structured Data -->
     <script type="application/ld+json">
@@ -65,20 +70,34 @@
     }
     </script>
 
-    <!-- Clean Google Fonts Import -->
+    <!-- Clean Google Fonts Import with display=swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google AdSense Code with defer -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous" defer></script>
+    <!-- Optimized AdSense Lazy-Load Script -->
+    <script>
+        function loadAdSense() {
+            if(window.adsenseLoaded) return;
+            window.adsenseLoaded = true;
+            const script = document.createElement('script');
+            script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060";
+            script.async = true;
+            script.crossOrigin = "anonymous";
+            document.head.appendChild(script);
+        }
+        window.addEventListener('scroll', loadAdSense, {once: true});
+        window.addEventListener('touchstart', loadAdSense, {once: true});
+        setTimeout(loadAdSense, 3500); 
+    </script>
 
     <style>
         :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:14px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
         *{margin:0;padding:0;box-sizing:border-box;}
         html{scroll-behavior:smooth;}
         body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.7;}
-        h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;}a{text-decoration:none;color:inherit;}
+        h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;}
+        a{text-decoration:none;color:inherit;}
         
         .container{max-width:1280px;margin:0 auto;padding:0 24px;}
         .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
