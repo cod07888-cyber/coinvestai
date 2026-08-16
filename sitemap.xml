@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- ========================================== -->
-  <!-- 1. MAIN CORE PAGES & PRIMARY HUBS          -->
-  <!-- ========================================== -->
   <url>
     <loc>https://coinvestai.com/</loc>
     <lastmod>2026-08-15</lastmod>
@@ -52,10 +48,6 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- ========================================== -->
-  <!-- 2. AI TOOLS & SOFTWARE IN-DEPTH REVIEWS    -->
-  <!-- ========================================== -->
   <url>
     <loc>https://coinvestai.com/ai-tools-chatgpt.html</loc>
     <lastmod>2026-08-15</lastmod>
@@ -122,10 +114,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- ========================================== -->
-  <!-- 3. RESEARCH PUBLICATIONS & BLOG ARTICLES   -->
-  <!-- ========================================== -->
   <url>
     <loc>https://coinvestai.com/blog-generative-ai-corporate-financial-auditing.html</loc>
     <lastmod>2026-08-15</lastmod>
@@ -234,10 +222,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- ========================================== -->
-  <!-- 4. AUTHORS & EDITORIAL PROFILES            -->
-  <!-- ========================================== -->
   <url>
     <loc>https://coinvestai.com/authors.html</loc>
     <lastmod>2026-08-15</lastmod>
@@ -250,10 +234,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- ========================================== -->
-  <!-- 5. COMPANY, SUPPORT & COMPLIANCE           -->
-  <!-- ========================================== -->
   <url>
     <loc>https://coinvestai.com/about.html</loc>
     <lastmod>2026-08-15</lastmod>
@@ -278,10 +258,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- ========================================== -->
-  <!-- 6. LEGAL & PRIVACY POLICIES                -->
-  <!-- ========================================== -->
   <url>
     <loc>https://coinvestai.com/privacy-policy.html</loc>
     <lastmod>2026-08-15</lastmod>
@@ -306,18 +282,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-<url>
+  <url>
     <loc>https://coinvestai.com/blog-stablecoins-business-ledgers.html</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://coinvestai.com/blog-ai-crypto-trading-2026.html</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-</url>
-  
+  </url>
 </urlset>
