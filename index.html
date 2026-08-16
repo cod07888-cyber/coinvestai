@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CoinvestAI — The Future of AI in Finance & Investment | 2026</title>
+
     <meta name="description" content="Independent insights on AI-powered investing tools, fintech innovation, cryptocurrency intelligence, and the technologies reshaping modern finance in 2026.">
+
     <meta property="og:title" content="CoinvestAI — The Future of AI in Finance & Investment">
     <meta property="og:description" content="Independent insights on AI-powered investing tools, fintech innovation, and cryptocurrency intelligence.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://coinvestai.com/">
+
     <meta name="twitter:card" content="summary_large_image">
+
     <link rel="canonical" href="https://coinvestai.com/">
 
-    <!-- Schema.org Structured Data -->
+    <!-- =========================================================
+         Schema.org Structured Data
+    ========================================================== -->
     <script type="application/ld+json">
     [
       {
@@ -40,144 +47,1083 @@
     ]
     </script>
 
-    <!-- Google Fonts -->
+    <!-- =========================================================
+         Google Fonts
+         display=swap prevents invisible text while fonts load.
+    ========================================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- External CSS Style -->
-    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
+    <!-- =========================================================
+         ALL CSS INLINE
+         This removes the external style.css request from the
+         initial critical rendering path.
+    ========================================================== -->
     <style>
-        /* Specific Homepage Layout Styles */
-        .hero{min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(160deg,#0F172A 0%,#1e293b 50%,#020617 100%);overflow:hidden;}
-        .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 40%,rgba(37,99,235,0.12) 0%,transparent 50%),radial-gradient(circle at 70% 60%,rgba(34,197,94,0.08) 0%,transparent 50%);}
-        .hero-content{position:relative;z-index:10;text-align:center;padding:120px 24px 80px;max-width:800px;margin:0 auto;}
-        .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:50px;color:rgba(255,255,255,0.9);font-size:14px;margin-bottom:28px;}
-        .hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite;}
-        @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
-        .hero h1{font-size:64px;font-weight:700;color:white;line-height:1.1;margin-bottom:20px;}
-        .hero-subtitle{font-size:20px;color:rgba(255,255,255,0.75);margin-bottom:36px;max-width:600px;margin-left:auto;margin-right:auto;}
-        .hero-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-        
-        .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--radius);font-weight:600;font-size:16px;cursor:pointer;transition:all 0.3s;border:none;font-family:var(--font-body);}
-        .btn-primary{background:var(--secondary);color:white;}
-        .btn-primary:hover{background:#1d4ed8;transform:translateY(-1px);box-shadow:0 8px 25px rgba(37,99,235,0.25);}
-        .btn-outline{background:transparent;color:white;border:1px solid rgba(255,255,255,0.3);}
-        .btn-outline:hover{background:rgba(255,255,255,0.1);}
-        .btn-dark{background:var(--primary);color:white;}
-        .btn-dark:hover{background:#1e293b;transform:translateY(-1px);}
+        /* =====================================================
+           Root Variables
+        ====================================================== */
 
-        .section{padding:80px 0;}
-        .section-gray{background:var(--light-gray);}
-        .section-title{font-size:40px;font-weight:700;text-align:center;margin-bottom:16px;}
-        .section-subtitle{font-size:18px;color:var(--gray);text-align:center;max-width:600px;margin:0 auto 48px;}
-        
-        .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
-        .card{background:var(--bg);border-radius:16px;padding:32px;border:1px solid var(--border);transition:all 0.3s;}
-        .card:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,0.08);border-color:var(--secondary);}
-        .card-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:22px;}
-        .card-icon.blue{background:#eff6ff;color:var(--secondary);}
-        .card-icon.purple{background:#f5f3ff;color:#8b5cf6;}
-        .card-icon.green{background:#f0fdf4;color:var(--accent);}
-        .card h3{font-size:20px;margin-bottom:10px;}
-        .card p{color:var(--gray);font-size:15px;margin-bottom:18px;}
-        .card-link{color:var(--secondary);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:6px;}
+        :root {
+            --primary: #0F172A;
+            --secondary: #2563EB;
+            --accent: #22C55E;
+            --bg: #FFFFFF;
+            --text: #111827;
+            --gray: #64748B;
+            --light-gray: #f8fafc;
+            --border: #e5e7eb;
+            --radius: 12px;
+            --coral: #EF4444;
 
-        .article-card{background:var(--bg);border-radius:16px;overflow:hidden;border:1px solid var(--border);transition:all 0.3s;}
-        .article-card:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,0.08);}
-        .article-card-image{height:200px;position:relative;}
-        .aimg1{background:linear-gradient(135deg,#2563EB,#1d4ed8);}
-        .aimg2{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
-        .aimg3{background:linear-gradient(135deg,#22C55E,#16a34a);}
-        .article-card-category{position:absolute;top:14px;left:14px;padding:5px 14px;background:rgba(255,255,255,0.92);border-radius:50px;font-size:12px;font-weight:600;color:var(--primary);}
-        .article-card-body{padding:22px;}
-        .article-card-body h3{font-size:18px;margin-bottom:10px;}
-        .article-card-body p{color:var(--gray);font-size:14px;margin-bottom:14px;}
-        .article-card-meta{display:flex;gap:14px;font-size:13px;color:var(--gray);margin-bottom:14px;}
-        .article-card-meta a{color:var(--secondary);}
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
 
-        .tool-card{display:flex;gap:16px;padding:20px;background:var(--bg);border-radius:14px;border:1px solid var(--border);transition:all 0.3s;align-items:flex-start;}
-        .tool-card:hover{border-color:var(--secondary);box-shadow:0 4px 20px rgba(0,0,0,0.05);}
-        .tool-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;flex-shrink:0;}
-        .c1{background:linear-gradient(135deg,#2563EB,#1d4ed8);}
-        .c2{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
-        .c3{background:linear-gradient(135deg,#22C55E,#16a34a);}
-        .tool-info h3{font-size:16px;margin-bottom:4px;font-weight:700;}
-        .tcat{font-size:12px;color:var(--gray);}
-        .tdesc{font-size:14px;color:var(--gray);margin:6px 0;}
-        .tool-rating{font-weight:600;font-size:14px;}
-        .tool-rating a{font-size:11px;color:var(--gray);text-decoration:underline;margin-left:4px;}
+        body.dark-mode {
+            --primary: #F8FAFC;
+            --secondary: #3B82F6;
+            --bg: #0B132B;
+            --text: #F1F5F9;
+            --gray: #94A3B8;
+            --light-gray: #1E293B;
+            --border: #334155;
+        }
 
-        .featured-grid{display:grid;grid-template-columns:1fr 1fr;background:var(--light-gray);border-radius:20px;overflow:hidden;border:1px solid var(--border);}
-        .featured-content{padding:48px;}
-        .featured-image{min-height:400px;background:linear-gradient(135deg,#0F172A,#1e293b);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:60px;}
+        /* =====================================================
+           Global Styles
+        ====================================================== */
 
-        .newsletter{background:linear-gradient(160deg,var(--primary),#020617);position:relative;overflow:hidden;}
-        .nl-content{position:relative;z-index:10;text-align:center;max-width:520px;margin:0 auto;}
-        .nl-content h2{color:white;font-size:36px;margin-bottom:14px;}
-        .nl-content p{color:rgba(255,255,255,0.7);margin-bottom:28px;font-size:17px;}
-        .nl-form{display:flex;gap:10px;max-width:460px;margin:0 auto;}
-        .nl-form input{flex:1;padding:15px 20px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:white;font-size:16px;outline:none;}
-        .nl-privacy{font-size:13px;color:rgba(255,255,255,0.45);margin-top:12px;}
-        .nl-privacy a{color:rgba(255,255,255,0.6);text-decoration:underline;}
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        .faq-item{background:var(--bg);border:1px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden;}
-        .faq-q{width:100%;text-align:left;padding:18px 22px;background:none;border:none;cursor:pointer;font-family:var(--font-heading);font-size:16px;font-weight:600;display:flex;justify-content:space-between;align-items:center;color:var(--text);}
-        .faq-arr{transition:transform 0.3s;font-size:20px;}
-        .faq-item.active .faq-arr{transform:rotate(180deg);}
-        .faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s;}
-        .faq-item.active .faq-a{max-height:400px;}
-        .faq-ai{padding:0 22px 20px;color:var(--gray);font-size:15px;line-height:1.7;}
+        html {
+            scroll-behavior: smooth;
+        }
 
-        .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);z-index:999;padding:90px 24px 24px;}
-        .mobile-menu.active{display:block;}
-        .mobile-menu a{display:block;padding:14px 16px;font-size:17px;font-weight:500;border-radius:8px;color:var(--text);}
+        body {
+            font-family: var(--font-body);
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.8;
+            transition: background 0.3s, color 0.3s;
+        }
 
-        @media(max-width:1024px){.hero h1{font-size:44px;}.section-title{font-size:32px;}}
-        @media(max-width:768px){.hero h1{font-size:34px;}.section-title{font-size:28px;}.nav-links{display:none;}.mobile-menu-btn{display:block;}.featured-grid{grid-template-columns:1fr;}.featured-image{min-height:200px;order:-1;}.featured-content{padding:28px;}.nl-form{flex-direction:column;}.cards-grid{grid-template-columns:1fr;}}
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            transition: 0.2s;
+        }
+
+        button,
+        input {
+            font-family: var(--font-body);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                135deg,
+                var(--secondary),
+                var(--accent)
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* =====================================================
+           Header & Navigation
+        ====================================================== */
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            transition: background 0.3s, border-color 0.3s;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 4px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: rgba(37, 99, 235, 0.08);
+            color: var(--secondary);
+        }
+
+        .dark-mode-btn {
+            background: var(--light-gray);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s;
+            margin-left: 8px;
+        }
+
+        .dark-mode-btn:hover {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+
+        /* =====================================================
+           Footer
+        ====================================================== */
+
+        .footer {
+            background: #0F172A;
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+            transition: background 0.3s;
+        }
+
+        body.dark-mode .footer {
+            background: #020617;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 18px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer li {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.55);
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            margin-top: 40px;
+            padding-top: 24px;
+            text-align: center;
+            color: rgba(255,255,255,0.75);
+            font-size: 14px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 14px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 6px;
+            color: rgba(255,255,255,0.85);
+            font-size: 13px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .footer-social a:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* =====================================================
+           Generic Cards / Grid
+        ====================================================== */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(350px, 1fr)
+            );
+            gap: 30px;
+        }
+
+        .acard {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--bg);
+            transition: 0.3s;
+        }
+
+        .acard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .acard-body {
+            padding: 24px;
+        }
+
+        .acard-meta {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid var(--border);
+            padding-top: 14px;
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--gray);
+        }
+
+        /* =====================================================
+           Hero
+        ====================================================== */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background:
+                linear-gradient(
+                    160deg,
+                    #0F172A 0%,
+                    #1e293b 50%,
+                    #020617 100%
+                );
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(
+                    circle at 30% 40%,
+                    rgba(37,99,235,0.12) 0%,
+                    transparent 50%
+                ),
+                radial-gradient(
+                    circle at 70% 60%,
+                    rgba(34,197,94,0.08) 0%,
+                    transparent 50%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 120px 24px 80px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50px;
+            color: rgba(255,255,255,0.9);
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .hero-badge .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 700;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 36px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* =====================================================
+           Buttons
+        ====================================================== */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-family: var(--font-body);
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(37,99,235,0.25);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .btn-dark {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: #1e293b;
+            transform: translateY(-1px);
+        }
+
+        /* =====================================================
+           Sections
+        ====================================================== */
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-gray {
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gray);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+
+        /* =====================================================
+           Main Cards
+        ====================================================== */
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(300px, 1fr)
+            );
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--bg);
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            border-color: var(--secondary);
+        }
+
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .card-icon.blue {
+            background: #eff6ff;
+            color: var(--secondary);
+        }
+
+        .card-icon.purple {
+            background: #f5f3ff;
+            color: #8b5cf6;
+        }
+
+        .card-icon.green {
+            background: #f0fdf4;
+            color: var(--accent);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .card-link {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* =====================================================
+           Article Cards
+        ====================================================== */
+
+        .article-card {
+            background: var(--bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+        }
+
+        .article-card-image {
+            height: 200px;
+            position: relative;
+        }
+
+        .aimg1 {
+            background: linear-gradient(
+                135deg,
+                #2563EB,
+                #1d4ed8
+            );
+        }
+
+        .aimg2 {
+            background: linear-gradient(
+                135deg,
+                #8b5cf6,
+                #7c3aed
+            );
+        }
+
+        .aimg3 {
+            background: linear-gradient(
+                135deg,
+                #22C55E,
+                #16a34a
+            );
+        }
+
+        .article-card-category {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            padding: 5px 14px;
+            background: rgba(255,255,255,0.92);
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .article-card-body {
+            padding: 22px;
+        }
+
+        .article-card-body h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .article-card-body p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 14px;
+        }
+
+        .article-card-meta {
+            display: flex;
+            gap: 14px;
+            font-size: 13px;
+            color: var(--gray);
+            margin-bottom: 14px;
+        }
+
+        .article-card-meta a {
+            color: var(--secondary);
+        }
+
+        /* =====================================================
+           AI Tool Cards
+        ====================================================== */
+
+        .tool-card {
+            display: flex;
+            gap: 16px;
+            padding: 20px;
+            background: var(--bg);
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+            align-items: flex-start;
+        }
+
+        .tool-card:hover {
+            border-color: var(--secondary);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .tool-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .c1 {
+            background: linear-gradient(
+                135deg,
+                #2563EB,
+                #1d4ed8
+            );
+        }
+
+        .c2 {
+            background: linear-gradient(
+                135deg,
+                #8b5cf6,
+                #7c3aed
+            );
+        }
+
+        .c3 {
+            background: linear-gradient(
+                135deg,
+                #22C55E,
+                #16a34a
+            );
+        }
+
+        .tool-info {
+            width: 100%;
+        }
+
+        .tool-info h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+
+        .tcat {
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        .tdesc {
+            font-size: 14px;
+            color: var(--gray);
+            margin: 6px 0;
+        }
+
+        .tool-rating {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .tool-rating a {
+            font-size: 11px;
+            color: var(--gray);
+            text-decoration: underline;
+            margin-left: 4px;
+        }
+
+        /* =====================================================
+           Featured Section
+        ====================================================== */
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--light-gray);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .featured-content {
+            padding: 48px;
+        }
+
+        .featured-image {
+            min-height: 400px;
+            background: linear-gradient(
+                135deg,
+                #0F172A,
+                #1e293b
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.3);
+            font-size: 60px;
+        }
+
+        /* =====================================================
+           Newsletter
+        ====================================================== */
+
+        .newsletter {
+            background:
+                linear-gradient(
+                    160deg,
+                    var(--primary),
+                    #020617
+                );
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nl-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .nl-content h2 {
+            color: white;
+            font-size: 36px;
+            margin-bottom: 14px;
+        }
+
+        .nl-content p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 28px;
+            font-size: 17px;
+        }
+
+        .nl-form {
+            display: flex;
+            gap: 10px;
+            max-width: 460px;
+            margin: 0 auto;
+        }
+
+        .nl-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.08);
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .nl-privacy {
+            font-size: 13px !important;
+            color: rgba(255,255,255,0.45) !important;
+            margin-top: 12px;
+        }
+
+        .nl-privacy a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: underline;
+        }
+
+        /* =====================================================
+           FAQ
+        ====================================================== */
+
+        .faq-item {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-q {
+            width: 100%;
+            text-align: left;
+            padding: 18px 22px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text);
+        }
+
+        .faq-arr {
+            transition: transform 0.3s;
+            font-size: 20px;
+        }
+
+        .faq-item.active .faq-arr {
+            transform: rotate(180deg);
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+        }
+
+        .faq-item.active .faq-a {
+            max-height: 400px;
+        }
+
+        .faq-ai {
+            padding: 0 22px 20px;
+            color: var(--gray);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           Mobile Menu
+        ====================================================== */
+
+        .mobile-menu-btn {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg);
+            z-index: 999;
+            padding: 90px 24px 24px;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 14px 16px;
+            font-size: 17px;
+            font-weight: 500;
+            border-radius: 8px;
+            color: var(--text);
+        }
+
+        /* =====================================================
+           Responsive
+        ====================================================== */
+
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-image {
+                min-height: 200px;
+                order: -1;
+            }
+
+            .featured-content {
+                padding: 28px;
+            }
+
+            .nl-form {
+                flex-direction: column;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tool-card {
+                flex-direction: row;
+            }
+        }
     </style>
 
-    <!-- AdSense Lazy-Load Script -->
+    <!-- =========================================================
+         AdSense Lazy Load
+         Kept deferred exactly in behavior.
+    ========================================================== -->
     <script>
         function loadAdSense() {
-            if(window.adsenseLoaded) return;
+            if (window.adsenseLoaded) return;
+
             window.adsenseLoaded = true;
+
             const script = document.createElement('script');
-            script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060";
+
+            script.src =
+                "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060";
+
             script.async = true;
             script.crossOrigin = "anonymous";
+
             document.head.appendChild(script);
         }
-        window.addEventListener('scroll', loadAdSense, {once: true});
-        window.addEventListener('touchstart', loadAdSense, {once: true});
-        setTimeout(loadAdSense, 3500); 
+
+        window.addEventListener(
+            'scroll',
+            loadAdSense,
+            { once: true, passive: true }
+        );
+
+        window.addEventListener(
+            'touchstart',
+            loadAdSense,
+            { once: true, passive: true }
+        );
+
+        setTimeout(loadAdSense, 3500);
     </script>
 </head>
+
 <body>
 
 <header class="header" id="header">
     <div class="container">
         <div class="header-inner">
-            <a href="index.html" class="logo gradient-text">CoinvestAI</a>
-            <nav>
+
+            <a href="index.html" class="logo gradient-text">
+                CoinvestAI
+            </a>
+
+            <nav aria-label="Main navigation">
                 <ul class="nav-links">
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="ai-tools.html">AI Tools</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="fintech.html">Fintech</a></li>
-                    <li><a href="crypto-ai.html">Crypto AI</a></li>
-                    <li><a href="guides.html">Guides</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><button class="dark-mode-btn" onclick="toggleDarkMode()">🌓 Mode</button></li>
+
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+
+                    <li>
+                        <a href="ai-tools.html">AI Tools</a>
+                    </li>
+
+                    <li>
+                        <a href="reviews.html">Reviews</a>
+                    </li>
+
+                    <li>
+                        <a href="fintech.html">Fintech</a>
+                    </li>
+
+                    <li>
+                        <a href="crypto-ai.html">Crypto AI</a>
+                    </li>
+
+                    <li>
+                        <a href="guides.html">Guides</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <button
+                            class="dark-mode-btn"
+                            onclick="toggleDarkMode()"
+                            type="button"
+                        >
+                            🌓 Mode
+                        </button>
+                    </li>
+
                 </ul>
             </nav>
-            <button class="mobile-menu-btn" onclick="document.getElementById('mobileMenu').classList.toggle('active')" aria-label="Menu" style="background:none;border:none;cursor:pointer;color:white;font-size:22px;">☰</button>
+
+            <button
+                class="mobile-menu-btn"
+                onclick="document.getElementById('mobileMenu').classList.toggle('active')"
+                aria-label="Menu"
+                type="button"
+                style="background:none;border:none;cursor:pointer;color:white;font-size:22px;"
+            >
+                ☰
+            </button>
+
         </div>
     </div>
 </header>
 
+
+<!-- =========================================================
+     Mobile Menu
+========================================================== -->
+
 <div class="mobile-menu" id="mobileMenu">
+
     <a href="blog.html">Blog</a>
     <a href="ai-tools.html">AI Tools</a>
     <a href="reviews.html">Reviews</a>
@@ -186,288 +1132,1351 @@
     <a href="guides.html">Guides</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <button class="dark-mode-btn" onclick="toggleDarkMode()" style="margin-top: 14px; width: 100%; padding: 12px;">🌓 Toggle Dark Mode</button>
+
+    <button
+        class="dark-mode-btn"
+        onclick="toggleDarkMode()"
+        type="button"
+        style="margin-top:14px;width:100%;padding:12px;"
+    >
+        🌓 Toggle Dark Mode
+    </button>
+
 </div>
 
+
+<!-- =========================================================
+     HERO
+========================================================== -->
+
 <section class="hero">
+
     <div class="hero-content">
-        <div class="hero-badge"><span class="dot"></span>Independent AI &amp; Finance Publication • 2026</div>
-        <h1>The Future of AI in <span class="gradient-text">Finance &amp; Investment</span></h1>
-        <p class="hero-subtitle">Explore AI-powered investing tools, fintech innovation, cryptocurrency intelligence, and the technologies reshaping modern finance.</p>
+
+        <div class="hero-badge">
+            <span class="dot"></span>
+            Independent AI &amp; Finance Publication • 2026
+        </div>
+
+        <h1>
+            The Future of AI in
+            <span class="gradient-text">
+                Finance &amp; Investment
+            </span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Explore AI-powered investing tools, fintech innovation,
+            cryptocurrency intelligence, and the technologies
+            reshaping modern finance.
+        </p>
+
         <div class="hero-buttons">
-            <a href="blog.html" class="btn btn-primary">Explore Articles →</a>
-            <a href="ai-tools.html" class="btn btn-outline">Explore AI Tools →</a>
+
+            <a
+                href="blog.html"
+                class="btn btn-primary"
+            >
+                Explore Articles →
+            </a>
+
+            <a
+                href="ai-tools.html"
+                class="btn btn-outline"
+            >
+                Explore AI Tools →
+            </a>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- Search Bar Section -->
-<section class="section" style="padding:30px 0;background:var(--light-gray);">
+
+<!-- =========================================================
+     SEARCH
+========================================================== -->
+
+<section
+    class="section"
+    style="padding:30px 0;background:var(--light-gray);"
+>
+
     <div class="container">
-        <div class="search-box" style="max-width:600px;margin:0 auto;position:relative;">
-            <input type="text" id="siteSearch" placeholder="Search articles, tools, and topics..." aria-label="Search articles, tools, and topics" style="width:100%;padding:16px 20px 16px 50px;border:2px solid var(--border);border-radius:50px;font-size:16px;outline:none;font-family:var(--font-body);background:var(--bg);color:var(--text);" oninput="searchSite()">
-            <span style="position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:20px;">🔍</span>
+
+        <div
+            class="search-box"
+            style="max-width:600px;margin:0 auto;position:relative;"
+        >
+
+            <input
+                type="text"
+                id="siteSearch"
+                placeholder="Search articles, tools, and topics..."
+                aria-label="Search articles, tools, and topics"
+                style="width:100%;padding:16px 20px 16px 50px;border:2px solid var(--border);border-radius:50px;font-size:16px;outline:none;font-family:var(--font-body);background:var(--bg);color:var(--text);"
+                oninput="searchSite()"
+            >
+
+            <span
+                style="position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:20px;"
+                aria-hidden="true"
+            >
+                🔍
+            </span>
+
         </div>
-        <div id="searchResults" style="max-width:600px;margin:10px auto;"></div>
+
+        <div
+            id="searchResults"
+            style="max-width:600px;margin:10px auto;"
+        ></div>
+
     </div>
+
 </section>
 
-<section class="section" style="padding-bottom:0;">
+
+<!-- =========================================================
+     FEATURED STORY
+========================================================== -->
+
+<section
+    class="section"
+    style="padding-bottom:0;"
+>
+
     <div class="container">
+
         <div class="featured-grid">
+
             <div class="featured-content">
-                <span style="display:inline-block;padding:6px 14px;background:var(--secondary);color:white;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:16px;">FEATURED STORY</span>
-                <h2 style="font-size:32px;line-height:1.2;margin-bottom:16px;color:var(--text);">How AI Is Changing Investment Research in 2026</h2>
-                <p style="color:var(--gray);font-size:16px;line-height:1.7;margin-bottom:24px;">Artificial intelligence is transforming how investors discover information, analyze markets, evaluate companies, and manage research workflows.</p>
-                <div class="article-card-meta" style="margin-bottom:20px;">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Published: August 8, 2026 · 10 min read</div>
-                <a href="blog-ai-investment-research-tools.html" class="btn btn-primary">Read Analysis →</a>
+
+                <span
+                    style="display:inline-block;padding:6px 14px;background:var(--secondary);color:white;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:16px;"
+                >
+                    FEATURED STORY
+                </span>
+
+                <h2
+                    style="font-size:32px;line-height:1.2;margin-bottom:16px;color:var(--text);"
+                >
+                    How AI Is Changing Investment Research in 2026
+                </h2>
+
+                <p
+                    style="color:var(--gray);font-size:16px;line-height:1.7;margin-bottom:24px;"
+                >
+                    Artificial intelligence is transforming how investors
+                    discover information, analyze markets, evaluate
+                    companies, and manage research workflows.
+                </p>
+
+                <div
+                    class="article-card-meta"
+                    style="margin-bottom:20px;"
+                >
+                    By
+                    <a href="authors-coinvestai-editorial-team.html">
+                        Editorial Team
+                    </a>
+                    · Published: August 8, 2026 · 10 min read
+                </div>
+
+                <a
+                    href="blog-ai-investment-research-tools.html"
+                    class="btn btn-primary"
+                >
+                    Read Analysis →
+                </a>
+
             </div>
-            <div class="featured-image">📊</div>
+
+            <div
+                class="featured-image"
+                aria-hidden="true"
+            >
+                📊
+            </div>
+
         </div>
+
     </div>
+
 </section>
+
+
+<!-- =========================================================
+     EXPLORE AI IN FINANCE
+========================================================== -->
 
 <section class="section">
+
     <div class="container">
-        <h2 class="section-title">Explore AI in Finance</h2>
-        <p class="section-subtitle">In-depth coverage of the technologies transforming financial markets in 2026</p>
+
+        <h2 class="section-title">
+            Explore AI in Finance
+        </h2>
+
+        <p class="section-subtitle">
+            In-depth coverage of the technologies transforming
+            financial markets in 2026
+        </p>
+
         <div class="cards-grid">
+
             <div class="card">
-                <div class="card-icon blue">📈</div>
-                <h3>AI Trading &amp; Investment Tools</h3>
-                <p>Comprehensive coverage of AI-powered trading platforms and investment research tools.</p>
-                <a href="ai-tools.html" class="card-link">Explore Tools →</a>
+
+                <div class="card-icon blue">
+                    📈
+                </div>
+
+                <h3>
+                    AI Trading &amp; Investment Tools
+                </h3>
+
+                <p>
+                    Comprehensive coverage of AI-powered trading
+                    platforms and investment research tools.
+                </p>
+
+                <a
+                    href="ai-tools.html"
+                    class="card-link"
+                >
+                    Explore Tools →
+                </a>
+
             </div>
+
+
             <div class="card">
-                <div class="card-icon purple">🏦</div>
-                <h3>Fintech AI Trends</h3>
-                <p>Analysis of how AI is reshaping banking, payments, and digital financial infrastructure.</p>
-                <a href="fintech.html" class="card-link">Explore Fintech →</a>
+
+                <div class="card-icon purple">
+                    🏦
+                </div>
+
+                <h3>
+                    Fintech AI Trends
+                </h3>
+
+                <p>
+                    Analysis of how AI is reshaping banking,
+                    payments, and digital financial infrastructure.
+                </p>
+
+                <a
+                    href="fintech.html"
+                    class="card-link"
+                >
+                    Explore Fintech →
+                </a>
+
             </div>
+
+
             <div class="card">
-                <div class="card-icon green">₿</div>
-                <h3>Crypto &amp; AI Synergy</h3>
-                <p>Exploring how AI analyzes cryptocurrency markets and blockchain data.</p>
-                <a href="crypto-ai.html" class="card-link">Explore Crypto AI →</a>
+
+                <div class="card-icon green">
+                    ₿
+                </div>
+
+                <h3>
+                    Crypto &amp; AI Synergy
+                </h3>
+
+                <p>
+                    Exploring how AI analyzes cryptocurrency
+                    markets and blockchain data.
+                </p>
+
+                <a
+                    href="crypto-ai.html"
+                    class="card-link"
+                >
+                    Explore Crypto AI →
+                </a>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
+
+
+<!-- =========================================================
+     LATEST RESEARCH
+========================================================== -->
 
 <section class="section section-gray">
+
     <div class="container">
-        <h2 class="section-title">Latest Research &amp; Insights</h2>
-        <p class="section-subtitle">Stay informed with our latest analysis of AI in finance for 2026</p>
+
+        <h2 class="section-title">
+            Latest Research &amp; Insights
+        </h2>
+
+        <p class="section-subtitle">
+            Stay informed with our latest analysis of AI
+            in finance for 2026
+        </p>
+
         <div class="cards-grid">
+
             <article class="article-card">
-                <div class="article-card-image aimg1"><span class="article-card-category">AI Tools</span></div>
-                <div class="article-card-body">
-                    <h3>How to Evaluate AI Trading Platforms in 2026</h3>
-                    <p>Key criteria for assessing AI-powered trading and investment research tools.</p>
-                    <div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · 7 min read</div>
-                    <a href="blog-evaluate-ai-trading-platforms.html" class="card-link">Read Article →</a>
+
+                <div class="article-card-image aimg1">
+                    <span class="article-card-category">
+                        AI Tools
+                    </span>
                 </div>
+
+                <div class="article-card-body">
+
+                    <h3>
+                        How to Evaluate AI Trading Platforms in 2026
+                    </h3>
+
+                    <p>
+                        Key criteria for assessing AI-powered
+                        trading and investment research tools.
+                    </p>
+
+                    <div class="article-card-meta">
+                        By
+                        <a href="authors-coinvestai-editorial-team.html">
+                            Editorial Team
+                        </a>
+                        · 7 min read
+                    </div>
+
+                    <a
+                        href="blog-evaluate-ai-trading-platforms.html"
+                        class="card-link"
+                    >
+                        Read Article →
+                    </a>
+
+                </div>
+
             </article>
+
+
             <article class="article-card">
-                <div class="article-card-image aimg2"><span class="article-card-category">Fintech</span></div>
-                <div class="article-card-body">
-                    <h3>The Rise of AI-Native Financial Services in 2026</h3>
-                    <p>How AI is enabling a new generation of financial products and services.</p>
-                    <div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · 9 min read</div>
-                    <a href="blog-ai-native-financial-services.html" class="card-link">Read Article →</a>
+
+                <div class="article-card-image aimg2">
+                    <span class="article-card-category">
+                        Fintech
+                    </span>
                 </div>
+
+                <div class="article-card-body">
+
+                    <h3>
+                        The Rise of AI-Native Financial Services in 2026
+                    </h3>
+
+                    <p>
+                        How AI is enabling a new generation
+                        of financial products and services.
+                    </p>
+
+                    <div class="article-card-meta">
+                        By
+                        <a href="authors-coinvestai-editorial-team.html">
+                            Editorial Team
+                        </a>
+                        · 9 min read
+                    </div>
+
+                    <a
+                        href="blog-ai-native-financial-services.html"
+                        class="card-link"
+                    >
+                        Read Article →
+                    </a>
+
+                </div>
+
             </article>
+
+
             <article class="article-card">
-                <div class="article-card-image aimg3"><span class="article-card-category">Crypto AI</span></div>
-                <div class="article-card-body">
-                    <h3>ML Applications in Cryptocurrency Market Analysis</h3>
-                    <p>How ML models process on-chain data, market signals, and sentiment.</p>
-                    <div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · 8 min read</div>
-                    <a href="blog-ml-crypto-market-analysis.html" class="card-link">Read Article →</a>
+
+                <div class="article-card-image aimg3">
+                    <span class="article-card-category">
+                        Crypto AI
+                    </span>
                 </div>
+
+                <div class="article-card-body">
+
+                    <h3>
+                        ML Applications in Cryptocurrency Market Analysis
+                    </h3>
+
+                    <p>
+                        How ML models process on-chain data,
+                        market signals, and sentiment.
+                    </p>
+
+                    <div class="article-card-meta">
+                        By
+                        <a href="authors-coinvestai-editorial-team.html">
+                            Editorial Team
+                        </a>
+                        · 8 min read
+                    </div>
+
+                    <a
+                        href="blog-ml-crypto-market-analysis.html"
+                        class="card-link"
+                    >
+                        Read Article →
+                    </a>
+
+                </div>
+
             </article>
+
         </div>
-        <div style="text-align:center;margin-top:40px;"><a href="blog.html" class="btn btn-dark">View All Articles →</a></div>
+
+        <div
+            style="text-align:center;margin-top:40px;"
+        >
+            <a
+                href="blog.html"
+                class="btn btn-dark"
+            >
+                View All Articles →
+            </a>
+        </div>
+
     </div>
+
 </section>
 
+
+<!-- =========================================================
+     POPULAR AI TOOLS
+========================================================== -->
+
 <section class="section">
+
     <div class="container">
-        <h2 class="section-title">Popular AI Finance Tools in 2026</h2>
-        <p class="section-subtitle">AI platforms used by investors and financial professionals</p>
+
+        <h2 class="section-title">
+            Popular AI Finance Tools in 2026
+        </h2>
+
+        <p class="section-subtitle">
+            AI platforms used by investors and financial professionals
+        </p>
+
         <div class="cards-grid">
+
             <div class="tool-card">
-                <div class="tool-icon c1">C</div>
-                <div class="tool-info">
-                    <div style="display:flex;justify-content:space-between;"><h3>ChatGPT</h3><span class="tool-rating">Rating: ★ 4.8/5 <a href="review-methodology.html">How We Rate</a></span></div>
-                    <p class="tcat">AI Research Assistant</p>
-                    <p class="tdesc">OpenAI's language model for investment research and financial writing.</p>
-                    <a href="ai-tools-chatgpt.html" class="card-link">Learn More →</a>
+
+                <div class="tool-icon c1">
+                    C
                 </div>
+
+                <div class="tool-info">
+
+                    <div
+                        style="display:flex;justify-content:space-between;"
+                    >
+                        <h3>
+                            ChatGPT
+                        </h3>
+
+                        <span class="tool-rating">
+                            Rating: ★ 4.8/5
+                            <a href="review-methodology.html">
+                                How We Rate
+                            </a>
+                        </span>
+                    </div>
+
+                    <p class="tcat">
+                        AI Research Assistant
+                    </p>
+
+                    <p class="tdesc">
+                        OpenAI's language model for investment
+                        research and financial writing.
+                    </p>
+
+                    <a
+                        href="ai-tools-chatgpt.html"
+                        class="card-link"
+                    >
+                        Learn More →
+                    </a>
+
+                </div>
+
             </div>
+
+
             <div class="tool-card">
-                <div class="tool-icon c2">T</div>
-                <div class="tool-info">
-                    <div style="display:flex;justify-content:space-between;"><h3>TradingView</h3><span class="tool-rating">Rating: ★ 4.7/5 <a href="review-methodology.html">How We Rate</a></span></div>
-                    <p class="tcat">Charting &amp; Analysis</p>
-                    <p class="tdesc">Advanced charting with AI indicators and screening tools.</p>
-                    <a href="ai-tools-tradingview.html" class="card-link">Learn More →</a>
+
+                <div class="tool-icon c2">
+                    T
                 </div>
+
+                <div class="tool-info">
+
+                    <div
+                        style="display:flex;justify-content:space-between;"
+                    >
+                        <h3>
+                            TradingView
+                        </h3>
+
+                        <span class="tool-rating">
+                            Rating: ★ 4.7/5
+                            <a href="review-methodology.html">
+                                How We Rate
+                            </a>
+                        </span>
+                    </div>
+
+                    <p class="tcat">
+                        Charting &amp; Analysis
+                    </p>
+
+                    <p class="tdesc">
+                        Advanced charting with AI indicators
+                        and screening tools.
+                    </p>
+
+                    <a
+                        href="ai-tools-tradingview.html"
+                        class="card-link"
+                    >
+                        Learn More →
+                    </a>
+
+                </div>
+
             </div>
+
+
             <div class="tool-card">
-                <div class="tool-icon c3">A</div>
-                <div class="tool-info">
-                    <div style="display:flex;justify-content:space-between;"><h3>AlphaSense</h3><span class="tool-rating">Rating: ★ 4.6/5 <a href="review-methodology.html">How We Rate</a></span></div>
-                    <p class="tcat">Market Intelligence</p>
-                    <p class="tdesc">AI-powered market intelligence for institutional research.</p>
-                    <a href="ai-tools-alphasense.html" class="card-link">Learn More →</a>
+
+                <div class="tool-icon c3">
+                    A
                 </div>
+
+                <div class="tool-info">
+
+                    <div
+                        style="display:flex;justify-content:space-between;"
+                    >
+                        <h3>
+                            AlphaSense
+                        </h3>
+
+                        <span class="tool-rating">
+                            Rating: ★ 4.6/5
+                            <a href="review-methodology.html">
+                                How We Rate
+                            </a>
+                        </span>
+                    </div>
+
+                    <p class="tcat">
+                        Market Intelligence
+                    </p>
+
+                    <p class="tdesc">
+                        AI-powered market intelligence
+                        for institutional research.
+                    </p>
+
+                    <a
+                        href="ai-tools-alphasense.html"
+                        class="card-link"
+                    >
+                        Learn More →
+                    </a>
+
+                </div>
+
             </div>
+
         </div>
-        <div style="text-align:center;margin-top:40px;"><a href="ai-tools.html" class="btn btn-dark">Browse All AI Tools →</a></div>
+
+        <div
+            style="text-align:center;margin-top:40px;"
+        >
+            <a
+                href="ai-tools.html"
+                class="btn btn-dark"
+            >
+                Browse All AI Tools →
+            </a>
+        </div>
+
     </div>
+
 </section>
+
+
+<!-- =========================================================
+     NEWSLETTER
+========================================================== -->
 
 <section class="newsletter section">
+
     <div class="nl-content">
-        <div style="font-size:48px;margin-bottom:20px;">📧</div>
-        <h2>Stay Ahead of AI in Finance</h2>
-        <p>Get practical insights on AI investing, fintech innovation, and crypto intelligence delivered to your inbox.</p>
-        <form class="nl-form" onsubmit="event.preventDefault();alert('Thank you for subscribing!');">
-            <input type="email" placeholder="Your email address" required>
-            <button type="submit" class="btn btn-primary">Subscribe</button>
+
+        <div
+            style="font-size:48px;margin-bottom:20px;"
+            aria-hidden="true"
+        >
+            📧
+        </div>
+
+        <h2>
+            Stay Ahead of AI in Finance
+        </h2>
+
+        <p>
+            Get practical insights on AI investing, fintech
+            innovation, and crypto intelligence delivered
+            to your inbox.
+        </p>
+
+        <form
+            class="nl-form"
+            onsubmit="event.preventDefault();alert('Thank you for subscribing!');"
+        >
+
+            <input
+                type="email"
+                placeholder="Your email address"
+                required
+                aria-label="Your email address"
+            >
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                Subscribe
+            </button>
+
         </form>
-        <p class="nl-privacy">No spam. Unsubscribe anytime. <a href="privacy-policy.html">Privacy Policy</a>.</p>
+
+        <p class="nl-privacy">
+            No spam. Unsubscribe anytime.
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>.
+        </p>
+
     </div>
+
 </section>
+
+
+<!-- =========================================================
+     FAQ
+========================================================== -->
 
 <section class="section">
-    <div class="container" style="max-width:750px;">
-        <h2 class="section-title">Common Questions</h2>
-        <p class="section-subtitle">Understanding AI's role in modern finance in 2026</p>
-        <div class="faq-item active"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')">What is AI investing?<span class="faq-arr">▾</span></button><div class="faq-a"><div class="faq-ai">AI investing refers to using artificial intelligence and machine learning technologies to assist with financial analysis, investment research, and portfolio management.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')">Can AI predict stock market movements?<span class="faq-arr">▾</span></button><div class="faq-a"><div class="faq-ai">AI models can analyze historical data and identify patterns, but cannot predict markets with certainty. AI tools should be used as analytical aids.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')">Are AI trading tools suitable for beginners?<span class="faq-arr">▾</span></button><div class="faq-a"><div class="faq-ai">Many platforms offer features for different experience levels. Understand fundamental concepts before committing real capital.</div></div></div>
+
+    <div
+        class="container"
+        style="max-width:750px;"
+    >
+
+        <h2 class="section-title">
+            Common Questions
+        </h2>
+
+        <p class="section-subtitle">
+            Understanding AI's role in modern finance in 2026
+        </p>
+
+
+        <div class="faq-item active">
+
+            <button
+                class="faq-q"
+                onclick="this.parentElement.classList.toggle('active')"
+                type="button"
+            >
+                What is AI investing?
+                <span class="faq-arr">▾</span>
+            </button>
+
+            <div class="faq-a">
+
+                <div class="faq-ai">
+                    AI investing refers to using artificial intelligence
+                    and machine learning technologies to assist with
+                    financial analysis, investment research, and
+                    portfolio management.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button
+                class="faq-q"
+                onclick="this.parentElement.classList.toggle('active')"
+                type="button"
+            >
+                Can AI predict stock market movements?
+                <span class="faq-arr">▾</span>
+            </button>
+
+            <div class="faq-a">
+
+                <div class="faq-ai">
+                    AI models can analyze historical data and identify
+                    patterns, but cannot predict markets with certainty.
+                    AI tools should be used as analytical aids.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button
+                class="faq-q"
+                onclick="this.parentElement.classList.toggle('active')"
+                type="button"
+            >
+                Are AI trading tools suitable for beginners?
+                <span class="faq-arr">▾</span>
+            </button>
+
+            <div class="faq-a">
+
+                <div class="faq-ai">
+                    Many platforms offer features for different
+                    experience levels. Understand fundamental concepts
+                    before committing real capital.
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
+
 </section>
 
+
+<!-- =========================================================
+     FOOTER
+========================================================== -->
+
 <footer class="footer">
+
     <div class="container">
+
         <div class="footer-grid">
+
             <div>
-                <h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3>
-                <p style="color:rgba(255,255,255,0.5);font-size:14px;">Independent insights on AI-powered investing, fintech, and cryptocurrency intelligence.</p>
+
+                <h3
+                    style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"
+                >
+                    <span class="gradient-text">
+                        CoinvestAI
+                    </span>
+                </h3>
+
+                <p
+                    style="color:rgba(255,255,255,0.5);font-size:14px;"
+                >
+                    Independent insights on AI-powered investing,
+                    fintech, and cryptocurrency intelligence.
+                </p>
+
             </div>
+
+
             <div>
-                <h3>Explore</h3>
+
+                <h3>
+                    Explore
+                </h3>
+
                 <ul>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="ai-tools.html">AI Tools</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="guides.html">Guides</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="https://twitter.com/CoinvestAI_HQ" target="_blank">Twitter / X</a></li>
+
+                    <li>
+                        <a href="blog.html">
+                            Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="ai-tools.html">
+                            AI Tools
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="reviews.html">
+                            Reviews
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="guides.html">
+                            Guides
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="news.html">
+                            News
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://twitter.com/CoinvestAI_HQ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Twitter / X
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
+
             <div>
-                <h3>Topics</h3>
+
+                <h3>
+                    Topics
+                </h3>
+
                 <ul>
-                    <li><a href="fintech.html">Fintech AI</a></li>
-                    <li><a href="crypto-ai.html">Crypto AI</a></li>
-                    <li><a href="blog.html">Trading</a></li>
-                    <li><a href="blog.html">Machine Learning</a></li>
-                    <li><a href="authors.html">Authors</a></li>
+
+                    <li>
+                        <a href="fintech.html">
+                            Fintech AI
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="crypto-ai.html">
+                            Crypto AI
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blog.html">
+                            Trading
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blog.html">
+                            Machine Learning
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="authors.html">
+                            Authors
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
+
             <div>
-                <h3>Company</h3>
+
+                <h3>
+                    Company
+                </h3>
+
                 <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="editorial-guidelines.html">Editorial Guidelines</a></li>
-                    <li><a href="review-methodology.html">Review Methodology</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="editorial-guidelines.html">
+                            Editorial Guidelines
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="review-methodology.html">
+                            Review Methodology
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="privacy-policy.html">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="disclaimer.html">
+                            Disclaimer
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="terms.html">
+                            Terms of Service
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cookie-policy.html">
+                            Cookie Policy
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
+
+
         <div class="footer-bottom">
-            <p>© 2026 CoinvestAI. All rights reserved.</p>
+
+            <p>
+                © 2026 CoinvestAI. All rights reserved.
+            </p>
+
         </div>
+
     </div>
+
 </footer>
 
-<script>
-    // Header scroll background change
-    window.addEventListener('scroll', function(){
-        document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
-    });
 
-    // Dark Mode Toggle & Persistence
+<!-- =========================================================
+     JavaScript
+========================================================== -->
+
+<script>
+    /* =========================================================
+       Header Scroll Background
+    ========================================================== */
+
+    window.addEventListener(
+        'scroll',
+        function () {
+            const header = document.getElementById('header');
+
+            if (header) {
+                header.classList.toggle(
+                    'scrolled',
+                    window.scrollY > 50
+                );
+            }
+        },
+        {
+            passive: true
+        }
+    );
+
+
+    /* =========================================================
+       Dark Mode
+    ========================================================== */
+
     function toggleDarkMode() {
+
         document.body.classList.toggle('dark-mode');
+
         if (document.body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
+
+            localStorage.setItem(
+                'theme',
+                'dark'
+            );
+
         } else {
-            localStorage.setItem('theme', 'light');
+
+            localStorage.setItem(
+                'theme',
+                'light'
+            );
+
         }
     }
 
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
+
+    /* =========================================================
+       Restore Theme
+    ========================================================== */
+
+    try {
+
+        if (
+            localStorage.getItem('theme') === 'dark'
+        ) {
+
+            document.body.classList.add(
+                'dark-mode'
+            );
+
+        }
+
+    } catch (error) {
+        /* localStorage unavailable */
     }
 
-    // Site Search Function
-    const sitePages=[
-        {title:"Home",url:"index.html",keywords:"home main"},
-        {title:"Blog",url:"blog.html",keywords:"blog articles"},
-        {title:"AI Tools Directory",url:"ai-tools.html",keywords:"tools directory list catalog"},
-        {title:"Liquid Co-Invest Review",url:"ai-tools-liquid-coinvest.html",keywords:"liquid co-invest trading research conversational"},
-        {title:"Manus AI Review",url:"ai-tools-manus-ai.html",keywords:"manus ai agentic automation sandbox"},
-        {title:"Trade Ideas Review",url:"ai-tools-trade-ideas.html",keywords:"trade ideas holly scanner algorithmic trading"},
-        {title:"Macroaxis Review",url:"ai-tools-macroaxis.html",keywords:"macroaxis portfolio wealth optimization risk"},
-        {title:"TrendSpider Review",url:"ai-tools-trendspider.html",keywords:"trendspider technical analysis automated charting"},
-        {title:"Kavout Review",url:"ai-tools-kavout.html",keywords:"kavout k score quantitative ranking portfolio"},
-        {title:"ChatGPT Review",url:"ai-tools-chatgpt.html",keywords:"chatgpt openai assistant"},
-        {title:"Claude Review",url:"ai-tools-claude.html",keywords:"claude anthropic analysis research"},
-        {title:"TradingView Review",url:"ai-tools-tradingview.html",keywords:"tradingview charts technical analysis"},
-        {title:"AlphaSense Review",url:"ai-tools-alphasense.html",keywords:"alphasense market intelligence sec filings"},
-        {title:"DeepSeek AI Tool Review",url:"ai-tools-deepseek.html",keywords:"deepseek AI language model open weights"},
-        {title:"Evaluate AI Trading Platforms",url:"blog-evaluate-ai-trading-platforms.html",keywords:"evaluate trading AI platforms"},
-        {title:"AI-Native Financial Services",url:"blog-ai-native-financial-services.html",keywords:"AI-native fintech banking services"},
-        {title:"ML Crypto Market Analysis",url:"blog-ml-crypto-market-analysis.html",keywords:"ML crypto machine learning analysis"},
-        {title:"ML Portfolio Management",url:"blog-ml-portfolio-management.html",keywords:"blog-ml-portfolio-management.html"},
-        {title:"AI Investment Research Tools",url:"blog-ai-investment-research-tools.html",keywords:"research tools due diligence quantitative"},
-        {title:"AI Digital Banking Automation",url:"blog-ai-digital-banking-automation.html",keywords:"banking digital automated workflows"},
-        {title:"AI Crypto Trading Algorithms",url:"blog-ai-crypto-trading-algorithms.html",keywords:"crypto trading algorithms quant bots"},
-        {title:"Beginner Guide to AI Investing",url:"blog-beginners-guide-ai-investing.html",keywords:"beginner guide investing ai basics"},
-        {title:"NLP Financial Document Analysis",url:"blog-nlp-financial-document-analysis.html",keywords:"NLP documents 10-K parsing textual analysis"},
-        {title:"Robo-Advisors in AI Investment",url:"blog-robo-advisors-ai-investment.html",keywords:"robo-advisors wealth automation portfolio"},
-        {title:"AI Fraud Detection in Finance",url:"blog-ai-fraud-detection-finance.html",keywords:"fraud detection anti-money laundering security"},
-        {title:"Blockchain Data Analytics with AI",url:"blog-blockchain-data-analytics-ai.html",keywords:"blockchain data analytics on-chain"},
-        {title:"DeepSeek AI in Finance 2026",url:"blog-deepseek-ai-finance-2026.html",keywords:"deepseek AI finance investors analysis"},
-        {title:"AI Driven Crypto Insights",url:"blog-ai-driven-crypto-insights.html",keywords:"crypto insights volatility AI intelligence"},
-        {title:"About CoinvestAI",url:"about.html",keywords:"about mission team"},
-        {title:"Contact Us",url:"contact.html",keywords:"contact support email"},
-        {title:"Fintech AI Section",url:"fintech.html",keywords:"fintech financial technology"},
-        {title:"Crypto AI Section",url:"crypto-ai.html",keywords:"crypto blockchain ai intelligence"},
-        {title:"Guides & Tutorials",url:"guides.html",keywords:"guides tutorials walkthroughs"},
-        {title:"Independent Reviews",url:"reviews.html",keywords:"reviews software tools"},
-        {title:"Authors & Editorial Team",url:"authors.html",keywords:"authors editorial team contributors"},
-        {title:"Editorial Guidelines",url:"editorial-guidelines.html",keywords:"editorial guidelines ethics review process"},
-        {title:"Review Methodology",url:"review-methodology.html",keywords:"review methodology how we rate scoring"}
+
+    /* =========================================================
+       Site Search Data
+    ========================================================== */
+
+    const sitePages = [
+
+        {
+            title: "Home",
+            url: "index.html",
+            keywords: "home main"
+        },
+
+        {
+            title: "Blog",
+            url: "blog.html",
+            keywords: "blog articles"
+        },
+
+        {
+            title: "AI Tools Directory",
+            url: "ai-tools.html",
+            keywords: "tools directory list catalog"
+        },
+
+        {
+            title: "Liquid Co-Invest Review",
+            url: "ai-tools-liquid-coinvest.html",
+            keywords: "liquid co-invest trading research conversational"
+        },
+
+        {
+            title: "Manus AI Review",
+            url: "ai-tools-manus-ai.html",
+            keywords: "manus ai agentic automation sandbox"
+        },
+
+        {
+            title: "Trade Ideas Review",
+            url: "ai-tools-trade-ideas.html",
+            keywords: "trade ideas holly scanner algorithmic trading"
+        },
+
+        {
+            title: "Macroaxis Review",
+            url: "ai-tools-macroaxis.html",
+            keywords: "macroaxis portfolio wealth optimization risk"
+        },
+
+        {
+            title: "TrendSpider Review",
+            url: "ai-tools-trendspider.html",
+            keywords: "trendspider technical analysis automated charting"
+        },
+
+        {
+            title: "Kavout Review",
+            url: "ai-tools-kavout.html",
+            keywords: "kavout k score quantitative ranking portfolio"
+        },
+
+        {
+            title: "ChatGPT Review",
+            url: "ai-tools-chatgpt.html",
+            keywords: "chatgpt openai assistant"
+        },
+
+        {
+            title: "Claude Review",
+            url: "ai-tools-claude.html",
+            keywords: "claude anthropic analysis research"
+        },
+
+        {
+            title: "TradingView Review",
+            url: "ai-tools-tradingview.html",
+            keywords: "tradingview charts technical analysis"
+        },
+
+        {
+            title: "AlphaSense Review",
+            url: "ai-tools-alphasense.html",
+            keywords: "alphasense market intelligence sec filings"
+        },
+
+        {
+            title: "DeepSeek AI Tool Review",
+            url: "ai-tools-deepseek.html",
+            keywords: "deepseek AI language model open weights"
+        },
+
+        {
+            title: "Evaluate AI Trading Platforms",
+            url: "blog-evaluate-ai-trading-platforms.html",
+            keywords: "evaluate trading AI platforms"
+        },
+
+        {
+            title: "AI-Native Financial Services",
+            url: "blog-ai-native-financial-services.html",
+            keywords: "AI-native fintech banking services"
+        },
+
+        {
+            title: "ML Crypto Market Analysis",
+            url: "blog-ml-crypto-market-analysis.html",
+            keywords: "ML crypto machine learning analysis"
+        },
+
+        {
+            title: "ML Portfolio Management",
+            url: "blog-ml-portfolio-management.html",
+            keywords: "portfolio management machine learning ML"
+        },
+
+        {
+            title: "AI Investment Research Tools",
+            url: "blog-ai-investment-research-tools.html",
+            keywords: "research tools due diligence quantitative"
+        },
+
+        {
+            title: "AI Digital Banking Automation",
+            url: "blog-ai-digital-banking-automation.html",
+            keywords: "banking digital automated workflows"
+        },
+
+        {
+            title: "AI Crypto Trading Algorithms",
+            url: "blog-ai-crypto-trading-algorithms.html",
+            keywords: "crypto trading algorithms quant bots"
+        },
+
+        {
+            title: "Beginner Guide to AI Investing",
+            url: "blog-beginners-guide-ai-investing.html",
+            keywords: "beginner guide investing ai basics"
+        },
+
+        {
+            title: "NLP Financial Document Analysis",
+            url: "blog-nlp-financial-document-analysis.html",
+            keywords: "NLP documents 10-K parsing textual analysis"
+        },
+
+        {
+            title: "Robo-Advisors in AI Investment",
+            url: "blog-robo-advisors-ai-investment.html",
+            keywords: "robo-advisors wealth automation portfolio"
+        },
+
+        {
+            title: "AI Fraud Detection in Finance",
+            url: "blog-ai-fraud-detection-finance.html",
+            keywords: "fraud detection anti-money laundering security"
+        },
+
+        {
+            title: "Blockchain Data Analytics with AI",
+            url: "blog-blockchain-data-analytics-ai.html",
+            keywords: "blockchain data analytics on-chain"
+        },
+
+        {
+            title: "DeepSeek AI in Finance 2026",
+            url: "blog-deepseek-ai-finance-2026.html",
+            keywords: "deepseek AI finance investors analysis"
+        },
+
+        {
+            title: "AI Driven Crypto Insights",
+            url: "blog-ai-driven-crypto-insights.html",
+            keywords: "crypto insights volatility AI intelligence"
+        },
+
+        {
+            title: "About CoinvestAI",
+            url: "about.html",
+            keywords: "about mission team"
+        },
+
+        {
+            title: "Contact Us",
+            url: "contact.html",
+            keywords: "contact support email"
+        },
+
+        {
+            title: "Fintech AI Section",
+            url: "fintech.html",
+            keywords: "fintech financial technology"
+        },
+
+        {
+            title: "Crypto AI Section",
+            url: "crypto-ai.html",
+            keywords: "crypto blockchain ai intelligence"
+        },
+
+        {
+            title: "Guides & Tutorials",
+            url: "guides.html",
+            keywords: "guides tutorials walkthroughs"
+        },
+
+        {
+            title: "Independent Reviews",
+            url: "reviews.html",
+            keywords: "reviews software tools"
+        },
+
+        {
+            title: "Authors & Editorial Team",
+            url: "authors.html",
+            keywords: "authors editorial team contributors"
+        },
+
+        {
+            title: "Editorial Guidelines",
+            url: "editorial-guidelines.html",
+            keywords: "editorial guidelines ethics review process"
+        },
+
+        {
+            title: "Review Methodology",
+            url: "review-methodology.html",
+            keywords: "review methodology how we rate scoring"
+        }
+
     ];
 
-    function searchSite(){
-        var q=document.getElementById('siteSearch').value.toLowerCase().trim();
-        var r=document.getElementById('searchResults');
-        if(q.length<2){r.innerHTML='';return;}
-        var results=sitePages.filter(function(p){return p.title.toLowerCase().includes(q)||p.keywords.toLowerCase().includes(q);});
-        if(results.length===0){r.innerHTML='<div style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;color:var(--gray);">No results found for "<strong>'+q+'</strong>"</div>';}
-        else{r.innerHTML=results.map(function(p){return '<a href="'+p.url+'" style="display:block;padding:14px 20px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;background:var(--bg);color:var(--text);text-decoration:none;font-weight:500;">'+p.title+'</a>';}).join('');}
+
+    /* =========================================================
+       Site Search
+    ========================================================== */
+
+    function searchSite() {
+
+        const input =
+            document.getElementById('siteSearch');
+
+        const resultsContainer =
+            document.getElementById('searchResults');
+
+        if (!input || !resultsContainer) {
+            return;
+        }
+
+        const q =
+            input.value
+                .toLowerCase()
+                .trim();
+
+        if (q.length < 2) {
+
+            resultsContainer.innerHTML = '';
+
+            return;
+        }
+
+        const results =
+            sitePages.filter(function (page) {
+
+                return (
+                    page.title
+                        .toLowerCase()
+                        .includes(q)
+                    ||
+                    page.keywords
+                        .toLowerCase()
+                        .includes(q)
+                );
+
+            });
+
+
+        if (results.length === 0) {
+
+            resultsContainer.innerHTML =
+                '<div style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center;color:var(--gray);">No results found for "<strong>' +
+                escapeHTML(q) +
+                '</strong>"</div>';
+
+            return;
+        }
+
+
+        resultsContainer.innerHTML =
+            results
+                .map(function (page) {
+
+                    return (
+                        '<a href="' +
+                        page.url +
+                        '" style="display:block;padding:14px 20px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;background:var(--bg);color:var(--text);text-decoration:none;font-weight:500;">' +
+                        escapeHTML(page.title) +
+                        '</a>'
+                    );
+
+                })
+                .join('');
+    }
+
+
+    /* =========================================================
+       Search HTML Escape
+       Prevents user input from being injected into results.
+    ========================================================== */
+
+    function escapeHTML(value) {
+
+        return value
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+
     }
 </script>
+
 </body>
 </html>
