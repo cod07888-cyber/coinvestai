@@ -28,334 +28,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Critical CSS & Optimized Stylesheet Loading -->
+    <!-- External Optimized Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Specific inline styles for Blog page unique layout elements -->
     <style>
-        :root {
-            --primary: #0F172A;
-            --secondary: #2563EB;
-            --accent: #22C55E;
-            --bg: #FFFFFF;
-            --text: #111827;
-            --gray: #64748B;
-            --light-gray: #f8fafc;
-            --border: #e5e7eb;
-            --radius: 12px;
-            --font-heading: 'Space Grotesk', sans-serif;
-            --font-body: 'Inter', sans-serif;
-        }
-
-        body.dark-mode {
-            --primary: #F8FAFC;
-            --secondary: #3B82F6;
-            --bg: #0B132B;
-            --text: #F1F5F9;
-            --gray: #94A3B8;
-            --light-gray: #1E293B;
-            --border: #334155;
-        }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--text);
-            background: var(--bg);
-            line-height: 1.8;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        h1, h2, h3 {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--secondary);
-            transition: color 0.2s;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, var(--secondary), var(--accent));
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: var(--bg);
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            transition: background-color 0.3s, border-color 0.3s;
-        }
-
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 16px 24px;
-        }
-
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 24px;
-            font-weight: 700;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            display: inline-block;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--gray);
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            background: rgba(37, 99, 235, 0.08);
-            color: var(--secondary);
-        }
-
-        .dark-mode-btn {
-            margin-left: 8px;
-            padding: 6px 12px;
-            background: var(--light-gray);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text);
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 500;
-            transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-        }
-
-        .dark-mode-btn:hover {
-            background: var(--secondary);
-            color: #fff;
-            border-color: var(--secondary);
-        }
-
-        /* Specific styles for Blog page layout */
-        .page-header {
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .page-header h1 {
-            font-size: 48px;
-            margin-bottom: 12px;
-            font-family: var(--font-heading);
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .page-header p {
-            color: var(--gray);
-            font-size: 18px;
-            max-width: 680px;
-            margin: 0 auto;
-        }
+        .page-header{padding:60px 0;text-align:center;}
+        .page-header h1{font-size:48px;margin-bottom:12px;font-family:var(--font-heading);font-weight:700;color:var(--primary);}
+        .page-header p{color:var(--gray);font-size:18px;max-width:680px;margin:0 auto;}
         
-        .cat-row {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
+        .cat-row{display:flex;gap:10px;justify-content:center;margin-bottom:40px;flex-wrap:wrap;}
+        .cat-btn{padding:10px 20px;border-radius:50px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-weight:600;cursor:pointer;transition:0.2s;}
+        .cat-btn.active{background:var(--secondary);color:white;border-color:var(--secondary);}
 
-        .cat-btn {
-            padding: 10px 20px;
-            border-radius: 50px;
-            border: 1px solid var(--border);
-            background: var(--bg);
-            color: var(--text);
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .cat-btn.active {
-            background: var(--secondary);
-            color: white;
-            border-color: var(--secondary);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        .acard {
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-        }
-
-        .acard:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-            border-color: var(--secondary);
-        }
-
-        .acard-img {
-            height: 180px;
-            background: linear-gradient(135deg, var(--primary), #1e293b);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-        }
-
-        .acard-body {
-            padding: 24px;
-        }
-
-        .acard-body h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-
-        .acard-body p {
-            color: var(--gray);
-            font-size: 15px;
-            margin-bottom: 16px;
-        }
-
-        .acard-meta {
-            display: flex;
-            justify-content: space-between;
-            border-top: 1px solid var(--border);
-            padding-top: 14px;
-            margin-top: 14px;
-            font-size: 13px;
-            color: var(--gray);
-        }
-
-        .acard-link {
-            color: var(--secondary);
-            font-weight: 600;
-        }
-
-        .acard-link:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            margin-top: 80px;
-            padding: 60px 0 30px;
-            background: #0F172A;
-            color: #fff;
-            transition: background-color 0.3s;
-        }
-
-        body.dark-mode .footer {
-            background: #020617;
-            border-top: 1px solid var(--border);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-        }
-
-        .footer h3 {
-            margin-bottom: 18px;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 12px;
-            text-transform: uppercase;
-        }
-
-        .footer ul {
-            list-style: none;
-        }
-
-        .footer li {
-            margin-bottom: 10px;
-        }
-
-        .footer a {
-            color: rgba(255, 255, 255, 0.55);
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-
-        .footer a:hover {
-            color: #fff;
-        }
-
-        .footer-bottom {
-            margin-top: 40px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            color: rgba(255, 255, 255, 0.75);
-            font-size: 14px;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-        }
+        .grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:24px;}
+        .acard{background:var(--bg);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform 0.3s, box-shadow 0.3s, border-color 0.3s;display:flex;flex-direction:column;}
+        .acard:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0, 0, 0, 0.08);border-color:var(--secondary);}
+        .acard-img{height:180px;background:linear-gradient(135deg, var(--primary), #1e293b);display:flex;align-items:center;justify-content:center;font-size:40px;}
+        .acard-body{padding:24px;display:flex;flex-direction:column;flex-grow:1;justify-content:space-between;}
+        .acard-body h3{font-size:20px;margin-bottom:10px;color:var(--primary);}
+        .acard-body p{color:var(--gray);font-size:15px;margin-bottom:16px;}
+        .acard-meta{display:flex;justify-content:space-between;border-top:1px solid var(--border);padding-top:14px;margin-top:14px;font-size:13px;color:var(--gray);}
+        .acard-link{color:var(--secondary);font-weight:600;}
+        .acard-link:hover{text-decoration:underline;}
     </style>
 
-    <!-- Full stylesheet loaded asynchronously -->
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
-
-    <!-- AdSense Lazy-Load -->
+    <!-- Super Optimized AdSense Lazy Load Script -->
     <script>
+        let adsLoaded = false;
         function loadAdSense() {
-            if(window.adsenseLoaded) return;
-            window.adsenseLoaded = true;
+            if (adsLoaded) return;
+            adsLoaded = true;
             const script = document.createElement('script');
             script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060";
             script.async = true;
             script.crossOrigin = "anonymous";
             document.head.appendChild(script);
         }
-        window.addEventListener('scroll', loadAdSense, {once: true});
-        setTimeout(loadAdSense, 3500);
+        window.addEventListener('scroll', loadAdSense, { once: true, passive: true });
+        window.addEventListener('touchstart', loadAdSense, { once: true, passive: true });
+        window.addEventListener('mousemove', loadAdSense, { once: true, passive: true });
+        setTimeout(loadAdSense, 7000);
     </script>
 </head>
 <body>
@@ -371,7 +84,7 @@
             <li><a href="crypto-ai.html">Crypto AI</a></li>
             <li><a href="guides.html">Guides</a></li>
             <li><a href="about.html">About</a></li>
-            <li><button class="dark-mode-btn" onclick="toggleDarkMode()">🌓 Mode</button></li>
+            <li><button class="dark-mode-btn" onclick="toggleDarkMode()" type="button">🌓 Mode</button></li>
         </ul></nav>
     </div>
 </header>
@@ -383,10 +96,10 @@
 
 <div class="container">
     <div class="cat-row">
-        <button class="cat-btn active" onclick="filterCat('all', this)">All</button>
-        <button class="cat-btn" onclick="filterCat('ai-tools', this)">AI Tools</button>
-        <button class="cat-btn" onclick="filterCat('fintech', this)">Fintech</button>
-        <button class="cat-btn" onclick="filterCat('crypto', this)">Crypto AI</button>
+        <button class="cat-btn active" onclick="filterCat('all', this)" type="button">All</button>
+        <button class="cat-btn" onclick="filterCat('ai-tools', this)" type="button">AI Tools</button>
+        <button class="cat-btn" onclick="filterCat('fintech', this)" type="button">Fintech</button>
+        <button class="cat-btn" onclick="filterCat('crypto', this)" type="button">Crypto AI</button>
     </div>
 
     <div class="grid" id="grid">
@@ -394,8 +107,10 @@
         <article class="acard" data-cat="crypto">
             <div class="acard-img">🤖</div>
             <div class="acard-body">
-                <h3>How AI Is Actually Changing Crypto Trading in 2026</h3>
-                <p>What AI price prediction, trading bots and sentiment analysis actually do in crypto markets.</p>
+                <div>
+                    <h3>How AI Is Actually Changing Crypto Trading in 2026</h3>
+                    <p>What AI price prediction, trading bots and sentiment analysis actually do in crypto markets.</p>
+                </div>
                 <div class="acard-meta">
                     <span>Aug 15, 2026 · 9 min</span>
                     <a href="blog-ai-crypto-trading-2026.html" class="acard-link">Read Analysis →</a>
@@ -407,8 +122,10 @@
         <article class="acard" data-cat="crypto">
             <div class="acard-img">🤖</div>
             <div class="acard-body">
-                <h3>AI Trading Algorithms in Crypto Markets</h3>
-                <p>Analyzing the mechanics of real-time signals, high-frequency execution, and quantitative models.</p>
+                <div>
+                    <h3>AI Trading Algorithms in Crypto Markets</h3>
+                    <p>Analyzing the mechanics of real-time signals, high-frequency execution, and quantitative models.</p>
+                </div>
                 <div class="acard-meta">
                     <span>Aug 8, 2026 · 9 min</span>
                     <a href="blog-ai-crypto-trading-algorithms.html" class="acard-link">Read Analysis →</a>
@@ -420,8 +137,10 @@
         <article class="acard" data-cat="fintech">
             <div class="acard-img">🏦</div>
             <div class="acard-body">
-                <h3>The Rise of AI-Native Financial Services</h3>
-                <p>How AI is enabling a new generation of financial products built from the ground up with machine learning.</p>
+                <div>
+                    <h3>The Rise of AI-Native Financial Services</h3>
+                    <p>How AI is enabling a new generation of financial products built from the ground up with machine learning.</p>
+                </div>
                 <div class="acard-meta">
                     <span>Aug 11, 2026 · 9 min</span>
                     <a href="blog-ai-native-financial-services.html" class="acard-link">Read Analysis →</a>
@@ -433,8 +152,10 @@
         <article class="acard" data-cat="fintech">
             <div class="acard-img">🛡️</div>
             <div class="acard-body">
-                <h3>AI in Fraud Detection & Financial Security</h3>
-                <p>How ML models detect and prevent financial fraud in real-time across banking and payments.</p>
+                <div>
+                    <h3>AI in Fraud Detection & Financial Security</h3>
+                    <p>How ML models detect and prevent financial fraud in real-time across banking and payments.</p>
+                </div>
                 <div class="acard-meta">
                     <span>Aug 9, 2026 · 6 min</span>
                     <a href="blog-ai-fraud-detection-finance.html" class="acard-link">Read Analysis →</a>
@@ -446,8 +167,10 @@
         <article class="acard" data-cat="fintech">
             <div class="acard-img">📋</div>
             <div class="acard-body">
-                <h3>How Generative AI Is Transforming Corporate Auditing</h3>
-                <p>Corporate auditing giants deploy continuous 100% population AI testing across enterprise ledgers.</p>
+                <div>
+                    <h3>How Generative AI Is Transforming Corporate Auditing</h3>
+                    <p>Corporate auditing giants deploy continuous 100% population AI testing across enterprise ledgers.</p>
+                </div>
                 <div class="acard-meta">
                     <span>Aug 13, 2026 · 9 min</span>
                     <a href="blog-generative-ai-corporate-financial-auditing.html" class="acard-link">Read Analysis →</a>
@@ -459,8 +182,10 @@
         <article class="acard" data-cat="crypto">
             <div class="acard-img">⚖️</div>
             <div class="acard-body">
-                <h3>AI Risk Management in Decentralized Finance</h3>
-                <p>Global regulators align on AI risk frameworks and automated smart contract boundaries.</p>
+                <div>
+                    <h3>AI Risk Management in Decentralized Finance</h3>
+                    <p>Global regulators align on AI risk frameworks and automated smart contract boundaries.</p>
+                </div>
                 <div class="acard-meta">
                     <span>Aug 13, 2026 · 10 min</span>
                     <a href="blog-ai-risk-management-defi-2026.html" class="acard-link">Read Analysis →</a>
@@ -472,8 +197,10 @@
         <article class="acard" data-cat="ai-tools">
             <div class="acard-img">🔍</div>
             <div class="acard-body">
-                <h3>DeepSeek AI in Finance: Open-Weights Revolution</h3>
-                <p>Open-weights reasoning models gain traction in private quantitative trading desks.</p>
+                <div>
+                    <h3>DeepSeek AI in Finance: Open-Weights Revolution</h3>
+                    <p>Open-weights reasoning models gain traction in private quantitative trading desks.</p>
+                </div>
                 <div class="acard-meta">
                     <span>Aug 12, 2026 · 8 min</span>
                     <a href="blog-deepseek-ai-finance-2026.html" class="acard-link">Read Analysis →</a>
@@ -485,8 +212,10 @@
         <article class="acard" data-cat="ai-tools">
             <div class="acard-img">📊</div>
             <div class="acard-body">
-                <h3>How to Evaluate AI Trading Platforms in 2026</h3>
-                <p>Key criteria for assessing AI-powered trading and investment research platforms.</p>
+                <div>
+                    <h3>How to Evaluate AI Trading Platforms in 2026</h3>
+                    <p>Key criteria for assessing AI-powered trading and investment research platforms.</p>
+                </div>
                 <div class="acard-meta">
                     <span>Aug 11, 2026 · 7 min</span>
                     <a href="blog-evaluate-ai-trading-platforms.html" class="acard-link">Read Analysis →</a>
@@ -498,8 +227,10 @@
         <article class="acard" data-cat="crypto">
             <div class="acard-img">📈</div>
             <div class="acard-body">
-                <h3>ML Applications in Cryptocurrency Market Analysis</h3>
-                <p>How machine learning models process on-chain data, order flow, and market sentiment.</p>
+                <div>
+                    <h3>ML Applications in Cryptocurrency Market Analysis</h3>
+                    <p>How machine learning models process on-chain data, order flow, and market sentiment.</p>
+                </div>
                 <div class="acard-meta">
                     <span>Aug 11, 2026 · 8 min</span>
                     <a href="blog-ml-crypto-market-analysis.html" class="acard-link">Read Analysis →</a>
@@ -511,8 +242,10 @@
         <article class="acard" data-cat="ai-tools">
             <div class="acard-img">📑</div>
             <div class="acard-body">
-                <h3>NLP for Financial Document Analysis</h3>
-                <p>Natural language processing architectures parse SEC 10-K filings with sub-second latency.</p>
+                <div>
+                    <h3>NLP for Financial Document Analysis</h3>
+                    <p>Natural language processing architectures parse SEC 10-K filings with sub-second latency.</p>
+                </div>
                 <div class="acard-meta">
                     <span>Aug 11, 2026 · 8 min</span>
                     <a href="blog-nlp-financial-document-analysis.html" class="acard-link">Read Analysis →</a>
@@ -537,7 +270,7 @@
                     <li><a href="reviews.html">Reviews</a></li>
                     <li><a href="guides.html">Guides</a></li>
                     <li><a href="news.html">News</a></li>
-                    <li><a href="https://twitter.com/CoinvestAI_HQ" target="_blank">Twitter / X</a></li>
+                    <li><a href="https://twitter.com/CoinvestAI_HQ" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
                 </ul>
             </div>
             <div>
@@ -578,9 +311,11 @@
         }
     }
 
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-    }
+    try {
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    } catch (e) {}
 
     function filterCat(c, btn){
         document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
