@@ -70,41 +70,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google AdSense Code with defer -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous" defer></script>
+    <!-- External Optimized Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Super Optimized AdSense Lazy-Load Script -->
+    <script>
+        let adsLoaded = false;
+        function loadAdSense() {
+            if(window.adsenseLoaded || adsLoaded) return;
+            adsLoaded = true;
+            window.adsenseLoaded = true;
+            const script = document.createElement('script');
+            script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060";
+            script.async = true;
+            script.crossOrigin = "anonymous";
+            document.head.appendChild(script);
+        }
+        window.addEventListener('scroll', loadAdSense, {once: true, passive: true});
+        window.addEventListener('touchstart', loadAdSense, {once: true, passive: true});
+        window.addEventListener('mousemove', loadAdSense, {once: true, passive: true});
+        setTimeout(loadAdSense, 7000); 
+    </script>
 
     <style>
-        :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:14px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
-        *{margin:0;padding:0;box-sizing:border-box;}
-        html{scroll-behavior:smooth;}
-        body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.7;}
-        h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;}a{text-decoration:none;color:inherit;}
-        
-        .container{max-width:1280px;margin:0 auto;padding:0 24px;}
-        .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-
-        /* Navigation */
-        .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-        .header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
-        .logo{font-family:var(--font-heading);font-size:24px;font-weight:700;}
-        .nav-links{display:flex;gap:4px;list-style:none;}
-        .nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--gray);}
-        .nav-links a:hover,.nav-links a.active{background:rgba(37,99,235,0.08);color:var(--secondary);}
-
-        .breadcrumbs{padding:20px 0;font-size:14px;color:var(--gray);}
-        .breadcrumbs a{color:var(--secondary);}
-
-        /* Hero */
         .page-hero{background:linear-gradient(135deg,#6366f1,#4f46e5);padding:60px 0;text-align:center;color:white;}
-        .page-hero h1{font-size:42px;margin-bottom:8px;line-height:1.2;}
+        .page-hero h1{font-size:42px;margin-bottom:8px;line-height:1.2;font-family:var(--font-heading);font-weight:700;}
         .page-hero p{color:rgba(255,255,255,0.9);font-size:18px;max-width:680px;margin:0 auto;}
 
         .disclaimer-banner{max-width:820px;margin:24px auto 0;background:#fffbeb;border-left:4px solid #f59e0b;padding:12px 18px;border-radius:0 8px 8px 0;font-size:13px;color:#92400e;text-align:left;line-height:1.6;}
 
-        /* Grid */
-        .section-title{font-size:24px;color:var(--primary);text-align:center;margin:30px 0 10px;}
+        .section-title{font-size:24px;color:var(--primary);text-align:center;margin:30px 0 10px;font-family:var(--font-heading);font-weight:700;}
         .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:28px;padding:30px 0 60px;}
-        .card{background:white;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);transition:all 0.3s;display:flex;flex-direction:column;justify-content:space-between;}
+        .card{background:var(--bg);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);transition:all 0.3s;display:flex;flex-direction:column;justify-content:space-between;}
         .card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.08);border-color:var(--secondary);}
         
         .card-img{height:180px;position:relative;display:flex;align-items:center;justify-content:center;font-size:48px;color:rgba(255,255,255,0.35);}
@@ -116,26 +113,14 @@
         .fi6{background:linear-gradient(135deg,#f59e0b,#d97706);}
         
         .card-body{padding:24px;display:flex;flex-direction:column;flex-grow:1;justify-content:space-between;}
-        .card-body h3{font-size:19px;margin-bottom:10px;line-height:1.4;color:var(--primary);}
+        .card-body h3{font-size:19px;margin-bottom:10px;line-height:1.4;color:var(--primary);font-family:var(--font-heading);font-weight:700;}
         .card-body p{color:var(--gray);font-size:14px;line-height:1.6;margin-bottom:18px;}
         .card-body a{color:var(--secondary);font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:4px;margin-top:auto;}
         .card-body a:hover{text-decoration:underline;}
 
-        /* Ad Banner Slot */
         .ad-slot{margin:30px 0;padding:16px 0;text-align:center;background:var(--light-gray);border-radius:var(--radius);border:1px dashed var(--border);}
         .ad-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gray);margin-bottom:8px;}
 
-        /* Footer */
-        .footer{background:var(--primary);color:white;padding:60px 0 30px;margin-top:60px;}
-        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
-        .footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-bottom:18px;}
-        .footer ul{list-style:none;}
-        .footer li{margin-bottom:10px;}
-        .footer a{color:rgba(255,255,255,0.55);font-size:14px;}
-        .footer a:hover{color:white;}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.35);font-size:14px;}
-
-        /* Render Performance Optimization */
         .footer, .card, .ad-slot {
             content-visibility: auto;
             contain-intrinsic-size: 1px 350px;
@@ -145,7 +130,6 @@
             .page-hero h1{font-size:30px;}
             .grid{grid-template-columns:1fr;}
             .nav-links{display:none;}
-            .footer-grid{grid-template-columns:1fr;}
         }
     </style>
 </head>
@@ -162,105 +146,120 @@
         <li><a href="crypto-ai.html">Crypto AI</a></li>
         <li><a href="guides.html">Guides</a></li>
         <li><a href="about.html">About</a></li>
+        <li><button class="dark-mode-btn" onclick="toggleDarkMode()" type="button">🌓 Mode</button></li>
     </ul></nav>
 </div></div></header>
 
-<div class="container"><nav class="breadcrumbs"><a href="index.html">Home</a> › Fintech AI</nav></div>
+<main>
+    <div class="container"><nav class="breadcrumbs"><a href="index.html">Home</a> › Fintech AI</nav></div>
 
-<!-- Hero Banner -->
-<section class="page-hero">
-    <div class="container">
-        <h1>Fintech AI Trends 2026</h1>
-        <p>How artificial intelligence and autonomous machine learning frameworks are reshaping banking infrastructure, corporate auditing, and automated wealth management.</p>
-        
-        <div class="disclaimer-banner">
-            <strong>⚠️ Educational &amp; Legal Disclaimer:</strong> Content on CoinvestAI is strictly for educational, scientific, and research purposes only. Nothing herein constitutes formal financial, investment, or banking advisory.
+    <!-- Hero Banner -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Fintech AI Trends 2026</h1>
+            <p>How artificial intelligence and autonomous machine learning frameworks are reshaping banking infrastructure, corporate auditing, and automated wealth management.</p>
+            
+            <div class="disclaimer-banner">
+                <strong>⚠️ Educational &amp; Legal Disclaimer:</strong> Content on CoinvestAI is strictly for educational, scientific, and research purposes only. Nothing herein constitutes formal financial, investment, or banking advisory.
+            </div>
         </div>
+    </section>
+
+    <!-- Content Container -->
+    <div class="container">
+
+        <!-- Ad Banner Slot -->
+        <div class="ad-slot">
+            <div class="ad-label">Advertisement</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-7088247829787060"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <h2 class="section-title">Latest Fintech AI &amp; Financial Infrastructure Publications</h2>
+
+        <div class="grid">
+            
+            <!-- Article 1: Generative AI Auditing -->
+            <article class="card">
+                <div class="card-img fi1">📑</div>
+                <div class="card-body">
+                    <div>
+                        <h3>How Generative AI Is Transforming Corporate Financial Auditing</h3>
+                        <p>Exploring the shift from retrospective sampling to continuous, 100% population testing and real-time assurance in corporate finance.</p>
+                    </div>
+                    <a href="blog-generative-ai-corporate-financial-auditing.html">Read Full Research →</a>
+                </div>
+            </article>
+
+            <!-- Article 2: AI-Native Financial Services -->
+            <article class="card">
+                <div class="card-img fi4">💳</div>
+                <div class="card-body">
+                    <div>
+                        <h3>The Rise of AI-Native Financial Services in 2026</h3>
+                        <p>How autonomous intelligence enables a new generation of financial products designed with algorithmic decision engines at their foundation.</p>
+                    </div>
+                    <a href="blog-ai-native-financial-services.html">Read Full Research →</a>
+                </div>
+            </article>
+
+            <!-- Article 3: Digital Banking Automation -->
+            <article class="card">
+                <div class="card-img fi2">🏦</div>
+                <div class="card-body">
+                    <div>
+                        <h3>AI &amp; Automation in Digital Banking (2026)</h3>
+                        <p>Analyzing the impact of conversational banking interfaces, real-time credit underwriting, and automated compliance monitoring systems.</p>
+                    </div>
+                    <a href="blog-ai-digital-banking-automation.html">Read Full Research →</a>
+                </div>
+            </article>
+
+            <!-- Article 4: Robo-Advisors Evolution -->
+            <article class="card">
+                <div class="card-img fi5">🤖</div>
+                <div class="card-body">
+                    <div>
+                        <h3>The Evolution of Robo-Advisors &amp; AI Wealth Systems</h3>
+                        <p>Beyond traditional modern portfolio theory: How multi-agent AI frameworks construct dynamic, tax-efficient, personalized retail portfolios.</p>
+                    </div>
+                    <a href="blog-robo-advisors-ai-investment.html">Read Full Research →</a>
+                </div>
+            </article>
+
+            <!-- Article 5: AI Fraud Detection -->
+            <article class="card">
+                <div class="card-img fi3">🛡️</div>
+                <div class="card-body">
+                    <div>
+                        <h3>AI Fraud Detection &amp; Security in Financial Services (2026)</h3>
+                        <p>Deep neural network graph analytics and behavioral biometric models identifying synthetic identities and payment anomalies in real-time.</p>
+                    </div>
+                    <a href="blog-ai-fraud-detection-finance.html">Read Full Research →</a>
+                </div>
+            </article>
+
+            <!-- Article 6: AI Investment Research Tools -->
+            <article class="card">
+                <div class="card-img fi6">📊</div>
+                <div class="card-body">
+                    <div>
+                        <h3>How AI Is Changing Investment Research in 2026</h3>
+                        <p>How quantitative analysts use LLMs and predictive engines to parse earnings call transcripts, 10-K filings, and macro market telemetry.</p>
+                    </div>
+                    <a href="blog-ai-investment-research-tools.html">Read Full Research →</a>
+                </div>
+            </article>
+
+        </div>
+
     </div>
-</section>
-
-<!-- Content Container -->
-<div class="container">
-
-    <!-- Ad Banner Slot -->
-    <div class="ad-slot">
-        <div class="ad-label">Advertisement</div>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7088247829787060"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
-    <h2 class="section-title">Latest Fintech AI &amp; Financial Infrastructure Publications</h2>
-
-    <div class="grid">
-        
-        <!-- Article 1: Generative AI Auditing -->
-        <article class="card">
-            <div class="card-img fi1">📑</div>
-            <div class="card-body">
-                <h3>How Generative AI Is Transforming Corporate Financial Auditing</h3>
-                <p>Exploring the shift from retrospective sampling to continuous, 100% population testing and real-time assurance in corporate finance.</p>
-                <a href="blog-generative-ai-corporate-financial-auditing.html">Read Full Research →</a>
-            </div>
-        </article>
-
-        <!-- Article 2: AI-Native Financial Services -->
-        <article class="card">
-            <div class="card-img fi4">💳</div>
-            <div class="card-body">
-                <h3>The Rise of AI-Native Financial Services in 2026</h3>
-                <p>How autonomous intelligence enables a new generation of financial products designed with algorithmic decision engines at their foundation.</p>
-                <a href="blog-ai-native-financial-services.html">Read Full Research →</a>
-            </div>
-        </article>
-
-        <!-- Article 3: Digital Banking Automation -->
-        <article class="card">
-            <div class="card-img fi2">🏦</div>
-            <div class="card-body">
-                <h3>AI &amp; Automation in Digital Banking (2026)</h3>
-                <p>Analyzing the impact of conversational banking interfaces, real-time credit underwriting, and automated compliance monitoring systems.</p>
-                <a href="blog-ai-digital-banking-automation.html">Read Full Research →</a>
-            </div>
-        </article>
-
-        <!-- Article 4: Robo-Advisors Evolution -->
-        <article class="card">
-            <div class="card-img fi5">🤖</div>
-            <div class="card-body">
-                <h3>The Evolution of Robo-Advisors &amp; AI Wealth Systems</h3>
-                <p>Beyond traditional modern portfolio theory: How multi-agent AI frameworks construct dynamic, tax-efficient, personalized retail portfolios.</p>
-                <a href="blog-robo-advisors-ai-investment.html">Read Full Research →</a>
-            </div>
-        </article>
-
-        <!-- Article 5: AI Fraud Detection -->
-        <article class="card">
-            <div class="card-img fi3">🛡️</div>
-            <div class="card-body">
-                <h3>AI Fraud Detection &amp; Security in Financial Services (2026)</h3>
-                <p>Deep neural network graph analytics and behavioral biometric models identifying synthetic identities and payment anomalies in real-time.</p>
-                <a href="blog-ai-fraud-detection-finance.html">Read Full Research →</a>
-            </div>
-        </article>
-
-        <!-- Article 6: AI Investment Research Tools -->
-        <article class="card">
-            <div class="card-img fi6">📊</div>
-            <div class="card-body">
-                <h3>How AI Is Changing Investment Research in 2026</h3>
-                <p>How quantitative analysts use LLMs and predictive engines to parse earnings call transcripts, 10-K filings, and macro market telemetry.</p>
-                <a href="blog-ai-investment-research-tools.html">Read Full Research →</a>
-            </div>
-        </article>
-
-    </div>
-
-</div>
+</main>
 
 <!-- Footer -->
 <footer class="footer"><div class="container"><div class="footer-grid">
@@ -306,6 +305,17 @@
     </p>
     <p>© 2026 CoinvestAI. All rights reserved.</p>
 </div></div></footer>
+
+<!-- Dark Mode Script -->
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    }
+    try {
+        if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+    } catch (e) {}
+</script>
 
 </body>
 </html>
