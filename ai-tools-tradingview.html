@@ -128,6 +128,7 @@
 
         /* Code/Snippet Box */
         .code-box{background:#1e293b;color:#e2e8f0;border-radius:var(--radius);padding:20px;margin:20px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;line-height:1.6;overflow-x:auto;}
+        .code-box pre{white-space:pre-wrap;word-break:break-all;margin:0;font-family:inherit;}
         .code-label{color:#38bdf8;font-weight:700;margin-bottom:8px;display:block;}
 
         /* Scoring Table */
@@ -148,11 +149,6 @@
         .sidebar-item .value{font-weight:600;color:var(--primary);font-size:14px;margin-top:2px;}
         .btn-full{display:block;width:100%;text-align:center;padding:12px;background:var(--secondary);color:white;border-radius:8px;font-weight:600;font-size:14px;margin-top:20px;transition:all 0.2s;}
         .btn-full:hover{background:#1d4ed8;}
-
-        /* FAQ Accordion */
-        details{background:var(--light-gray);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;margin-bottom:12px;}
-        summary{cursor:pointer;font-weight:600;color:var(--primary);font-size:15px;outline:none;}
-        details p{margin-top:10px;margin-bottom:0;font-size:14px;color:#475569;}
 
         /* Author Box */
         .author-box{background:var(--light-gray);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-top:40px;display:flex;gap:16px;align-items:center;}
@@ -288,7 +284,7 @@
 
         <div class="code-box">
             <span class="code-label">// Pine Script v5 Strategy Example with Dynamic Stop-Loss</span>
-//@version=5
+            <pre>//@version=5
 strategy("CoinvestAI Mean-Reversion Demo", overlay=true, margin_long=100)
 length = input.int(20, "EMA Length")
 emaVal = ta.ema(close, length)
@@ -296,7 +292,7 @@ buyCondition = ta.crossover(close, emaVal) and ta.rsi(close, 14) < 45
 
 if (buyCondition)
     strategy.entry("Long Entry", strategy.long)
-    strategy.exit("Bracket Exit", "Long Entry", stop=close * 0.98, limit=close * 1.04)
+    strategy.exit("Bracket Exit", "Long Entry", stop=close * 0.98, limit=close * 1.04)</pre>
         </div>
 
         <p>The built-in strategy tester calculates historical Sharpe ratios, maximum drawdown percentages, profit factors, and trade distribution tables without requiring external compilation environments.</p>
