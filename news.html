@@ -64,6 +64,7 @@
         function loadAdSense() {
             if (adsLoaded) return;
             adsLoaded = true;
+            window.adsenseLoaded = true;
             const script = document.createElement('script');
             script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060";
             script.async = true;
@@ -181,130 +182,132 @@
     </ul></nav>
 </div></div></header>
 
-<div class="container"><nav class="breadcrumbs"><a href="index.html">Home</a> › News</nav></div>
+<main>
+    <div class="container"><nav class="breadcrumbs"><a href="index.html">Home</a> › News</nav></div>
 
-<!-- Hero Banner -->
-<section class="page-hero">
-    <div class="container">
-        <h1>AI Finance News &amp; Market Dispatches</h1>
-        <p>Institutional briefings on regulatory shifts, quantitative model breakthroughs, and algorithmic finance updates for 2026.</p>
-        
-        <div class="disclaimer-banner">
-            <strong>⚠️ Educational Notice:</strong> CoinvestAI provides objective news analysis and quantitative reporting for informational purposes only. Nothing herein constitutes investment or financial advice.
+    <!-- Hero Banner -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>AI Finance News &amp; Market Dispatches</h1>
+            <p>Institutional briefings on regulatory shifts, quantitative model breakthroughs, and algorithmic finance updates for 2026.</p>
+            
+            <div class="disclaimer-banner">
+                <strong>⚠️ Educational Notice:</strong> CoinvestAI provides objective news analysis and quantitative reporting for informational purposes only. Nothing herein constitutes investment or financial advice.
+            </div>
         </div>
+    </section>
+
+    <!-- Content Container -->
+    <div class="container news-section">
+
+        <!-- Ad Banner Slot -->
+        <div class="ad-slot">
+            <div class="ad-label">Advertisement</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-7088247829787060"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <h2 class="section-title">Latest Market Briefs &amp; Intelligence Dispatches</h2>
+
+        <div class="news-grid">
+
+            <!-- News Item 1 -->
+            <article class="news-card">
+                <div>
+                    <span class="news-badge badge-reg">Regulation &amp; Policy</span>
+                    <h3>Global Regulators Align on AI Risk Frameworks in Decentralized Finance</h3>
+                    <p>International compliance authorities enforce stricter risk boundary testing on automated smart contract bots and oracle manipulation safeguards under emerging 2026 frameworks.</p>
+                </div>
+                <div class="news-footer">
+                    <span class="news-date">Aug 14, 2026</span>
+                    <a href="blog-ai-risk-management-defi-2026.html" class="news-link">Read Analysis →</a>
+                </div>
+            </article>
+
+            <!-- News Item 2 -->
+            <article class="news-card">
+                <div>
+                    <span class="news-badge badge-quant">Quantitative ML</span>
+                    <h3>Open-Weights Reasoning Models Gain Traction in Private Quantitative Desks</h3>
+                    <p>Proprietary trading firms are rapidly deploying localized open-weights architectures to execute private financial reasoning without leaking trade telemetry to public APIs.</p>
+                </div>
+                <div class="news-footer">
+                    <span class="news-date">Aug 13, 2026</span>
+                    <a href="blog-deepseek-ai-finance-2026.html" class="news-link">Read Analysis →</a>
+                </div>
+            </article>
+
+            <!-- News Item 3 -->
+            <article class="news-card">
+                <div>
+                    <span class="news-badge badge-corp">Fintech &amp; Banking</span>
+                    <h3>Corporate Auditing Giants Deploy Continuous 100% Population AI Testing</h3>
+                    <p>Financial assurance firms shift entirely from retrospective quarterly sampling to real-time, automated verification across corporate enterprise ledger entries.</p>
+                </div>
+                <div class="news-footer">
+                    <span class="news-date">Aug 13, 2026</span>
+                    <a href="blog-generative-ai-corporate-financial-auditing.html" class="news-link">Read Analysis →</a>
+                </div>
+            </article>
+
+            <!-- News Item 4 -->
+            <article class="news-card">
+                <div>
+                    <span class="news-badge badge-crypto">Crypto Telemetry</span>
+                    <h3>High-Frequency Crypto Venues Integrate Real-Time Slippage Prediction Models</h3>
+                    <p>Algorithmic crypto execution venues increasingly deploy machine learning predictive engines to dynamically route liquidity and mitigate order book slippage during volatility spikes.</p>
+                </div>
+                <div class="news-footer">
+                    <span class="news-date">Aug 12, 2026</span>
+                    <a href="blog-ai-crypto-trading-algorithms.html" class="news-link">Read Analysis →</a>
+                </div>
+            </article>
+
+            <!-- News Item 5 -->
+            <article class="news-card">
+                <div>
+                    <span class="news-badge badge-quant">Document AI</span>
+                    <h3>NLP Models Parse SEC 10-K Filings with Sub-Second Latency</h3>
+                    <p>Modern natural language processing architectures allow quantitative research systems to cross-reference multi-year financial statements within milliseconds of filing releases.</p>
+                </div>
+                <div class="news-footer">
+                    <span class="news-date">Aug 11, 2026</span>
+                    <a href="blog-nlp-financial-document-analysis.html" class="news-link">Read Analysis →</a>
+                </div>
+            </article>
+
+            <!-- News Item 6 -->
+            <article class="news-card">
+                <div>
+                    <span class="news-badge badge-corp">Wealth Tech</span>
+                    <h3>Next-Gen Robo-Advisors Move Beyond Modern Portfolio Theory</h3>
+                    <p>Multi-agent wealth platforms transition from static asset allocation to real-time, tax-optimized dynamic rebalancing tailored to individual risk appetites.</p>
+                </div>
+                <div class="news-footer">
+                    <span class="news-date">Aug 10, 2026</span>
+                    <a href="blog-robo-advisors-ai-investment.html" class="news-link">Read Analysis →</a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Newsletter Dispatch Block -->
+        <div class="nl-block">
+            <h3>Stay Ahead of Institutional AI Finance</h3>
+            <p>Get our weekly research briefs, quantitative updates, and tool evaluations delivered to your inbox.</p>
+            <form class="nl-form" onsubmit="event.preventDefault();alert('Thank you for subscribing to CoinvestAI News!');">
+                <input type="email" placeholder="Enter your business email" required>
+                <button class="nl-btn">Subscribe</button>
+            </form>
+        </div>
+
     </div>
-</section>
-
-<!-- Content Container -->
-<div class="container news-section">
-
-    <!-- Ad Banner Slot -->
-    <div class="ad-slot">
-        <div class="ad-label">Advertisement</div>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7088247829787060"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
-    <h2 class="section-title">Latest Market Briefs &amp; Intelligence Dispatches</h2>
-
-    <div class="news-grid">
-
-        <!-- News Item 1 -->
-        <article class="news-card">
-            <div>
-                <span class="news-badge badge-reg">Regulation &amp; Policy</span>
-                <h3>Global Regulators Align on AI Risk Frameworks in Decentralized Finance</h3>
-                <p>International compliance authorities enforce stricter risk boundary testing on automated smart contract bots and oracle manipulation safeguards under emerging 2026 frameworks.</p>
-            </div>
-            <div class="news-footer">
-                <span class="news-date">Aug 14, 2026</span>
-                <a href="blog-ai-risk-management-defi-2026.html" class="news-link">Read Analysis →</a>
-            </div>
-        </article>
-
-        <!-- News Item 2 -->
-        <article class="news-card">
-            <div>
-                <span class="news-badge badge-quant">Quantitative ML</span>
-                <h3>Open-Weights Reasoning Models Gain Traction in Private Quantitative Desks</h3>
-                <p>Proprietary trading firms are rapidly deploying localized open-weights architectures to execute private financial reasoning without leaking trade telemetry to public APIs.</p>
-            </div>
-            <div class="news-footer">
-                <span class="news-date">Aug 13, 2026</span>
-                <a href="blog-deepseek-ai-finance-2026.html" class="news-link">Read Analysis →</a>
-            </div>
-        </article>
-
-        <!-- News Item 3 -->
-        <article class="news-card">
-            <div>
-                <span class="news-badge badge-corp">Fintech &amp; Banking</span>
-                <h3>Corporate Auditing Giants Deploy Continuous 100% Population AI Testing</h3>
-                <p>Financial assurance firms shift entirely from retrospective quarterly sampling to real-time, automated verification across corporate enterprise ledger entries.</p>
-            </div>
-            <div class="news-footer">
-                <span class="news-date">Aug 13, 2026</span>
-                <a href="blog-generative-ai-corporate-financial-auditing.html" class="news-link">Read Analysis →</a>
-            </div>
-        </article>
-
-        <!-- News Item 4 -->
-        <article class="news-card">
-            <div>
-                <span class="news-badge badge-crypto">Crypto Telemetry</span>
-                <h3>High-Frequency Crypto Venues Integrate Real-Time Slippage Prediction Models</h3>
-                <p>Algorithmic crypto execution venues increasingly deploy machine learning predictive engines to dynamically route liquidity and mitigate order book slippage during volatility spikes.</p>
-            </div>
-            <div class="news-footer">
-                <span class="news-date">Aug 12, 2026</span>
-                <a href="blog-ai-crypto-trading-algorithms.html" class="news-link">Read Analysis →</a>
-            </div>
-        </article>
-
-        <!-- News Item 5 -->
-        <article class="news-card">
-            <div>
-                <span class="news-badge badge-quant">Document AI</span>
-                <h3>NLP Models Parse SEC 10-K Filings with Sub-Second Latency</h3>
-                <p>Modern natural language processing architectures allow quantitative research systems to cross-reference multi-year financial statements within milliseconds of filing releases.</p>
-            </div>
-            <div class="news-footer">
-                <span class="news-date">Aug 11, 2026</span>
-                <a href="blog-nlp-financial-document-analysis.html" class="news-link">Read Analysis →</a>
-            </div>
-        </article>
-
-        <!-- News Item 6 -->
-        <article class="news-card">
-            <div>
-                <span class="news-badge badge-corp">Wealth Tech</span>
-                <h3>Next-Gen Robo-Advisors Move Beyond Modern Portfolio Theory</h3>
-                <p>Multi-agent wealth platforms transition from static asset allocation to real-time, tax-optimized dynamic rebalancing tailored to individual risk appetites.</p>
-            </div>
-            <div class="news-footer">
-                <span class="news-date">Aug 10, 2026</span>
-                <a href="blog-robo-advisors-ai-investment.html" class="news-link">Read Analysis →</a>
-            </div>
-        </article>
-
-    </div>
-
-    <!-- Newsletter Dispatch Block -->
-    <div class="nl-block">
-        <h3>Stay Ahead of Institutional AI Finance</h3>
-        <p>Get our weekly research briefs, quantitative updates, and tool evaluations delivered to your inbox.</p>
-        <form class="nl-form" onsubmit="event.preventDefault();alert('Thank you for subscribing to CoinvestAI News!');">
-            <input type="email" placeholder="Enter your business email" required>
-            <button class="nl-btn">Subscribe</button>
-        </form>
-    </div>
-
-</div>
+</main>
 
 <!-- Footer -->
 <footer class="footer"><div class="container"><div class="footer-grid">
