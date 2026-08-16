@@ -3,12 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editorial Team | CoinvestAI</title>
+    <title>Editorial Team & Research Staff — CoinvestAI 2026</title>
+    <meta name="description" content="Meet the quantitative analysts, financial software researchers, and editorial staff behind CoinvestAI's independent AI and fintech publications.">
+    <link rel="canonical" href="https://coinvestai.com/authors-coinvestai-editorial-team.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
+
     <style>
-        .wrap { max-width: 800px; margin: 0 auto; padding: 60px 24px; text-align: center; }
-        h1 { font-family: 'Space Grotesk', sans-serif; font-size: 38px; color: var(--primary); margin-bottom: 20px; }
-        p { color: var(--gray); font-size: 17px; }
+        .page-hero{background:linear-gradient(135deg,var(--primary),#020617);padding:60px 0;text-align:center;color:white;}
+        .page-hero h1{font-size:42px;margin-bottom:8px;line-height:1.2;font-family:var(--font-heading);font-weight:700;}
+        
+        .team-section{padding:60px 0;}
+        .section-intro{max-width:800px;margin:0 auto 40px;text-align:center;color:var(--gray);}
+        
+        .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;max-width:1000px;margin:0 auto;}
+        .team-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:32px;text-align:center;transition:0.3s;}
+        .team-card:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(0,0,0,0.06);border-color:var(--secondary);}
+        
+        .avatar{width:90px;height:90px;margin:0 auto 20px;background:linear-gradient(135deg,var(--secondary),var(--accent));border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:32px;font-weight:700;}
+        .team-card h3{font-size:20px;margin-bottom:6px;font-family:var(--font-heading);color:var(--primary);}
+        .team-card .role{color:var(--secondary);font-weight:600;font-size:14px;margin-bottom:16px;}
+        .team-card p{color:var(--gray);font-size:14px;line-height:1.6;}
+        
+        .values-box{max-width:800px;margin:60px auto 0;background:var(--light-gray);padding:40px;border-radius:var(--radius);}
+        .values-box h2{text-align:center;margin-bottom:30px;font-family:var(--font-heading);color:var(--primary);}
+        .values-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+        .values-grid h4{color:var(--primary);margin-bottom:5px;}
+        .values-grid p{color:var(--gray);font-size:14px;}
+        
+        @media(max-width:768px){.values-grid{grid-template-columns:1fr;}}
     </style>
 </head>
 <body>
@@ -19,24 +46,86 @@
         <li><a href="blog.html">Blog</a></li>
         <li><a href="ai-tools.html">AI Tools</a></li>
         <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><button class="dark-mode-btn" onclick="toggleDarkMode()" type="button">🌓 Mode</button></li>
     </ul></nav>
 </div></div></header>
 
 <main>
-    <div class="wrap">
-        <h1>Editorial Team</h1>
-        <p>This page is currently under development. Our team of financial analysts and AI researchers is working hard to bring you the best insights.</p>
-        <p style="margin-top:20px;"><a href="index.html">← Return to Home</a></p>
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Editorial Team</h1>
+            <p>The minds driving the future of AI-driven financial research.</p>
+        </div>
+    </section>
+
+    <div class="container team-section">
+        <div class="section-intro">
+            <p>At CoinvestAI, we combine deep quantitative expertise with cutting-edge artificial intelligence. Our team ensures that every review, guide, and market dispatch adheres to our strict editorial standards.</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="avatar">QA</div>
+                <h3>Lead Research Desk</h3>
+                <div class="role">Quantitative Analysis & Strategy</div>
+                <p>Specializing in algorithmic backtesting, market microstructure, and performance metrics for AI trading software.</p>
+            </div>
+            <div class="team-card">
+                <div class="avatar">FT</div>
+                <h3>Fintech Editor</h3>
+                <div class="role">Financial Innovation Lead</div>
+                <p>Focuses on banking infrastructure, generative AI integration in auditing, and digital ledger innovation.</p>
+            </div>
+            <div class="team-card">
+                <div class="avatar">ET</div>
+                <h3>Ethics & Compliance</h3>
+                <div class="role">AI Policy & Safety</div>
+                <p>Oversees regulatory alignment, risk framework adherence, and compliance transparency in decentralized finance protocols.</p>
+            </div>
+        </div>
+
+        <div class="values-box">
+            <h2>Our Editorial Commitment</h2>
+            <div class="values-grid">
+                <div>
+                    <h4>Independent Research</h4>
+                    <p>We are beholden only to our readers. Ratings are based on data, not paid placements.</p>
+                </div>
+                <div>
+                    <h4>Fact-Driven Insights</h4>
+                    <p>Every claim is verified against primary sources, ensuring accuracy in a fast-moving AI landscape.</p>
+                </div>
+                <div>
+                    <h4>Human Oversight</h4>
+                    <p>While we use AI to analyze data, final analysis is always vetted by human experts.</p>
+                </div>
+                <div>
+                    <h4>Transparency</h4>
+                    <p>We openly disclose our review methodology and scoring frameworks.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
-<footer class="footer">
-    <div class="container">
-        <div class="footer-bottom">
-            <p>© 2026 CoinvestAI. All rights reserved.</p>
-        </div>
+<footer class="footer"><div class="container"><div class="footer-grid">
+    <div>
+        <h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:14px;">Independent research on AI-driven financial tools and quantitative intelligence.</p>
     </div>
-</footer>
+    <div><h3>Company</h3><ul><li><a href="editorial-guidelines.html">Editorial Guidelines</a></li><li><a href="review-methodology.html">Review Methodology</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+</div></div></footer>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    }
+    try {
+        if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+    } catch (e) {}
+</script>
+
 </body>
 </html>
