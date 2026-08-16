@@ -90,6 +90,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Critical CSS & Optimized Stylesheet Loading -->
     <style>
         :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:14px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
         *{margin:0;padding:0;box-sizing:border-box;}
@@ -181,7 +182,6 @@
         .footer a{color:rgba(255,255,255,0.55);font-size:14px;}
         .footer a:hover{color:white;}
         
-        /* Updated contrast color for high accessibility rating */
         .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.75);font-size:14px;}
 
         /* Render Performance Optimization */
@@ -199,8 +199,24 @@
         }
     </style>
 
-    <!-- Google AdSense Code with defer -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous" defer></script>
+    <!-- Full stylesheet loaded asynchronously -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+    <!-- AdSense Lazy-Load Script -->
+    <script>
+        function loadAdSense() {
+            if(window.adsenseLoaded) return;
+            window.adsenseLoaded = true;
+            const script = document.createElement('script');
+            script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060";
+            script.async = true;
+            script.crossOrigin = "anonymous";
+            document.head.appendChild(script);
+        }
+        window.addEventListener('scroll', loadAdSense, {once: true, passive: true});
+        setTimeout(loadAdSense, 3500);
+    </script>
 </head>
 <body>
 
