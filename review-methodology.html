@@ -31,39 +31,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google AdSense Code with defer -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous" defer></script>
+    <!-- External Optimized Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
+    <!-- Super Optimized AdSense Lazy-Load Script -->
+    <script>
+        let adsLoaded = false;
+        function loadAdSense() {
+            if(window.adsenseLoaded || adsLoaded) return;
+            adsLoaded = true;
+            window.adsenseLoaded = true;
+            const script = document.createElement('script');
+            script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060";
+            script.async = true;
+            script.crossOrigin = "anonymous";
+            document.head.appendChild(script);
+        }
+        window.addEventListener('scroll', loadAdSense, {once: true, passive: true});
+        window.addEventListener('touchstart', loadAdSense, {once: true, passive: true});
+        window.addEventListener('mousemove', loadAdSense, {once: true, passive: true});
+        setTimeout(loadAdSense, 7000);
+    </script>
+
+    <!-- Page Specific Styles -->
     <style>
-        :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:12px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
-        *{margin:0;padding:0;box-sizing:border-box;}
-        html{scroll-behavior:smooth;}
-        body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.8;}
-        h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;}
-        a{text-decoration:none;color:inherit;}
-        
         .container{max-width:900px;margin:0 auto;padding:0 24px;}
-        .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-
-        /* Header Navigation */
-        .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-        .header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
-        .logo{font-family:var(--font-heading);font-size:24px;font-weight:700;}
-        .nav-links{display:flex;gap:4px;list-style:none;}
-        .nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--gray);}
-        .nav-links a:hover,.nav-links a.active{background:rgba(37,99,235,0.08);color:var(--secondary);}
-
-        .breadcrumbs{padding:20px 0;font-size:14px;color:var(--gray);}
-        .breadcrumbs a{color:var(--secondary);}
-
+        
         /* Hero */
         .page-hero{background:linear-gradient(135deg,var(--primary),#020617);padding:60px 0;text-align:center;color:white;}
-        .page-hero h1{font-size:40px;margin-bottom:8px;line-height:1.2;}
+        .page-hero h1{font-size:40px;margin-bottom:8px;line-height:1.2;font-family:var(--font-heading);font-weight:700;}
         .page-hero .date{color:rgba(255,255,255,0.65);font-size:14px;}
 
         /* Content Area */
         .content{padding:50px 0 70px;max-width:850px;margin:0 auto;}
-        .content h2{font-size:24px;margin:38px 0 16px;color:var(--primary);border-bottom:1px solid var(--border);padding-bottom:8px;}
+        .content h2{font-size:24px;margin:38px 0 16px;color:var(--primary);border-bottom:1px solid var(--border);padding-bottom:8px;font-family:var(--font-heading);font-weight:700;}
         .content h2:first-of-type{margin-top:0;}
         .content p{color:#334155;margin-bottom:16px;font-size:16px;line-height:1.8;}
         .content ul{color:#334155;margin-bottom:20px;padding-left:24px;font-size:15px;}
@@ -75,22 +76,12 @@
 
         .criteria-card{background:var(--light-gray);border-radius:var(--radius);padding:24px;margin-bottom:20px;border:1px solid var(--border);transition:all 0.2s;}
         .criteria-card:hover{border-color:var(--secondary);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.04);}
-        .criteria-card h3{color:var(--secondary);margin-bottom:8px;font-size:18px;}
+        .criteria-card h3{color:var(--secondary);margin-bottom:8px;font-size:18px;font-family:var(--font-heading);font-weight:700;}
         .criteria-card p{margin:0;color:var(--gray);font-size:15px;line-height:1.6;}
 
         /* Ad Banner Slot */
         .ad-slot{margin:36px 0;padding:16px 0;text-align:center;background:var(--light-gray);border-radius:var(--radius);border:1px dashed var(--border);}
         .ad-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gray);margin-bottom:8px;}
-
-        /* Footer */
-        .footer{background:var(--primary);color:white;padding:60px 0 30px;margin-top:60px;}
-        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
-        .footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-bottom:18px;}
-        .footer ul{list-style:none;}
-        .footer li{margin-bottom:10px;}
-        .footer a{color:rgba(255,255,255,0.55);font-size:14px;}
-        .footer a:hover{color:white;}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.35);font-size:14px;}
 
         /* Render Performance Optimization */
         .footer, .criteria-card, .ad-slot {
@@ -109,7 +100,7 @@
 <body>
 
 <!-- Header Navigation -->
-<header class="header"><div class="container"><div class="header-inner">
+<header class="header"><div class="container" style="max-width:1100px;"><div class="header-inner">
     <a href="index.html" class="logo gradient-text">CoinvestAI</a>
     <nav><ul class="nav-links">
         <li><a href="blog.html">Blog</a></li>
@@ -126,7 +117,7 @@
 
 <!-- Hero Banner -->
 <section class="page-hero">
-    <div class="container">
+    <div class="container" style="max-width:1100px;">
         <h1>How CoinvestAI Reviews AI Finance Tools</h1>
         <p class="date">Last Updated: August 15, 2026</p>
     </div>
@@ -208,7 +199,7 @@
 </div></div>
 
 <!-- Footer -->
-<footer class="footer"><div class="container"><div class="footer-grid">
+<footer class="footer"><div class="container" style="max-width:1100px;"><div class="footer-grid">
     <div>
         <h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3>
         <p style="color:rgba(255,255,255,0.5);font-size:14px;">Independent research on AI-driven financial tools, quantitative analytics, and fintech innovation.</p>
