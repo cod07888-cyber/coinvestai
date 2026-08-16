@@ -1,69 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Editorial Guidelines | CoinvestAI</title>
-<meta name="description" content="Learn about CoinvestAI's editorial standards, fact-checking processes, independence, and commitment to accurate financial and AI research.">
-<link rel="canonical" href="https://coinvestai.com/editorial-guidelines.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorial Guidelines | CoinvestAI</title>
+    <meta name="description" content="Learn about CoinvestAI's editorial standards, fact-checking processes, independence, and commitment to accurate financial and AI research.">
+    <link rel="canonical" href="https://coinvestai.com/editorial-guidelines.html">
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-    :root{
-        --primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:12px;
-        --font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;
-    }
+    <!-- External Optimized Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
-    body.dark-mode {
-        --primary:#F8FAFC;--secondary:#3B82F6;--bg:#0B132B;--text:#F1F5F9;--gray:#94A3B8;--light-gray:#1E293B;--border:#334155;
-    }
+    <!-- Page Specific Styles -->
+    <style>
+        .wrap { max-width: 800px; margin: 0 auto; padding: 60px 24px; }
+        .wrap h1 { font-family: var(--font-heading); font-size: 38px; font-weight: 700; color: var(--text); margin-bottom: 16px; }
+        .lead { font-size: 19px; color: var(--gray); margin-bottom: 40px; line-height: 1.6; }
+        
+        .wrap h2 { font-family: var(--font-heading); font-size: 24px; color: var(--text); margin: 36px 0 16px 0; border-left: 4px solid var(--secondary); padding-left: 14px; }
+        .wrap p { font-size: 17px; color: var(--gray); margin-bottom: 20px; line-height: 1.8; }
+        .wrap ul { margin: 0 0 24px 24px; color: var(--gray); }
+        .wrap li { font-size: 16.5px; margin-bottom: 10px; }
+    </style>
 
-    *{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;}
-    body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.8;transition:background 0.3s, color 0.3s;}
-
-    .header{position:sticky;top:0;z-index:1000;background:var(--bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:background 0.3s, border-color 0.3s;}
-    .header-inner{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:16px 24px;}
-    .logo{font-family:var(--font-heading);font-size:24px;font-weight:700;background:linear-gradient(135deg,#2563EB,#22C55E);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-    .nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
-    .nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--gray);transition:all 0.2s;}
-    .nav-links a:hover,.nav-links a.active{background:rgba(37,99,235,0.08);color:var(--secondary);}
-
-    .dark-mode-btn {
-        background: var(--light-gray); border: 1px solid var(--border); color: var(--text);
-        padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.2s; margin-left: 8px;
-    }
-    .dark-mode-btn:hover { background: var(--secondary); color: white; border-color: var(--secondary); }
-
-    .wrap { max-width: 800px; margin: 0 auto; padding: 60px 24px; }
-    h1 { font-family: var(--font-heading); font-size: 38px; font-weight: 700; color: var(--text); margin-bottom: 16px; }
-    .lead { font-size: 19px; color: var(--gray); margin-bottom: 40px; line-height: 1.6; }
-    
-    h2 { font-family: var(--font-heading); font-size: 24px; color: var(--text); margin: 36px 0 16px 0; border-left: 4px solid var(--secondary); padding-left: 14px; }
-    p { font-size: 17px; color: var(--gray); margin-bottom: 20px; }
-    ul { margin: 0 0 24px 24px; color: var(--gray); }
-    li { font-size: 16.5px; margin-bottom: 10px; }
-
-    .footer{background:var(--primary);color:white;padding:60px 0 30px;margin-top:60px;}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
-    .footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-bottom:18px;}
-    .footer ul{list-style:none;}
-    .footer li{margin-bottom:10px;}
-    .footer a{color:rgba(255,255,255,0.55);font-size:14px;}
-    .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.75);font-size:14px;}
-
-    @media (max-width:768px){ .nav-links{display:none;} .footer-grid{grid-template-columns:1fr;} }
-</style>
+    <!-- Super Optimized AdSense Lazy-Load Script -->
+    <script>
+        let adsLoaded = false;
+        function loadAdSense() {
+            if(window.adsenseLoaded || adsLoaded) return;
+            adsLoaded = true;
+            window.adsenseLoaded = true;
+            const script = document.createElement('script');
+            script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060";
+            script.async = true;
+            script.crossOrigin = "anonymous";
+            document.head.appendChild(script);
+        }
+        window.addEventListener('scroll', loadAdSense, {once: true, passive: true});
+        window.addEventListener('touchstart', loadAdSense, {once: true, passive: true});
+        window.addEventListener('mousemove', loadAdSense, {once: true, passive: true});
+        setTimeout(loadAdSense, 7000);
+    </script>
 </head>
 <body>
 
-<header class="header">
+<header class="header" id="header">
     <div class="header-inner">
-        <a href="index.html" class="logo">CoinvestAI</a>
+        <a href="index.html" class="logo gradient-text">CoinvestAI</a>
         <nav><ul class="nav-links">
             <li><a href="blog.html">Blog</a></li>
             <li><a href="ai-tools.html">AI Tools</a></li>
@@ -72,7 +59,7 @@
             <li><a href="crypto-ai.html">Crypto AI</a></li>
             <li><a href="guides.html">Guides</a></li>
             <li><a href="about.html">About</a></li>
-            <li><button class="dark-mode-btn" onclick="toggleDarkMode()">🌓 Mode</button></li>
+            <li><button class="dark-mode-btn" onclick="toggleDarkMode()" type="button">🌓 Mode</button></li>
         </ul></nav>
     </div>
 </header>
@@ -82,10 +69,10 @@
         <h1>Editorial Guidelines</h1>
         <p class="lead">At CoinvestAI, we are committed to delivering independent, accurate, and rigorous research on AI-driven financial tools, algorithmic trading, and fintech innovation.</p>
 
-        <h2>1. Accuracy & Fact-Checking</h2>
+        <h2>1. Accuracy &amp; Fact-Checking</h2>
         <p>Our editorial team verifies data, financial metrics, and technological claims before publication. We cross-reference metrics with primary industry sources, official documentation, and empirical backtests to ensure our insights reflect real-world functionality.</p>
 
-        <h2>2. Independence & Integrity</h2>
+        <h2>2. Independence &amp; Integrity</h2>
         <p>Our research and reviews remain strictly independent. While we may utilize affiliate links or partner programs, commercial relationships never dictate our ratings, scoring methodologies, or analytical conclusions. An AI tool or platform earns its reputation strictly through performance, usability, and transparency.</p>
 
         <h2>3. Transparency in AI Usage</h2>
@@ -100,7 +87,7 @@
 </main>
 
 <footer class="footer">
-    <div class="container" style="max-width:1100px;margin:0 auto;padding:0 24px;">
+    <div class="container">
         <div class="footer-grid">
             <div>
                 <h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3>
@@ -153,9 +140,11 @@
             localStorage.setItem('theme', 'light');
         }
     }
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-    }
+    try {
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    } catch (e) {}
 </script>
 </body>
 </html>
