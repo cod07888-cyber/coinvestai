@@ -12,7 +12,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://coinvestai.com/about.html">
 
-    <!-- Schema.org Data for About Page -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -50,259 +49,977 @@
     }
     </script>
 
-    <!-- Clean Google Fonts Import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google AdSense Code with defer -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous" defer></script>
 
     <style>
-        :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:12px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;}
-        *{margin:0;padding:0;box-sizing:border-box;}
-        html{scroll-behavior:smooth;}
-        body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.8;}
-        h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;}
-        a{text-decoration:none;color:inherit;}
-        
-        .container{max-width:960px;margin:0 auto;padding:0 24px;}
-        .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-        
-        .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--radius);font-weight:600;font-size:16px;background:var(--secondary);color:white;transition:all 0.3s;}
-        .btn:hover{background:#1d4ed8;transform:translateY(-1px);box-shadow:0 8px 25px rgba(37,99,235,0.25);}
+        :root {
+            --primary: #0F172A;
+            --secondary: #2563EB;
+            --accent: #22C55E;
+            --bg: #FFFFFF;
+            --text: #111827;
+            --gray: #64748B;
+            --light-gray: #f8fafc;
+            --border: #e5e7eb;
+            --radius: 12px;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); color: var(--text); background: var(--bg); line-height: 1.8; }
+        h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+        .gradient-text {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px; border-radius: var(--radius);
+            font-weight: 600; font-size: 16px; background: var(--secondary);
+            color: white; transition: all 0.3s; border: none; cursor: pointer;
+        }
+        .btn:hover {
+            background: #1d4ed8; transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+        }
+        .btn-outline {
+            background: transparent; border: 2px solid var(--secondary);
+            color: var(--secondary);
+        }
+        .btn-outline:hover {
+            background: var(--secondary); color: white;
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25);
+        }
 
         /* Header */
-        .header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-        .header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
-        .logo{font-family:var(--font-heading);font-size:24px;font-weight:700;}
-        .nav-links{display:flex;gap:4px;list-style:none;}
-        .nav-links a{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;color:var(--gray);}
-        .nav-links a:hover,.nav-links a.active{background:rgba(37,99,235,0.08);color:var(--secondary);}
+        .header {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        .header-inner {
+            display: flex; justify-content: space-between;
+            align-items: center; padding: 16px 0;
+        }
+        .logo { font-family: var(--font-heading); font-size: 24px; font-weight: 700; }
+        .nav-links { display: flex; gap: 4px; list-style: none; }
+        .nav-links a {
+            padding: 8px 16px; border-radius: 8px;
+            font-size: 14px; font-weight: 500; color: var(--gray);
+            transition: all 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(37, 99, 235, 0.08); color: var(--secondary);
+        }
 
-        .breadcrumbs{padding:20px 0;font-size:14px;color:var(--gray);}
-        .breadcrumbs a{color:var(--secondary);}
+        /* Mobile Menu */
+        .mobile-toggle {
+            display: none; background: none; border: none;
+            cursor: pointer; padding: 8px;
+        }
+        .mobile-toggle span {
+            display: block; width: 24px; height: 2px;
+            background: var(--primary); margin: 5px 0;
+            transition: all 0.3s;
+        }
+
+        .breadcrumbs { padding: 20px 0; font-size: 14px; color: var(--gray); }
+        .breadcrumbs a { color: var(--secondary); }
+        .breadcrumbs a:hover { text-decoration: underline; }
 
         /* Page Hero */
-        .page-hero{background:linear-gradient(135deg,var(--primary),#020617);padding:70px 0;text-align:center;color:white;}
-        .page-hero h1{font-size:42px;margin-bottom:12px;line-height:1.2;}
-        .page-hero p{color:rgba(255,255,255,0.85);font-size:18px;max-width:720px;margin:0 auto;}
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary), #020617);
+            padding: 80px 0; text-align: center; color: white;
+            position: relative; overflow: hidden;
+        }
+        .page-hero::before {
+            content: ''; position: absolute; top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(37, 99, 235, 0.12) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(34, 197, 94, 0.08) 0%, transparent 50%);
+            animation: heroFloat 20s ease-in-out infinite;
+        }
+        @keyframes heroFloat {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(20px, -20px) rotate(2deg); }
+            66% { transform: translate(-15px, 10px) rotate(-1deg); }
+        }
+        .page-hero .container { position: relative; z-index: 2; }
+        .page-hero h1 { font-size: 46px; margin-bottom: 16px; line-height: 1.15; }
+        .page-hero p {
+            color: rgba(255, 255, 255, 0.8); font-size: 18px;
+            max-width: 700px; margin: 0 auto 28px;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 8px 20px; border-radius: 50px; font-size: 13px;
+            color: rgba(255, 255, 255, 0.9); margin-bottom: 24px;
+            backdrop-filter: blur(8px);
+        }
+        .hero-badge .dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--accent); animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.3); }
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--light-gray); border-bottom: 1px solid var(--border);
+            padding: 32px 0;
+        }
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+            text-align: center;
+        }
+        .stat-item { position: relative; }
+        .stat-item:not(:last-child)::after {
+            content: ''; position: absolute; right: 0; top: 10%;
+            height: 80%; width: 1px; background: var(--border);
+        }
+        .stat-number {
+            font-family: var(--font-heading); font-size: 32px;
+            font-weight: 700; color: var(--primary); line-height: 1;
+        }
+        .stat-number .gradient-text { font-size: inherit; }
+        .stat-label {
+            font-size: 13px; color: var(--gray); margin-top: 6px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
 
         /* Content Area */
-        .content{padding:50px 0 70px;}
-        .content h2{font-size:26px;margin:42px 0 16px;color:var(--primary);border-bottom:1px solid var(--border);padding-bottom:10px;}
-        .content h2:first-of-type{margin-top:0;}
-        .content h3{font-size:19px;margin:24px 0 12px;color:var(--secondary);}
-        .content p{color:#334155;margin-bottom:18px;font-size:16px;line-height:1.8;}
-        .content ul{margin:0 0 20px 24px;color:#334155;font-size:15px;}
-        .content li{margin-bottom:8px;}
-        .content a{color:var(--secondary);font-weight:600;}
-        .content a:hover{text-decoration:underline;}
+        .content { padding: 60px 0 80px; }
+        .content h2 {
+            font-size: 28px; margin: 50px 0 18px; color: var(--primary);
+            border-bottom: 2px solid var(--border); padding-bottom: 12px;
+            position: relative;
+        }
+        .content h2::after {
+            content: ''; position: absolute; bottom: -2px; left: 0;
+            width: 60px; height: 2px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+        }
+        .content h2:first-of-type { margin-top: 0; }
+        .content h3 { font-size: 19px; margin: 28px 0 12px; color: var(--secondary); }
+        .content p {
+            color: #334155; margin-bottom: 18px;
+            font-size: 16px; line-height: 1.85;
+        }
+        .content ul { margin: 0 0 20px 24px; color: #334155; font-size: 15px; }
+        .content li { margin-bottom: 10px; }
+        .content a { color: var(--secondary); font-weight: 600; transition: all 0.2s; }
+        .content a:hover { text-decoration: underline; }
 
-        .info-box{background:#eff6ff;border-left:4px solid var(--secondary);padding:22px 26px;margin:28px 0;border-radius:0 8px 8px 0;font-size:15px;line-height:1.7;}
-        .info-box p{color:#1e40af;margin:0;font-weight:500;}
+        .lead-text {
+            font-size: 18px; color: var(--primary); font-weight: 500;
+            line-height: 1.7; margin-bottom: 24px;
+            border-left: 3px solid var(--accent); padding-left: 20px;
+        }
 
-        /* Grid Layouts */
-        .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin:30px 0;}
-        .value-card{background:var(--light-gray);border:1px solid var(--border);padding:24px;border-radius:var(--radius);transition:all 0.2s;}
-        .value-card:hover{border-color:var(--secondary);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.04);}
-        .value-card h3{font-size:18px;margin-bottom:8px;color:var(--primary);}
-        .value-card p{font-size:14px;color:var(--gray);margin:0;line-height:1.6;}
+        .info-box {
+            background: #eff6ff; border-left: 4px solid var(--secondary);
+            padding: 24px 28px; margin: 30px 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            font-size: 15px; line-height: 1.7;
+        }
+        .info-box p { color: #1e40af; margin: 0; font-weight: 500; }
 
-        .desk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin:24px 0;}
-        .desk-card{background:white;border:1px solid var(--border);border-radius:var(--radius);padding:22px;}
-        .desk-card h4{font-size:16px;color:var(--primary);margin-bottom:8px;}
-        .desk-card p{font-size:13px;color:var(--gray);margin:0;line-height:1.6;}
+        .warning-box {
+            background: #fef3c7; border-left: 4px solid #f59e0b;
+            padding: 24px 28px; margin: 30px 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+        .warning-box p { color: #92400e; margin: 0; font-size: 15px; }
+
+        /* Values Grid */
+        .values-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 20px; margin: 30px 0;
+        }
+        .value-card {
+            background: var(--light-gray); border: 1px solid var(--border);
+            padding: 28px; border-radius: var(--radius);
+            transition: all 0.3s; position: relative; overflow: hidden;
+        }
+        .value-card::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            transform: scaleX(0); transition: transform 0.3s;
+            transform-origin: left;
+        }
+        .value-card:hover::before { transform: scaleX(1); }
+        .value-card:hover {
+            border-color: var(--secondary); transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        }
+        .value-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(34, 197, 94, 0.1));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; margin-bottom: 16px;
+        }
+        .value-card h3 {
+            font-size: 18px; margin-bottom: 10px; color: var(--primary);
+        }
+        .value-card p {
+            font-size: 14px; color: var(--gray); margin: 0; line-height: 1.7;
+        }
+
+        /* Desk Grid */
+        .desk-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 20px; margin: 28px 0;
+        }
+        .desk-card {
+            background: white; border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 26px;
+            transition: all 0.3s; position: relative;
+        }
+        .desk-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            transform: translateY(-2px);
+        }
+        .desk-icon {
+            width: 44px; height: 44px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; margin-bottom: 14px;
+        }
+        .desk-icon.blue { background: rgba(37, 99, 235, 0.1); }
+        .desk-icon.green { background: rgba(34, 197, 94, 0.1); }
+        .desk-icon.purple { background: rgba(139, 92, 246, 0.1); }
+        .desk-icon.orange { background: rgba(249, 115, 22, 0.1); }
+        .desk-card h4 { font-size: 17px; color: var(--primary); margin-bottom: 10px; }
+        .desk-card p { font-size: 14px; color: var(--gray); margin: 0; line-height: 1.7; }
+        .desk-tag {
+            display: inline-block; font-size: 11px; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.5px;
+            padding: 4px 10px; border-radius: 6px; margin-top: 14px;
+        }
+        .desk-tag.blue { background: rgba(37, 99, 235, 0.08); color: var(--secondary); }
+        .desk-tag.green { background: rgba(34, 197, 94, 0.08); color: #16a34a; }
+        .desk-tag.purple { background: rgba(139, 92, 246, 0.08); color: #7c3aed; }
+        .desk-tag.orange { background: rgba(249, 115, 22, 0.08); color: #ea580c; }
+
+        /* Timeline Section */
+        .timeline { margin: 32px 0; position: relative; padding-left: 32px; }
+        .timeline::before {
+            content: ''; position: absolute; left: 12px; top: 0;
+            bottom: 0; width: 2px;
+            background: linear-gradient(180deg, var(--secondary), var(--accent));
+        }
+        .timeline-item { position: relative; margin-bottom: 28px; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -26px; top: 6px;
+            width: 12px; height: 12px; border-radius: 50%;
+            background: var(--secondary); border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--secondary);
+        }
+        .timeline-item h4 {
+            font-size: 16px; color: var(--primary); margin-bottom: 4px;
+        }
+        .timeline-item .year {
+            font-size: 12px; font-weight: 600; color: var(--secondary);
+            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;
+        }
+        .timeline-item p {
+            font-size: 14px; color: var(--gray); margin: 0; line-height: 1.6;
+        }
+
+        /* Methodology Process */
+        .process-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px; margin: 28px 0;
+        }
+        .process-step {
+            text-align: center; padding: 24px 16px;
+            background: var(--light-gray); border-radius: var(--radius);
+            border: 1px solid var(--border); position: relative;
+            transition: all 0.3s;
+        }
+        .process-step:hover {
+            border-color: var(--secondary);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+        }
+        .step-number {
+            width: 36px; height: 36px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white; display: flex; align-items: center;
+            justify-content: center; font-weight: 700; font-size: 14px;
+            margin: 0 auto 12px;
+        }
+        .process-step h4 { font-size: 14px; color: var(--primary); margin-bottom: 6px; }
+        .process-step p { font-size: 12px; color: var(--gray); margin: 0; line-height: 1.5; }
+
+        /* Team Preview */
+        .team-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px; margin: 28px 0;
+        }
+        .team-card {
+            text-align: center; padding: 28px 20px;
+            background: var(--light-gray); border: 1px solid var(--border);
+            border-radius: var(--radius); transition: all 0.3s;
+        }
+        .team-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+        .team-avatar {
+            width: 72px; height: 72px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 14px; font-size: 28px; color: white; font-weight: 700;
+        }
+        .team-card h4 { font-size: 16px; color: var(--primary); margin-bottom: 4px; }
+        .team-card .role {
+            font-size: 13px; color: var(--secondary); font-weight: 600; margin-bottom: 8px;
+        }
+        .team-card p { font-size: 13px; color: var(--gray); margin: 0; line-height: 1.5; }
+
+        /* FAQ Accordion */
+        .faq-section { margin: 36px 0; }
+        .faq-item {
+            border: 1px solid var(--border); border-radius: var(--radius);
+            margin-bottom: 12px; overflow: hidden; transition: all 0.3s;
+        }
+        .faq-item:hover { border-color: rgba(37, 99, 235, 0.3); }
+        .faq-question {
+            width: 100%; background: none; border: none;
+            padding: 20px 24px; text-align: left; cursor: pointer;
+            font-family: var(--font-heading); font-size: 16px;
+            font-weight: 600; color: var(--primary);
+            display: flex; justify-content: space-between; align-items: center;
+            transition: all 0.2s;
+        }
+        .faq-question:hover { color: var(--secondary); }
+        .faq-arrow {
+            font-size: 18px; transition: transform 0.3s; color: var(--gray);
+            flex-shrink: 0; margin-left: 16px;
+        }
+        .faq-item.active .faq-arrow { transform: rotate(180deg); color: var(--secondary); }
+        .faq-answer {
+            max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+        }
+        .faq-answer-inner {
+            padding: 0 24px 20px; font-size: 15px;
+            color: #475569; line-height: 1.7;
+        }
+        .faq-item.active .faq-answer { max-height: 300px; }
+
+        /* Trust Badges */
+        .trust-section {
+            background: var(--light-gray); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 32px; margin: 36px 0;
+            text-align: center;
+        }
+        .trust-section h3 {
+            font-size: 18px; color: var(--primary); margin-bottom: 20px;
+        }
+        .trust-badges {
+            display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
+        }
+        .trust-badge {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 14px; color: var(--gray);
+        }
+        .trust-badge-icon {
+            width: 40px; height: 40px; border-radius: 10px;
+            background: white; border: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px;
+        }
 
         /* Ad Slot */
-        .ad-slot{margin:36px 0;padding:16px 0;text-align:center;background:var(--light-gray);border-radius:var(--radius);border:1px dashed var(--border);}
-        .ad-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gray);margin-bottom:8px;}
+        .ad-slot {
+            margin: 40px 0; padding: 20px 0; text-align: center;
+            background: var(--light-gray); border-radius: var(--radius);
+            border: 1px dashed var(--border);
+        }
+        .ad-label {
+            font-size: 11px; letter-spacing: 1px;
+            text-transform: uppercase; color: var(--gray); margin-bottom: 8px;
+        }
 
-        /* CTA & Footer */
-        .cta-section{background:var(--light-gray);padding:60px 0;text-align:center;border-top:1px solid var(--border);}
-        .cta-section h2{font-size:28px;margin-bottom:12px;color:var(--primary);}
-        .cta-section p{color:var(--gray);margin-bottom:24px;}
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), #1e293b);
+            padding: 70px 0; text-align: center; position: relative; overflow: hidden;
+        }
+        .cta-section::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(34, 197, 94, 0.1) 0%, transparent 50%);
+        }
+        .cta-section .container { position: relative; z-index: 2; }
+        .cta-section h2 { font-size: 32px; margin-bottom: 14px; color: white; }
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.7); margin-bottom: 28px;
+            font-size: 17px; max-width: 550px; margin-left: auto; margin-right: auto;
+        }
+        .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .btn-white {
+            background: white; color: var(--primary); font-weight: 700;
+        }
+        .btn-white:hover {
+            background: #f1f5f9; transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        .btn-ghost {
+            background: transparent; border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+        .btn-ghost:hover {
+            border-color: white; background: rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+        }
 
-        .footer{background:#0f172a;color:#ffffff;padding:60px 0 30px;margin-top:0;}
-        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
-        .footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-bottom:18px;}
-        .footer ul{list-style:none;}
-        .footer li{margin-bottom:10px;}
-        .footer a{color:rgba(255,255,255,0.55);font-size:14px;}
-        .footer a:hover{color:white;}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,0.35);font-size:14px;}
+        /* Footer */
+        .footer {
+            background: #0f172a; color: #ffffff;
+            padding: 60px 0 30px; margin-top: 0;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+        }
+        .footer h3 {
+            font-size: 12px; text-transform: uppercase;
+            letter-spacing: 1.5px; color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 18px;
+        }
+        .footer ul { list-style: none; }
+        .footer li { margin-bottom: 10px; }
+        .footer a { color: rgba(255, 255, 255, 0.55); font-size: 14px; transition: color 0.2s; }
+        .footer a:hover { color: white; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 40px; padding-top: 24px; text-align: center;
+            color: rgba(255, 255, 255, 0.35); font-size: 14px;
+        }
 
-        /* Render Performance Optimization */
-        .footer, .cta-section, .values-grid, .ad-slot, .desk-grid {
+        /* Scroll Animation */
+        .fade-up {
+            opacity: 0; transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+        /* Content Visibility Optimization */
+        .footer, .cta-section, .values-grid, .ad-slot, .desk-grid, .faq-section {
             content-visibility: auto;
             contain-intrinsic-size: 1px 300px;
         }
 
-        @media(max-width:768px){
-            .page-hero h1{font-size:32px;}
-            .nav-links{display:none;}
-            .footer-grid{grid-template-columns:1fr;}
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 32px; }
+            .page-hero p { font-size: 16px; }
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .stat-item:nth-child(2)::after { display: none; }
+            .stat-number { font-size: 26px; }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .trust-badges { gap: 20px; }
+            .content h2 { font-size: 24px; }
+            .cta-section h2 { font-size: 26px; }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .stat-item::after { display: none; }
+            .process-grid { grid-template-columns: 1fr 1fr; }
+            .team-grid { grid-template-columns: 1fr; }
+            .hero-badge { font-size: 12px; padding: 6px 14px; }
         }
     </style>
 </head>
 <body>
 
 <!-- Navigation Header -->
-<header class="header"><div class="container"><div class="header-inner">
-    <a href="index.html" class="logo gradient-text">CoinvestAI</a>
-    <nav><ul class="nav-links">
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="ai-tools.html">AI Tools</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="fintech.html">Fintech</a></li>
-        <li><a href="crypto-ai.html">Crypto AI</a></li>
-        <li><a href="guides.html">Guides</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-    </ul></nav>
-</div></div></header>
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="index.html" class="logo gradient-text">CoinvestAI</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="ai-tools.html">AI Tools</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="fintech.html">Fintech</a></li>
+                    <li><a href="crypto-ai.html">Crypto AI</a></li>
+                    <li><a href="guides.html">Guides</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" aria-label="Toggle Menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
 
-<!-- Main Landmark wrapping core page content -->
 <main>
-    <div class="container"><nav class="breadcrumbs"><a href="index.html">Home</a> › About Us</nav></div>
+    <!-- Breadcrumbs -->
+    <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a> › About Us
+        </nav>
+    </div>
 
     <!-- Hero Banner -->
     <section class="page-hero">
         <div class="container">
-            <h1>About CoinvestAI</h1>
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Independent Research Since 2026
+            </div>
+            <h1>About <span class="gradient-text">CoinvestAI</span></h1>
             <p>Independent research, quantitative benchmarks, and empirical analysis on how artificial intelligence is transforming capital markets, investment tools, and fintech architecture in 2026.</p>
         </div>
     </section>
 
+    <!-- Stats Bar -->
+    <section class="stats-bar fade-up">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number"><span class="gradient-text">150+</span></div>
+                    <div class="stat-label">Tools Reviewed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number"><span class="gradient-text">4</span></div>
+                    <div class="stat-label">Research Desks</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number"><span class="gradient-text">500+</span></div>
+                    <div class="stat-label">Articles Published</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number"><span class="gradient-text">100%</span></div>
+                    <div class="stat-label">Editorial Independence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Content Section -->
-    <div class="content"><div class="container">
+    <div class="content">
+        <div class="container">
 
-        <h2>Our Mission &amp; Purpose</h2>
-        <p><strong>CoinvestAI</strong> was founded with a singular purpose: to provide transparent, scientifically rigorous, and unbiased intelligence at the rapidly expanding intersection of artificial intelligence and modern finance. As quantitative algorithms, autonomous reasoning models, and agentic workflows reshape investment management, market participants require objective evaluations that cut through promotional hype to analyze real-world performance, execution latency, and systemic risk controls.</p>
-        
-        <p>Our publication serves quantitative analysts, institutional researchers, financial developers, and discerning retail investors who require empirical evidence before integrating artificial intelligence into their research stacks.</p>
+            <!-- Mission Section -->
+            <h2>Our Mission &amp; Purpose</h2>
+            <p class="lead-text">CoinvestAI exists to bridge the gap between AI innovation and informed financial decision-making — providing the transparency investors deserve in an era of algorithmic complexity.</p>
 
-        <!-- In-Article Ad Banner -->
-        <div class="ad-slot">
-            <div class="ad-label">Advertisement</div>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-7088247829787060"
-                 data-ad-slot="1234567890"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <p><strong>CoinvestAI</strong> was founded with a singular purpose: to provide transparent, scientifically rigorous, and unbiased intelligence at the rapidly expanding intersection of artificial intelligence and modern finance. As quantitative algorithms, autonomous reasoning models, and agentic workflows reshape investment management, market participants require objective evaluations that cut through promotional hype to analyze real-world performance, execution latency, and systemic risk controls.</p>
+
+            <p>Our publication serves quantitative analysts, institutional researchers, financial developers, and discerning retail investors who require empirical evidence before integrating artificial intelligence into their research stacks.</p>
+
+            <!-- In-Article Ad Banner -->
+            <div class="ad-slot">
+                <div class="ad-label">Advertisement</div>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-7088247829787060"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <!-- Core Pillars -->
+            <h2>Core Pillars of Our Research</h2>
+            <div class="values-grid fade-up">
+                <div class="value-card">
+                    <div class="value-icon">🛡️</div>
+                    <h3>Uncompromising Independence</h3>
+                    <p>Our software evaluations, quantitative ratings, and technical teardowns are conducted with strict editorial autonomy. Software vendors cannot purchase favorable scores or sponsored placements within our research output.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">📊</div>
+                    <h3>Quantitative &amp; Empirical Rigor</h3>
+                    <p>We test financial AI software against verified exchange telemetry, sandbox task execution, historical backtesting datasets, and human-in-the-loop audit trails — ensuring reproducible conclusions.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">⚠️</div>
+                    <h3>Transparent Risk Disclosures</h3>
+                    <p>We actively highlight structural vulnerabilities in algorithmic systems, including data overfitting, execution slippage, regime shifts, and international compliance boundaries.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔬</div>
+                    <h3>Continuous Methodology Evolution</h3>
+                    <p>Our scoring frameworks and testing protocols are updated quarterly to reflect market microstructure changes, new AI model architectures, and evolving regulatory standards.</p>
+                </div>
+            </div>
+
+            <!-- Research Desks -->
+            <h2>Our Specialized Research Desks</h2>
+            <p>CoinvestAI's publications and tool evaluations are produced across four dedicated analytical desks, each staffed by domain-specific researchers:</p>
+
+            <div class="desk-grid fade-up">
+                <div class="desk-card">
+                    <div class="desk-icon blue">🤖</div>
+                    <h4>AI Trading &amp; Quant Algorithms</h4>
+                    <p>Benchmarking automated execution engines, order routing bots, multi-factor ranking algorithms, and machine learning backtesting frameworks across global equity and derivatives markets.</p>
+                    <span class="desk-tag blue">Algorithmic Trading</span>
+                </div>
+                <div class="desk-card">
+                    <div class="desk-icon green">📄</div>
+                    <h4>Financial Document NLP &amp; Auditing</h4>
+                    <p>Analyzing large language models and semantic retrieval tools parsing corporate SEC filings, earnings call transcripts, corporate balance sheets, and regulatory documents.</p>
+                    <span class="desk-tag green">NLP Research</span>
+                </div>
+                <div class="desk-card">
+                    <div class="desk-icon purple">⛓️</div>
+                    <h4>On-Chain &amp; Crypto Telemetry</h4>
+                    <p>Tracking decentralized protocol analytics, AI-driven risk mitigation in DeFi, smart contract vulnerability detection, cross-chain liquidity flows, and MEV analysis.</p>
+                    <span class="desk-tag purple">Blockchain Analytics</span>
+                </div>
+                <div class="desk-card">
+                    <div class="desk-icon orange">🏦</div>
+                    <h4>Fintech &amp; Banking Automation</h4>
+                    <p>Covering the institutional integration of generative AI into corporate auditing, fraud detection, compliance automation, and multi-agent wealth management systems.</p>
+                    <span class="desk-tag orange">Enterprise Fintech</span>
+                </div>
+            </div>
+
+            <!-- Our Story Timeline -->
+            <h2>Our Journey &amp; Milestones</h2>
+            <p>From a research blog to a comprehensive financial AI intelligence platform — here's how CoinvestAI evolved:</p>
+
+            <div class="timeline fade-up">
+                <div class="timeline-item">
+                    <div class="year">Q1 2026</div>
+                    <h4>Foundation &amp; Initial Research</h4>
+                    <p>CoinvestAI launched as an independent blog focused on reviewing AI-powered trading tools and quantitative analysis platforms.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">Q2 2026</div>
+                    <h4>7-Factor Scoring Matrix Launch</h4>
+                    <p>Introduced our proprietary review methodology, establishing transparent and reproducible benchmarking standards for financial AI software.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">Q3 2026</div>
+                    <h4>Research Desks Expansion</h4>
+                    <p>Expanded to four specialized research desks covering algorithmic trading, financial NLP, on-chain analytics, and enterprise fintech automation.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">Q4 2026</div>
+                    <h4>150+ Tools &amp; Growing</h4>
+                    <p>Surpassed 150 comprehensive tool evaluations and 500 published research articles, becoming a trusted resource in the financial AI ecosystem.</p>
+                </div>
+            </div>
+
+            <!-- Review Methodology Overview -->
+            <h2>Our Review Methodology at a Glance</h2>
+            <p>Every tool and platform reviewed on CoinvestAI undergoes a structured five-phase evaluation process:</p>
+
+            <div class="process-grid fade-up">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Discovery</h4>
+                    <p>Identify and source financial AI tools based on market relevance and user demand</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Hands-On Testing</h4>
+                    <p>Direct usage with sandbox environments and real-world scenarios</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Data Collection</h4>
+                    <p>Quantitative metrics, latency benchmarks, and performance telemetry</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Scoring &amp; Analysis</h4>
+                    <p>Apply 7-factor scoring matrix with weighted criteria</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h4>Peer Review</h4>
+                    <p>Cross-desk editorial review and fact-checking verification</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <p>📋 <strong>Full Methodology:</strong> For complete scoring criteria, factor weightings, and validation workflows, see our <a href="review-methodology.html" style="color:#1d4ed8;">Review Methodology &amp; 7-Factor Scoring Matrix</a> documentation.</p>
+            </div>
+
+            <!-- Editorial Integrity -->
+            <h2>Editorial Integrity &amp; Review Standards</h2>
+            <div class="info-box">
+                <p><strong>Editorial Policy:</strong> CoinvestAI strictly enforces separation between commercial operations and research evaluations. Software vendors and platform creators cannot pay to alter numerical star ratings, suppress technical limitations, or dictate our editorial conclusions.</p>
+            </div>
+
+            <p>Our commitment to editorial independence means:</p>
+            <ul>
+                <li><strong>No pay-for-play reviews</strong> — Ratings and conclusions are determined solely by our research teams</li>
+                <li><strong>Transparent affiliate disclosure</strong> — Any affiliate partnerships are clearly labeled and never influence editorial scoring</li>
+                <li><strong>Regular re-evaluations</strong> — Published reviews are updated when tools release significant feature changes or pricing updates</li>
+                <li><strong>Correction policy</strong> — Factual errors are promptly corrected with transparent editorial notes</li>
+            </ul>
+
+            <p>To inspect our exact editorial standards and guidelines:</p>
+            <ul>
+                <li><a href="review-methodology.html">Review Methodology &amp; 7-Factor Scoring Matrix</a></li>
+                <li><a href="editorial-guidelines.html">Editorial Guidelines &amp; Fact-Checking Policy</a></li>
+                <li><a href="authors.html">Author Profiles &amp; Research Staff Archives</a></li>
+            </ul>
+
+            <!-- Second Ad Slot -->
+            <div class="ad-slot">
+                <div class="ad-label">Advertisement</div>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-7088247829787060"
+                     data-ad-slot="0987654321"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <!-- Meet the Team -->
+            <h2>Meet the Research Team</h2>
+            <p>CoinvestAI is powered by a multidisciplinary team of researchers, data scientists, and financial technology analysts:</p>
+
+            <div class="team-grid fade-up">
+                <div class="team-card">
+                    <div class="team-avatar">E</div>
+                    <h4>Editorial Director</h4>
+                    <div class="role">Research Strategy</div>
+                    <p>Oversees editorial direction, review methodology standards, and publication quality assurance.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">Q</div>
+                    <h4>Quant Research Lead</h4>
+                    <div class="role">Algorithmic Analysis</div>
+                    <p>Leads quantitative testing of trading algorithms, backtesting validation, and performance benchmarking.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">B</div>
+                    <h4>Blockchain Analyst</h4>
+                    <div class="role">On-Chain Intelligence</div>
+                    <p>Specializes in DeFi protocol evaluation, smart contract security analysis, and crypto-AI tool reviews.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">F</div>
+                    <h4>Fintech Researcher</h4>
+                    <div class="role">Enterprise AI</div>
+                    <p>Covers banking automation, NLP document analysis tools, and enterprise fintech integration.</p>
+                </div>
+            </div>
+
+            <p style="text-align:center;margin-top:20px;">
+                <a href="authors.html" class="btn btn-outline">View All Team Members →</a>
+            </p>
+
+            <!-- Trust Badges -->
+            <div class="trust-section fade-up">
+                <h3>Why Researchers Trust CoinvestAI</h3>
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <div class="trust-badge-icon">🔒</div>
+                        <span>Independent Research</span>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-badge-icon">📊</div>
+                        <span>Data-Driven Analysis</span>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-badge-icon">✅</div>
+                        <span>Fact-Checked Content</span>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-badge-icon">🔄</div>
+                        <span>Regular Updates</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-section fade-up">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Is CoinvestAI affiliated with any financial AI company?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            No. CoinvestAI is an editorially independent research publication. We are not owned by, affiliated with, or financially controlled by any AI software vendor, trading platform, or financial institution. Our reviews and analysis are produced with complete editorial autonomy.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How does CoinvestAI generate revenue?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            CoinvestAI generates revenue through contextual display advertising and clearly disclosed affiliate partnerships. These commercial relationships never influence our editorial ratings, scoring matrices, or research conclusions. All affiliate links are transparently labeled.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Can software vendors request a review?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Software companies may submit their tools for consideration via our <a href="contact.html">contact form</a>. However, submission does not guarantee coverage, and vendors have no control over the review outcome, scoring, or editorial conclusions. We select tools based on market relevance and reader demand.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        Does CoinvestAI provide financial advice?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            No. CoinvestAI is an educational and scientific research publication. All content is intended strictly for informational and analytical purposes. We do not provide personalized financial, investment, trading, accounting, or legal advice. Always consult qualified professionals before making financial decisions.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        How often are reviews updated?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            We conduct quarterly re-evaluations of major tools and update reviews whenever significant feature changes, pricing updates, or security vulnerabilities are identified. Each article displays its last-updated date for transparency.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Disclaimers -->
+            <h2>Educational Scope &amp; Legal Disclaimers</h2>
+            <div class="warning-box">
+                <p>⚠️ <strong>Important Notice:</strong> CoinvestAI is an educational and scientific research publication. Content published across our directory and blog is intended strictly for informational analysis. We do not provide personalized financial, investment, trading, accounting, or legal advice.</p>
+            </div>
+
+            <p>All research, reviews, and analytical content on CoinvestAI should be considered as one input among many in your research process. Past performance of any software tool or algorithm does not guarantee future results. Financial markets involve significant risk, and AI-augmented tools carry their own unique set of technical and operational risks.</p>
+
+            <p>For complete legal notices and data governance practices, please review:</p>
+            <ul>
+                <li><a href="disclaimer.html">Financial Disclaimer</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            </ul>
+
         </div>
-
-        <h2>Core Pillars of Our Research</h2>
-        <div class="values-grid">
-            <div class="value-card">
-                <h3>1. Uncompromising Independence</h3>
-                <p>Our software evaluations, quantitative ratings, and technical teardowns are conducted with strict editorial autonomy. Software vendors cannot purchase favorable scores or sponsored placements.</p>
-            </div>
-            <div class="value-card">
-                <h3>2. Quantitative &amp; Empirical Rigor</h3>
-                <p>We test financial AI software against verified exchange telemetry, sandbox task execution, historical backtesting datasets, and human-in-the-loop audit trails.</p>
-            </div>
-            <div class="value-card">
-                <h3>3. Transparent Risk Disclosures</h3>
-                <p>We actively highlight structural vulnerabilities in algorithmic systems, including data overfitting, execution slippage, regime shifts, and international compliance boundaries.</p>
-            </div>
-        </div>
-
-        <h2>Our Specialized Research Desks</h2>
-        <p>CoinvestAI's publications and tool evaluations are produced across four dedicated analytical desks:</p>
-
-        <div class="desk-grid">
-            <div class="desk-card">
-                <h4>🤖 AI Trading &amp; Quant Algorithms</h4>
-                <p>Benchmarking automated execution engines, order routing bots, multi-factor ranking algorithms, and machine learning backtesting frameworks.</p>
-            </div>
-            <div class="desk-card">
-                <h4>📄 Financial Document NLP &amp; Auditing</h4>
-                <p>Analyzing large language models and semantic retrieval tools parsing corporate SEC filings, earnings call transcripts, and corporate balance sheets.</p>
-            </div>
-            <div class="desk-card">
-                <h4>⛓️ On-Chain &amp; Crypto Telemetry</h4>
-                <p>Tracking decentralized protocol analytics, AI-driven risk mitigation in DeFi, smart contract vulnerability detection, and liquidity flows.</p>
-            </div>
-            <div class="desk-card">
-                <h4>🏦 Fintech &amp; Banking Automation</h4>
-                <p>Covering the institutional integration of generative AI into corporate auditing, fraud detection, and multi-agent wealth management systems.</p>
-            </div>
-        </div>
-
-        <h2>Editorial Integrity &amp; Review Standards</h2>
-        <div class="info-box">
-            <p><strong>Editorial Policy:</strong> CoinvestAI strictly enforces separation between commercial operations and research evaluations. Software vendors and platform creators cannot pay to alter numerical star ratings, suppress technical limitations, or dictate our editorial conclusions.</p>
-        </div>
-
-        <p>To inspect the exact criteria, weightings, and validation workflows we apply to every published guide and software review, explore our foundational documentation:</p>
-        <ul>
-            <li><a href="review-methodology.html">Review Methodology &amp; 7-Factor Scoring Matrix</a></li>
-            <li><a href="editorial-guidelines.html">Editorial Guidelines &amp; Fact-Checking Policy</a></li>
-            <li><a href="authors.html">Author Profiles &amp; Research Staff Archives</a></li>
-        </ul>
-
-        <h2>Educational Scope &amp; Legal Disclaimers</h2>
-        <p>CoinvestAI is an educational and scientific research publication. Content published across our directory and blog is intended strictly for informational analysis. We do not provide personalized financial, investment, trading, accounting, or legal advice.</p>
-        
-        <p>For complete legal notices and data governance practices, please review our <a href="disclaimer.html">Financial Disclaimer</a>, <a href="privacy-policy.html">Privacy Policy</a>, and <a href="terms.html">Terms of Service</a>.</p>
-
-    </div></div>
+    </div>
 
     <!-- CTA Section -->
-    <section class="cta-section"><div class="container">
-        <h2>Have Questions, Feedback, or Research Inquiries?</h2>
-        <p>Get in touch with our editorial and technical research team.</p>
-        <a href="contact.html" class="btn">Contact CoinvestAI Team →</a>
-    </div></section>
+    <section class="cta-section">
+        <div class="container">
+            <h2>Have Questions, Feedback, or Research Inquiries?</h2>
+            <p>Get in touch with our editorial and technical research team — we'd love to hear from you.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-white">Contact Our Team →</a>
+                <a href="editorial-guidelines.html" class="btn btn-ghost">Read Editorial Guidelines</a>
+            </div>
+        </div>
+    </section>
 </main>
 
 <!-- Footer -->
-<footer class="footer"><div class="container"><div class="footer-grid">
-    <div>
-        <h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;"><span class="gradient-text">CoinvestAI</span></h3>
-        <p style="color:rgba(255,255,255,0.5);font-size:14px;">Independent research on AI-driven financial tools, quantitative analytics, and fintech innovation.</p>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h3 style="font-size:22px;text-transform:none;letter-spacing:0;color:white;margin-bottom:12px;">
+                    <span class="gradient-text">CoinvestAI</span>
+                </h3>
+                <p style="color:rgba(255,255,255,0.5);font-size:14px;line-height:1.7;">
+                    Independent research on AI-driven financial tools, quantitative analytics, and fintech innovation. Trusted by analysts and investors worldwide.
+                </p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="ai-tools.html">AI Tools Directory</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="guides.html">Guides</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="https://twitter.com/CoinvestAI_HQ" target="_blank" rel="noopener">Twitter / X</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Topics</h3>
+                <ul>
+                    <li><a href="fintech.html">Fintech AI</a></li>
+                    <li><a href="crypto-ai.html">Crypto AI</a></li>
+                    <li><a href="authors.html">Authors</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="editorial-guidelines.html">Editorial Guidelines</a></li>
+                    <li><a href="review-methodology.html">Review Methodology</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="font-size:12px;color:rgba(255,255,255,0.45);max-width:700px;margin:0 auto 12px;line-height:1.6;">
+                <strong>Disclaimer:</strong> CoinvestAI provides independent research and analysis for educational purposes only. Nothing herein is financial, investment, or legal advice.
+            </p>
+            <p>© 2026 CoinvestAI. All rights reserved.</p>
+        </div>
     </div>
-    <div>
-        <h3>Explore</h3>
-        <ul>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="ai-tools.html">AI Tools Directory</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="guides.html">Guides</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="https://twitter.com/CoinvestAI_HQ" target="_blank">Twitter / X</a></li>
-        </ul>
-    </div>
-    <div>
-        <h3>Topics</h3>
-        <ul>
-            <li><a href="fintech.html">Fintech AI</a></li>
-            <li><a href="crypto-ai.html">Crypto AI</a></li>
-            <li><a href="authors.html">Authors</a></li>
-        </ul>
-    </div>
-    <div>
-        <h3>Company</h3>
-        <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="editorial-guidelines.html">Editorial Guidelines</a></li>
-            <li><a href="review-methodology.html">Review Methodology</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="disclaimer.html">Disclaimer</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="cookie-policy.html">Cookie Policy</a></li>
-        </ul>
-    </div>
-</div>
-<div class="footer-bottom">
-    <p style="font-size:12px;color:rgba(255,255,255,0.45);max-width:700px;margin:0 auto 12px;line-height:1.6;">
-        <strong>Disclaimer:</strong> CoinvestAI provides independent research and analysis for educational purposes only. Nothing herein is financial, investment, or legal advice.
-    </p>
-    <p>© 2026 CoinvestAI. All rights reserved.</p>
-</div></div></footer>
+</footer>
+
+<!-- Scroll Animation Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-up').forEach(function(el) {
+            observer.observe(el);
+        });
+    });
+</script>
 
 </body>
 </html>
