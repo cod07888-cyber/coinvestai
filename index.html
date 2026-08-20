@@ -18,6 +18,18 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://coinvestai.com/">
 
+    <!-- NEW: Theme Color & Favicon -->
+    <meta name="theme-color" content="#0F172A">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- NEW: Sitemap Reference -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+    <!-- NEW: AdSense Verification Script (Required for approval - loaded immediately) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous"></script>
+
     <script type="application/ld+json">
     [
       {
@@ -35,10 +47,23 @@
         "name":"CoinvestAI",
         "url":"https://coinvestai.com/",
         "logo":"https://coinvestai.com/logo.png",
+        "foundingDate":"2026",
         "sameAs":["https://twitter.com/CoinvestAI_HQ"],
-        "contactPoint":{"@type":"ContactPoint","email":"contact@coinvestai.com","contactType":"general inquiries"}
+        "contactPoint":{"@type":"ContactPoint","email":"contact@coinvestai.com","contactType":"general inquiries"},
+        "knowsAbout":["Artificial Intelligence in Finance","Algorithmic Trading","Quantitative Research","Fintech Automation","Cryptocurrency Intelligence","DeFi Risk Management"]
       }
     ]
+    </script>
+
+    <!-- NEW: BreadcrumbList Schema for Homepage -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://coinvestai.com/"}
+      ]
+    }
     </script>
 
     <script type="application/ld+json">
@@ -62,15 +87,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
-    <script>
-        let adsLoaded=false;
-        function loadAdSense(){if(adsLoaded)return;adsLoaded=true;const s=document.createElement('script');s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060";s.async=true;s.crossOrigin="anonymous";document.head.appendChild(s);}
-        window.addEventListener('scroll',loadAdSense,{once:true,passive:true});
-        window.addEventListener('touchstart',loadAdSense,{once:true,passive:true});
-        window.addEventListener('mousemove',loadAdSense,{once:true,passive:true});
-        setTimeout(loadAdSense,7000);
-    </script>
-
     <style>
         :root{--primary:#0F172A;--secondary:#2563EB;--accent:#22C55E;--bg:#FFFFFF;--text:#111827;--gray:#64748B;--light-gray:#f8fafc;--border:#e5e7eb;--radius:12px;--font-heading:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif}
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -81,7 +97,6 @@
         .container{max-width:1100px;margin:0 auto;padding:0 24px}
         .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 
-        /* Header */
         .header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
         .header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
         .logo{font-family:var(--font-heading);font-size:24px;font-weight:700}
@@ -92,7 +107,6 @@
         .mobile-toggle span{display:block;width:22px;height:2px;background:var(--primary);transition:.3s}
         .nav-links.show{display:flex!important;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:white;padding:16px 24px;border-bottom:1px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,.08);z-index:200}
 
-        /* Hero */
         .hero{min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(160deg,#0F172A 0%,#1e293b 50%,#020617 100%);overflow:hidden}
         .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 40%,rgba(37,99,235,.12) 0%,transparent 50%),radial-gradient(circle at 70% 60%,rgba(34,197,94,.08) 0%,transparent 50%)}
         .hero::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
@@ -109,9 +123,7 @@
         .hero-stat-lbl{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
         .hero-trust{display:flex;gap:20px;justify-content:center;margin-top:36px;flex-wrap:wrap}
         .hero-trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,.6)}
-        .hero-trust-icon{font-size:16px}
 
-        /* Buttons */
         .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--radius);font-weight:600;font-size:16px;cursor:pointer;transition:all .3s;border:none;font-family:var(--font-body)}
         .btn-primary{background:var(--secondary);color:white}
         .btn-primary:hover{background:#1d4ed8;transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,99,235,.3)}
@@ -120,27 +132,23 @@
         .btn-dark{background:var(--primary);color:white;padding:12px 28px;font-size:15px}
         .btn-dark:hover{background:#1e293b;transform:translateY(-1px)}
 
-        /* Sections */
         .section{padding:80px 0}
         .section-gray{background:var(--light-gray)}
         .section-title{font-size:38px;font-weight:700;text-align:center;margin-bottom:14px;color:var(--primary)}
         .section-subtitle{font-size:17px;color:var(--gray);text-align:center;max-width:600px;margin:0 auto 48px;line-height:1.7}
 
-        /* Ticker */
         .ticker{background:var(--primary);color:rgba(255,255,255,.75);padding:10px 0;overflow:hidden;white-space:nowrap;font-size:13px;font-weight:500;border-bottom:1px solid rgba(255,255,255,.08)}
         .ticker-content{display:inline-block;animation:tickerScroll 50s linear infinite}
         .ticker-content span{margin-right:40px}
         .ticker-dot{color:var(--accent);margin-right:6px}
         @keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-        /* Search */
         .search-section{padding:28px 0;background:var(--light-gray);border-bottom:1px solid var(--border)}
         .search-box{max-width:600px;margin:0 auto;position:relative}
         .search-box input{width:100%;padding:15px 20px 15px 48px;border:2px solid var(--border);border-radius:50px;font-size:15px;outline:none;font-family:var(--font-body);background:var(--bg);color:var(--text);transition:border-color .2s}
         .search-box input:focus{border-color:var(--secondary)}
         .search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:18px;color:var(--gray)}
 
-        /* Featured */
         .featured-grid{display:grid;grid-template-columns:1fr 1fr;border-radius:20px;overflow:hidden;border:1px solid var(--border);background:var(--bg)}
         .featured-content{padding:48px;display:flex;flex-direction:column;justify-content:center}
         .featured-badge{display:inline-block;padding:6px 14px;background:var(--secondary);color:white;border-radius:50px;font-size:12px;font-weight:700;margin-bottom:18px;width:fit-content;text-transform:uppercase;letter-spacing:.5px}
@@ -151,7 +159,6 @@
         .featured-image{min-height:400px;background:linear-gradient(135deg,#0F172A,#1e293b);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.2);font-size:80px;position:relative;overflow:hidden}
         .featured-image::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(37,99,235,.15) 0%,transparent 60%)}
 
-        /* Cards */
         .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
         .card{background:var(--bg);border-radius:16px;padding:32px;border:1px solid var(--border);transition:all .3s;position:relative;overflow:hidden}
         .card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--secondary),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform .3s}
@@ -169,16 +176,10 @@
         .card-link{color:var(--secondary);font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
         .card-link:hover{gap:10px;text-decoration:underline}
 
-        /* Article Cards */
         .article-card{background:var(--bg);border-radius:16px;overflow:hidden;border:1px solid var(--border);transition:all .3s}
         .article-card:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(0,0,0,.07)}
         .article-card-image{height:190px;position:relative;display:flex;align-items:center;justify-content:center;font-size:40px;color:rgba(255,255,255,.3)}
-        .aimg1{background:linear-gradient(135deg,#2563EB,#1d4ed8)}
-        .aimg2{background:linear-gradient(135deg,#8b5cf6,#7c3aed)}
-        .aimg3{background:linear-gradient(135deg,#22C55E,#16a34a)}
-        .aimg4{background:linear-gradient(135deg,#f59e0b,#d97706)}
-        .aimg5{background:linear-gradient(135deg,#ef4444,#dc2626)}
-        .aimg6{background:linear-gradient(135deg,#06b6d4,#0891b2)}
+        .aimg1{background:linear-gradient(135deg,#2563EB,#1d4ed8)}.aimg2{background:linear-gradient(135deg,#8b5cf6,#7c3aed)}.aimg3{background:linear-gradient(135deg,#22C55E,#16a34a)}.aimg4{background:linear-gradient(135deg,#f59e0b,#d97706)}.aimg5{background:linear-gradient(135deg,#ef4444,#dc2626)}.aimg6{background:linear-gradient(135deg,#06b6d4,#0891b2)}
         .article-card-category{position:absolute;top:14px;left:14px;padding:5px 14px;background:rgba(255,255,255,.92);border-radius:50px;font-size:12px;font-weight:600;color:var(--primary)}
         .article-card-badge{position:absolute;top:14px;right:14px;padding:4px 10px;background:rgba(0,0,0,.35);backdrop-filter:blur(6px);border-radius:6px;font-size:11px;font-weight:600;color:white}
         .article-card-body{padding:22px}
@@ -187,14 +188,10 @@
         .article-card-meta{display:flex;gap:12px;font-size:13px;color:var(--gray);margin-bottom:12px;flex-wrap:wrap}
         .article-card-meta a{color:var(--secondary);font-weight:600}
 
-        /* Tool Cards */
         .tool-card{display:flex;gap:16px;padding:22px;background:var(--bg);border-radius:14px;border:1px solid var(--border);transition:all .3s;align-items:flex-start}
         .tool-card:hover{border-color:var(--secondary);box-shadow:0 8px 24px rgba(0,0,0,.05);transform:translateY(-2px)}
         .tool-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;flex-shrink:0}
-        .c1{background:linear-gradient(135deg,#2563EB,#1d4ed8)}
-        .c2{background:linear-gradient(135deg,#8b5cf6,#7c3aed)}
-        .c3{background:linear-gradient(135deg,#22C55E,#16a34a)}
-        .c4{background:linear-gradient(135deg,#ef4444,#dc2626)}
+        .c1{background:linear-gradient(135deg,#2563EB,#1d4ed8)}.c2{background:linear-gradient(135deg,#8b5cf6,#7c3aed)}.c3{background:linear-gradient(135deg,#22C55E,#16a34a)}
         .tool-info{width:100%}
         .tool-info h3{font-size:16px;margin-bottom:4px;font-weight:700;color:var(--primary)}
         .tcat{font-size:12px;color:var(--gray)}
@@ -204,34 +201,41 @@
         .tool-footer a{font-size:13px;color:var(--secondary);font-weight:600}
         .tool-footer a:hover{text-decoration:underline}
 
-        /* Stats Section */
         .stats-section{background:linear-gradient(135deg,var(--primary),#1e293b);padding:60px 0;position:relative;overflow:hidden}
         .stats-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(37,99,235,.12) 0%,transparent 50%),radial-gradient(circle at 80% 50%,rgba(34,197,94,.08) 0%,transparent 50%)}
         .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;position:relative;z-index:2}
-        .stat-card{text-align:center;padding:28px 20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;backdrop-filter:blur(8px)}
+        .stat-card{text-align:center;padding:28px 20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;backdrop-filter:blur(8px);transition:all .3s}
         .stat-card:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15)}
         .stat-icon{font-size:28px;margin-bottom:12px;display:block}
         .stat-number{font-family:var(--font-heading);font-size:32px;font-weight:700;line-height:1;margin-bottom:6px}
         .stat-label{font-size:13px;color:rgba(255,255,255,.55);line-height:1.4}
 
-        /* Topics Grid */
         .topics-section{background:var(--light-gray);padding:70px 0}
         .topics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
         .topic-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:24px;display:flex;gap:16px;align-items:flex-start;transition:all .3s}
         .topic-card:hover{border-color:var(--secondary);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.05)}
         .topic-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-        .topic-icon.ti-blue{background:rgba(37,99,235,.08)}
-        .topic-icon.ti-purple{background:rgba(139,92,246,.08)}
-        .topic-icon.ti-green{background:rgba(34,197,94,.08)}
-        .topic-icon.ti-orange{background:rgba(245,158,11,.08)}
-        .topic-icon.ti-red{background:rgba(239,68,68,.08)}
-        .topic-icon.ti-cyan{background:rgba(6,182,212,.08)}
+        .topic-icon.ti-blue{background:rgba(37,99,235,.08)}.topic-icon.ti-purple{background:rgba(139,92,246,.08)}.topic-icon.ti-green{background:rgba(34,197,94,.08)}.topic-icon.ti-orange{background:rgba(245,158,11,.08)}.topic-icon.ti-red{background:rgba(239,68,68,.08)}.topic-icon.ti-cyan{background:rgba(6,182,212,.08)}
         .topic-card h3{font-size:16px;color:var(--primary);margin-bottom:4px}
         .topic-card p{font-size:13px;color:var(--gray);margin:0;line-height:1.5}
         .topic-link{font-size:13px;color:var(--secondary);font-weight:600;margin-top:6px;display:inline-block}
         .topic-link:hover{text-decoration:underline}
 
-        /* Newsletter */
+        /* NEW: Trust / E-E-A-T Section */
+        .trust-section{padding:60px 0;background:white}
+        .trust-box{max-width:820px;margin:0 auto;text-align:center}
+        .trust-box h2{font-size:30px;color:var(--primary);margin-bottom:12px}
+        .trust-box>p{color:var(--gray);font-size:16px;margin-bottom:32px;line-height:1.7}
+        .trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-bottom:28px}
+        .trust-item{background:var(--light-gray);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center;transition:all .25s}
+        .trust-item:hover{border-color:var(--secondary);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.04)}
+        .trust-item-icon{font-size:32px;margin-bottom:12px;display:block}
+        .trust-item h4{font-size:16px;color:var(--primary);margin-bottom:6px}
+        .trust-item p{font-size:13px;color:var(--gray);margin:0;line-height:1.5}
+        .trust-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+        .trust-link{font-size:14px;color:var(--secondary);font-weight:600;display:inline-flex;align-items:center;gap:4px}
+        .trust-link:hover{text-decoration:underline}
+
         .newsletter{background:linear-gradient(160deg,var(--primary),#020617);position:relative;overflow:hidden}
         .newsletter::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 50%,rgba(37,99,235,.15) 0%,transparent 50%),radial-gradient(circle at 70% 50%,rgba(34,197,94,.08) 0%,transparent 50%)}
         .nl-content{position:relative;z-index:10;text-align:center;max-width:540px;margin:0 auto}
@@ -240,11 +244,9 @@
         .nl-form{display:flex;gap:10px;max-width:460px;margin:0 auto}
         .nl-form input{flex:1;padding:14px 20px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:white;font-size:15px;outline:none}
         .nl-form input::placeholder{color:rgba(255,255,255,.4)}
-        .nl-form input:focus{border-color:rgba(255,255,255,.4)}
         .nl-privacy{font-size:13px;color:rgba(255,255,255,.4);margin-top:12px}
         .nl-privacy a{color:rgba(255,255,255,.55);text-decoration:underline}
 
-        /* FAQ */
         .faq-item{background:var(--bg);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden}
         .faq-q{width:100%;text-align:left;padding:18px 22px;background:none;border:none;cursor:pointer;font-family:var(--font-heading);font-size:15px;font-weight:600;display:flex;justify-content:space-between;align-items:center;color:var(--text);transition:color .2s}
         .faq-q:hover{color:var(--secondary)}
@@ -254,38 +256,37 @@
         .faq-item.active .faq-a{max-height:400px}
         .faq-ai{padding:0 22px 20px;color:var(--gray);font-size:14px;line-height:1.75}
 
-        /* Ad Slot */
+        /* NEW: SEO Bottom Content */
+        .seo-bottom{max-width:820px;margin:0 auto;padding:40px 24px}
+        .seo-bottom h2{font-size:24px;color:var(--primary);margin:28px 0 12px;padding-top:16px;border-top:1px solid var(--border)}
+        .seo-bottom h2:first-of-type{border-top:none;padding-top:0;margin-top:0}
+        .seo-bottom p{font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:14px}
+        .seo-bottom ul{color:var(--gray);margin-bottom:16px;padding-left:24px;font-size:15px}
+        .seo-bottom li{margin-bottom:8px;line-height:1.7}
+        .seo-bottom a{color:var(--secondary);font-weight:600}
+        .seo-bottom a:hover{text-decoration:underline}
+
         .ad-slot{margin:32px 0;padding:18px 0;text-align:center;background:var(--light-gray);border-radius:var(--radius);border:1px dashed var(--border)}
         .ad-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gray);margin-bottom:8px}
 
-        /* Disclaimer */
         .disclaimer-box{background:#fffbeb;border-left:4px solid #f59e0b;padding:16px 20px;margin:30px auto;border-radius:0 8px 8px 0;font-size:13px;color:#92400e;line-height:1.6;max-width:820px}
 
-        /* Footer */
         .footer{background:#0F172A;color:white;padding:60px 0 30px;margin-top:0}
         .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
         .footer h3{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.5);margin-bottom:18px}
-        .footer ul{list-style:none}
-        .footer li{margin-bottom:10px}
-        .footer a{color:rgba(255,255,255,.55);font-size:14px;transition:color .2s}
-        .footer a:hover{color:white}
+        .footer ul{list-style:none}.footer li{margin-bottom:10px}
+        .footer a{color:rgba(255,255,255,.55);font-size:14px;transition:color .2s}.footer a:hover{color:white}
         .footer-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,.35);font-size:14px}
 
-        /* Animations */
         .fade-in{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
         .fade-in.visible{opacity:1;transform:translateY(0)}
 
-        /* Performance */
         .footer,.newsletter,.stats-section,.faq-item,.ad-slot{content-visibility:auto;contain-intrinsic-size:1px 300px}
 
-        /* Responsive */
         @media(max-width:768px){
-            .nav-links{display:none}
-            .mobile-toggle{display:flex}
-            .hero h1{font-size:34px}
-            .hero-subtitle{font-size:16px}
-            .hero-stats{gap:20px}
-            .hero-stat-num{font-size:22px}
+            .nav-links{display:none}.mobile-toggle{display:flex}
+            .hero h1{font-size:34px}.hero-subtitle{font-size:16px}
+            .hero-stats{gap:20px}.hero-stat-num{font-size:22px}
             .section-title{font-size:28px}
             .featured-grid{grid-template-columns:1fr}
             .featured-image{min-height:200px;order:-1}
@@ -294,17 +295,17 @@
             .cards-grid{grid-template-columns:1fr}
             .footer-grid{grid-template-columns:1fr 1fr}
             .stats-grid{grid-template-columns:repeat(2,1fr)}
+            .trust-grid{grid-template-columns:1fr 1fr}
         }
         @media(max-width:480px){
             .footer-grid{grid-template-columns:1fr}
-            .hero-stats{flex-direction:row;gap:16px}
             .stats-grid{grid-template-columns:1fr 1fr}
+            .trust-grid{grid-template-columns:1fr}
         }
     </style>
 </head>
 <body>
 
-<!-- Ticker -->
 <div class="ticker">
     <div class="ticker-content">
         <span><span class="ticker-dot">●</span>150+ AI tools independently reviewed</span>
@@ -320,12 +321,11 @@
     </div>
 </div>
 
-<!-- Header -->
 <header class="header">
     <div class="container">
         <div class="header-inner">
-            <a href="index.html" class="logo gradient-text">CoinvestAI</a>
-            <nav>
+            <a href="/" class="logo gradient-text">CoinvestAI</a>
+            <nav aria-label="Main navigation">
                 <ul class="nav-links" id="navLinks">
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="ai-tools.html">AI Tools</a></li>
@@ -345,7 +345,6 @@
 
 <main>
 
-<!-- Hero -->
 <section class="hero">
     <div class="hero-content">
         <div class="hero-badge"><span class="dot"></span>Independent AI Finance Research · 2026</div>
@@ -370,18 +369,16 @@
     </div>
 </section>
 
-<!-- Search -->
 <section class="search-section">
     <div class="container">
         <div class="search-box">
-            <span class="search-icon">🔍</span>
-            <input type="text" id="siteSearch" placeholder="Search articles, tools, guides..." aria-label="Search" oninput="searchSite()">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input type="text" id="siteSearch" placeholder="Search articles, tools, guides..." aria-label="Search CoinvestAI" oninput="searchSite()">
         </div>
-        <div id="searchResults" style="max-width:600px;margin:10px auto;"></div>
+        <div id="searchResults" style="max-width:600px;margin:10px auto;" role="listbox"></div>
     </div>
 </section>
 
-<!-- Featured -->
 <section class="section" style="padding-bottom:40px">
     <div class="container">
         <div class="featured-grid fade-in">
@@ -392,12 +389,11 @@
                 <div class="featured-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 8, 2026 · 14 min read</div>
                 <a href="blog-ai-investment-research-tools.html" class="btn btn-primary" style="width:fit-content">Read Full Analysis →</a>
             </div>
-            <div class="featured-image">📊</div>
+            <div class="featured-image" aria-hidden="true">📊</div>
         </div>
     </div>
 </section>
 
-<!-- Ad 1 -->
 <div class="container">
     <div class="ad-slot">
         <div class="ad-label">Advertisement</div>
@@ -406,232 +402,63 @@
     </div>
 </div>
 
-<!-- Explore Categories -->
 <section class="section">
     <div class="container">
         <h2 class="section-title">Explore AI in Finance</h2>
         <p class="section-subtitle">In-depth coverage across six domains transforming financial markets in 2026</p>
         <div class="cards-grid fade-in">
-            <div class="card">
-                <div class="card-icon blue">📈</div>
-                <h3>AI Trading &amp; Investment</h3>
-                <p>Reviews and analysis of AI-powered trading platforms, algorithmic execution engines, and quantitative research tools.</p>
-                <a href="ai-tools.html" class="card-link">Explore Tools →</a>
-            </div>
-            <div class="card">
-                <div class="card-icon purple">🏦</div>
-                <h3>Fintech &amp; Banking AI</h3>
-                <p>How AI is reshaping digital banking, corporate auditing, fraud detection, and payment automation infrastructure.</p>
-                <a href="fintech.html" class="card-link">Explore Fintech →</a>
-            </div>
-            <div class="card">
-                <div class="card-icon green">⛓️</div>
-                <h3>Crypto &amp; DeFi Intelligence</h3>
-                <p>AI applications in cryptocurrency analysis, on-chain analytics, smart contract security, and decentralized protocol risk.</p>
-                <a href="crypto-ai.html" class="card-link">Explore Crypto AI →</a>
-            </div>
-            <div class="card">
-                <div class="card-icon orange">📄</div>
-                <h3>NLP &amp; Document Analysis</h3>
-                <p>How language models parse SEC filings, earnings transcripts, and regulatory documents for quantitative research.</p>
-                <a href="blog-nlp-financial-document-analysis.html" class="card-link">Read Research →</a>
-            </div>
-            <div class="card">
-                <div class="card-icon red">🛡️</div>
-                <h3>Risk &amp; Fraud Detection</h3>
-                <p>Neural network anomaly detection, behavioral biometrics, and AI-powered compliance monitoring systems.</p>
-                <a href="blog-ai-fraud-detection-finance.html" class="card-link">Read Research →</a>
-            </div>
-            <div class="card">
-                <div class="card-icon cyan">📋</div>
-                <h3>Regulation &amp; Compliance</h3>
-                <p>EU AI Act, SEC guidelines, and global regulatory frameworks for AI deployment in financial services.</p>
-                <a href="blog-ai-regulatory-compliance-finance.html" class="card-link">Read Research →</a>
-            </div>
+            <div class="card"><div class="card-icon blue">📈</div><h3>AI Trading &amp; Investment</h3><p>Reviews and analysis of AI-powered trading platforms, algorithmic execution engines, and quantitative research tools.</p><a href="ai-tools.html" class="card-link">Explore Tools →</a></div>
+            <div class="card"><div class="card-icon purple">🏦</div><h3>Fintech &amp; Banking AI</h3><p>How AI is reshaping digital banking, corporate auditing, fraud detection, and payment automation infrastructure.</p><a href="fintech.html" class="card-link">Explore Fintech →</a></div>
+            <div class="card"><div class="card-icon green">⛓️</div><h3>Crypto &amp; DeFi Intelligence</h3><p>AI applications in cryptocurrency analysis, on-chain analytics, smart contract security, and decentralized protocol risk.</p><a href="crypto-ai.html" class="card-link">Explore Crypto AI →</a></div>
+            <div class="card"><div class="card-icon orange">📄</div><h3>NLP &amp; Document Analysis</h3><p>How language models parse SEC filings, earnings transcripts, and regulatory documents for quantitative research.</p><a href="blog-nlp-financial-document-analysis.html" class="card-link">Read Research →</a></div>
+            <div class="card"><div class="card-icon red">🛡️</div><h3>Risk &amp; Fraud Detection</h3><p>Neural network anomaly detection, behavioral biometrics, and AI-powered compliance monitoring systems.</p><a href="blog-ai-fraud-detection-finance.html" class="card-link">Read Research →</a></div>
+            <div class="card"><div class="card-icon cyan">📋</div><h3>Regulation &amp; Compliance</h3><p>EU AI Act, SEC guidelines, and global regulatory frameworks for AI deployment in financial services.</p><a href="blog-ai-regulatory-compliance-finance.html" class="card-link">Read Research →</a></div>
         </div>
     </div>
 </section>
 
-<!-- Stats -->
 <section class="stats-section fade-in">
     <div class="container">
         <div class="stats-grid">
-            <div class="stat-card">
-                <span class="stat-icon">🤖</span>
-                <div class="stat-number gradient-text">73%</div>
-                <div class="stat-label">Institutional AI tool adoption in 2026</div>
-            </div>
-            <div class="stat-card">
-                <span class="stat-icon">📊</span>
-                <div class="stat-number gradient-text">6.2×</div>
-                <div class="stat-label">Faster research with AI vs. manual</div>
-            </div>
-            <div class="stat-card">
-                <span class="stat-icon">🛡️</span>
-                <div class="stat-number gradient-text">67%</div>
-                <div class="stat-label">Fraud reduction from AI detection</div>
-            </div>
-            <div class="stat-card">
-                <span class="stat-icon">💰</span>
-                <div class="stat-number gradient-text">$4.1B</div>
-                <div class="stat-label">Global fintech AI investment 2025</div>
-            </div>
-            <div class="stat-card">
-                <span class="stat-icon">📑</span>
-                <div class="stat-number gradient-text">1,400+</div>
-                <div class="stat-label">Avg. pages per S&P 500 annual filing</div>
-            </div>
+            <div class="stat-card"><span class="stat-icon">🤖</span><div class="stat-number gradient-text">73%</div><div class="stat-label">Institutional AI tool adoption in 2026</div></div>
+            <div class="stat-card"><span class="stat-icon">📊</span><div class="stat-number gradient-text">6.2×</div><div class="stat-label">Faster research with AI vs. manual</div></div>
+            <div class="stat-card"><span class="stat-icon">🛡️</span><div class="stat-number gradient-text">67%</div><div class="stat-label">Fraud reduction from AI detection</div></div>
+            <div class="stat-card"><span class="stat-icon">💰</span><div class="stat-number gradient-text">$4.1B</div><div class="stat-label">Global fintech AI investment 2025</div></div>
+            <div class="stat-card"><span class="stat-icon">📑</span><div class="stat-number gradient-text">1,400+</div><div class="stat-label">Avg. pages per S&P 500 annual filing</div></div>
         </div>
     </div>
 </section>
 
-<!-- Latest Research -->
 <section class="section section-gray">
     <div class="container">
         <h2 class="section-title">Latest Research &amp; Insights</h2>
         <p class="section-subtitle">Stay informed with our latest independent analysis of AI in finance</p>
         <div class="cards-grid fade-in">
-            <article class="article-card">
-                <div class="article-card-image aimg1">
-                    <span class="article-card-category">AI Tools</span>
-                    <span class="article-card-badge">⏱ 10 min</span>
-                </div>
-                <div class="article-card-body">
-                    <h3>How to Evaluate AI Trading Platforms in 2026</h3>
-                    <p>Key criteria and benchmarking frameworks for assessing AI-powered trading and investment research tools.</p>
-                    <div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div>
-                    <a href="blog-evaluate-ai-trading-platforms.html" class="card-link">Read Article →</a>
-                </div>
-            </article>
-            <article class="article-card">
-                <div class="article-card-image aimg2">
-                    <span class="article-card-category">Fintech</span>
-                    <span class="article-card-badge">⏱ 11 min</span>
-                </div>
-                <div class="article-card-body">
-                    <h3>The Rise of AI-Native Financial Services in 2026</h3>
-                    <p>How AI is enabling a new generation of financial products built with algorithmic decision engines at their core.</p>
-                    <div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div>
-                    <a href="blog-ai-native-financial-services.html" class="card-link">Read Article →</a>
-                </div>
-            </article>
-            <article class="article-card">
-                <div class="article-card-image aimg3">
-                    <span class="article-card-category">Crypto AI</span>
-                    <span class="article-card-badge">⏱ 9 min</span>
-                </div>
-                <div class="article-card-body">
-                    <h3>ML Applications in Cryptocurrency Market Analysis</h3>
-                    <p>How ML models process on-chain data, market signals, and sentiment for crypto investment research.</p>
-                    <div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div>
-                    <a href="blog-ml-crypto-market-analysis.html" class="card-link">Read Article →</a>
-                </div>
-            </article>
-            <article class="article-card">
-                <div class="article-card-image aimg4">
-                    <span class="article-card-category">Guides</span>
-                    <span class="article-card-badge">⏱ 12 min</span>
-                </div>
-                <div class="article-card-body">
-                    <h3>Beginner's Guide to AI Investing in 2026</h3>
-                    <p>Step-by-step introduction to leveraging AI tools for investment research and portfolio allocation.</p>
-                    <div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div>
-                    <a href="blog-beginners-guide-ai-investing.html" class="card-link">Read Guide →</a>
-                </div>
-            </article>
-            <article class="article-card">
-                <div class="article-card-image aimg5">
-                    <span class="article-card-category">DeFi</span>
-                    <span class="article-card-badge">⏱ 15 min</span>
-                </div>
-                <div class="article-card-body">
-                    <h3>AI Risk Management in DeFi Protocols (2026)</h3>
-                    <p>Real-time threat detection, oracle manipulation safeguards, and EU AI Act compliance in decentralized finance.</p>
-                    <div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div>
-                    <a href="blog-ai-risk-management-defi-2026.html" class="card-link">Read Research →</a>
-                </div>
-            </article>
-            <article class="article-card">
-                <div class="article-card-image aimg6">
-                    <span class="article-card-category">NLP</span>
-                    <span class="article-card-badge">⏱ 14 min</span>
-                </div>
-                <div class="article-card-body">
-                    <h3>NLP for Financial Document Analysis in 2026</h3>
-                    <p>How NLP models automate extraction of quantitative insights from SEC filings and earnings transcripts.</p>
-                    <div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div>
-                    <a href="blog-nlp-financial-document-analysis.html" class="card-link">Read Research →</a>
-                </div>
-            </article>
+            <article class="article-card"><div class="article-card-image aimg1"><span class="article-card-category">AI Tools</span><span class="article-card-badge">⏱ 10 min</span></div><div class="article-card-body"><h3>How to Evaluate AI Trading Platforms in 2026</h3><p>Key criteria and benchmarking frameworks for assessing AI-powered trading and investment research tools.</p><div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div><a href="blog-evaluate-ai-trading-platforms.html" class="card-link">Read Article →</a></div></article>
+            <article class="article-card"><div class="article-card-image aimg2"><span class="article-card-category">Fintech</span><span class="article-card-badge">⏱ 11 min</span></div><div class="article-card-body"><h3>The Rise of AI-Native Financial Services in 2026</h3><p>How AI is enabling a new generation of financial products built with algorithmic decision engines at their core.</p><div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div><a href="blog-ai-native-financial-services.html" class="card-link">Read Article →</a></div></article>
+            <article class="article-card"><div class="article-card-image aimg3"><span class="article-card-category">Crypto AI</span><span class="article-card-badge">⏱ 9 min</span></div><div class="article-card-body"><h3>ML Applications in Cryptocurrency Market Analysis</h3><p>How ML models process on-chain data, market signals, and sentiment for crypto investment research.</p><div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div><a href="blog-ml-crypto-market-analysis.html" class="card-link">Read Article →</a></div></article>
+            <article class="article-card"><div class="article-card-image aimg4"><span class="article-card-category">Guides</span><span class="article-card-badge">⏱ 12 min</span></div><div class="article-card-body"><h3>Beginner's Guide to AI Investing in 2026</h3><p>Step-by-step introduction to leveraging AI tools for investment research and portfolio allocation.</p><div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div><a href="blog-beginners-guide-ai-investing.html" class="card-link">Read Guide →</a></div></article>
+            <article class="article-card"><div class="article-card-image aimg5"><span class="article-card-category">DeFi</span><span class="article-card-badge">⏱ 15 min</span></div><div class="article-card-body"><h3>AI Risk Management in DeFi Protocols (2026)</h3><p>Real-time threat detection, oracle manipulation safeguards, and EU AI Act compliance in decentralized finance.</p><div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div><a href="blog-ai-risk-management-defi-2026.html" class="card-link">Read Research →</a></div></article>
+            <article class="article-card"><div class="article-card-image aimg6"><span class="article-card-category">NLP</span><span class="article-card-badge">⏱ 14 min</span></div><div class="article-card-body"><h3>NLP for Financial Document Analysis in 2026</h3><p>How NLP models automate extraction of quantitative insights from SEC filings and earnings transcripts.</p><div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div><a href="blog-nlp-financial-document-analysis.html" class="card-link">Read Research →</a></div></article>
         </div>
-        <div style="text-align:center;margin-top:40px">
-            <a href="blog.html" class="btn btn-dark">View All Articles →</a>
-        </div>
+        <div style="text-align:center;margin-top:40px"><a href="blog.html" class="btn btn-dark">View All Articles →</a></div>
     </div>
 </section>
 
-<!-- AI Tools -->
 <section class="section">
     <div class="container">
         <h2 class="section-title">Top-Rated AI Finance Tools 2026</h2>
         <p class="section-subtitle">Independently reviewed and scored by our research team</p>
         <div class="cards-grid fade-in">
-            <div class="tool-card">
-                <div class="tool-icon c1">M</div>
-                <div class="tool-info">
-                    <h3>Manus AI</h3>
-                    <p class="tcat">Agentic Automation</p>
-                    <p class="tdesc">Autonomous AI agent for multi-step financial due diligence, sandbox code execution, and research automation.</p>
-                    <div class="tool-footer">
-                        <span class="tool-rating">★ 4.8/5</span>
-                        <a href="ai-tools-manus-ai.html">Full Review →</a>
-                    </div>
-                </div>
-            </div>
-            <div class="tool-card">
-                <div class="tool-icon c1">C</div>
-                <div class="tool-info">
-                    <h3>ChatGPT (OpenAI)</h3>
-                    <p class="tcat">AI Research Assistant</p>
-                    <p class="tdesc">Leading LLM for SEC document parsing, sentiment analysis, and macro research synthesis.</p>
-                    <div class="tool-footer">
-                        <span class="tool-rating">★ 4.8/5</span>
-                        <a href="ai-tools-chatgpt.html">Full Review →</a>
-                    </div>
-                </div>
-            </div>
-            <div class="tool-card">
-                <div class="tool-icon c2">T</div>
-                <div class="tool-info">
-                    <h3>TradingView</h3>
-                    <p class="tcat">Charting &amp; Analysis</p>
-                    <p class="tdesc">Industry-standard charting with ML indicators, automated pattern recognition, and Pine Script backtesting.</p>
-                    <div class="tool-footer">
-                        <span class="tool-rating">★ 4.7/5</span>
-                        <a href="ai-tools-tradingview.html">Full Review →</a>
-                    </div>
-                </div>
-            </div>
-            <div class="tool-card">
-                <div class="tool-icon c3">A</div>
-                <div class="tool-info">
-                    <h3>AlphaSense</h3>
-                    <p class="tcat">Market Intelligence</p>
-                    <p class="tdesc">Institutional AI search platform for broker research, earnings transcripts, and regulatory filings.</p>
-                    <div class="tool-footer">
-                        <span class="tool-rating">★ 4.6/5</span>
-                        <a href="ai-tools-alphasense.html">Full Review →</a>
-                    </div>
-                </div>
-            </div>
+            <div class="tool-card"><div class="tool-icon c1">M</div><div class="tool-info"><h3>Manus AI</h3><p class="tcat">Agentic Automation</p><p class="tdesc">Autonomous AI agent for multi-step financial due diligence, sandbox code execution, and research automation.</p><div class="tool-footer"><span class="tool-rating">★ 4.8/5</span><a href="ai-tools-manus-ai.html">Full Review →</a></div></div></div>
+            <div class="tool-card"><div class="tool-icon c1">C</div><div class="tool-info"><h3>ChatGPT (OpenAI)</h3><p class="tcat">AI Research Assistant</p><p class="tdesc">Leading LLM for SEC document parsing, sentiment analysis, and macro research synthesis.</p><div class="tool-footer"><span class="tool-rating">★ 4.8/5</span><a href="ai-tools-chatgpt.html">Full Review →</a></div></div></div>
+            <div class="tool-card"><div class="tool-icon c2">T</div><div class="tool-info"><h3>TradingView</h3><p class="tcat">Charting &amp; Analysis</p><p class="tdesc">Industry-standard charting with ML indicators, automated pattern recognition, and Pine Script backtesting.</p><div class="tool-footer"><span class="tool-rating">★ 4.7/5</span><a href="ai-tools-tradingview.html">Full Review →</a></div></div></div>
+            <div class="tool-card"><div class="tool-icon c3">A</div><div class="tool-info"><h3>AlphaSense</h3><p class="tcat">Market Intelligence</p><p class="tdesc">Institutional AI search platform for broker research, earnings transcripts, and regulatory filings.</p><div class="tool-footer"><span class="tool-rating">★ 4.6/5</span><a href="ai-tools-alphasense.html">Full Review →</a></div></div></div>
         </div>
-        <div style="text-align:center;margin-top:40px">
-            <a href="reviews.html" class="btn btn-dark">View All 11 Reviews →</a>
-        </div>
+        <div style="text-align:center;margin-top:40px"><a href="reviews.html" class="btn btn-dark">View All 11 Reviews →</a></div>
     </div>
 </section>
 
-<!-- Ad 2 -->
 <div class="container">
     <div class="ad-slot">
         <div class="ad-label">Advertisement</div>
@@ -640,68 +467,62 @@
     </div>
 </div>
 
-<!-- Topics Browse -->
 <section class="topics-section fade-in">
     <div class="container">
         <h2 class="section-title">Browse by Topic</h2>
         <p class="section-subtitle">Quick access to our most popular research categories</p>
         <div class="topics-grid">
-            <a href="guides.html" class="topic-card">
-                <div class="topic-icon ti-orange">📘</div>
-                <div>
-                    <h3>Educational Guides</h3>
-                    <p>12 step-by-step guides from beginner to advanced</p>
-                    <span class="topic-link">Browse Guides →</span>
-                </div>
-            </a>
-            <a href="reviews.html" class="topic-card">
-                <div class="topic-icon ti-blue">⚖️</div>
-                <div>
-                    <h3>Independent Reviews</h3>
-                    <p>11 AI tools tested with 7-factor scoring</p>
-                    <span class="topic-link">Browse Reviews →</span>
-                </div>
-            </a>
-            <a href="news.html" class="topic-card">
-                <div class="topic-icon ti-red">📰</div>
-                <div>
-                    <h3>News &amp; Dispatches</h3>
-                    <p>Weekly regulatory and market intelligence</p>
-                    <span class="topic-link">Latest News →</span>
-                </div>
-            </a>
-            <a href="blog.html" class="topic-card">
-                <div class="topic-icon ti-purple">📝</div>
-                <div>
-                    <h3>Research Blog</h3>
-                    <p>In-depth analysis across all AI finance topics</p>
-                    <span class="topic-link">Browse Blog →</span>
-                </div>
-            </a>
-            <a href="crypto-ai.html" class="topic-card">
-                <div class="topic-icon ti-green">⛓️</div>
-                <div>
-                    <h3>Crypto &amp; DeFi AI</h3>
-                    <p>On-chain analytics and protocol intelligence</p>
-                    <span class="topic-link">Explore Crypto →</span>
-                </div>
-            </a>
-            <a href="fintech.html" class="topic-card">
-                <div class="topic-icon ti-cyan">🏦</div>
-                <div>
-                    <h3>Fintech &amp; Banking</h3>
-                    <p>Banking automation, fraud detection, robo-advisory</p>
-                    <span class="topic-link">Explore Fintech →</span>
-                </div>
-            </a>
+            <a href="guides.html" class="topic-card"><div class="topic-icon ti-orange">📘</div><div><h3>Educational Guides</h3><p>12 step-by-step guides from beginner to advanced</p><span class="topic-link">Browse Guides →</span></div></a>
+            <a href="reviews.html" class="topic-card"><div class="topic-icon ti-blue">⚖️</div><div><h3>Independent Reviews</h3><p>11 AI tools tested with 7-factor scoring</p><span class="topic-link">Browse Reviews →</span></div></a>
+            <a href="news.html" class="topic-card"><div class="topic-icon ti-red">📰</div><div><h3>News &amp; Dispatches</h3><p>Weekly regulatory and market intelligence</p><span class="topic-link">Latest News →</span></div></a>
+            <a href="blog.html" class="topic-card"><div class="topic-icon ti-purple">📝</div><div><h3>Research Blog</h3><p>In-depth analysis across all AI finance topics</p><span class="topic-link">Browse Blog →</span></div></a>
+            <a href="crypto-ai.html" class="topic-card"><div class="topic-icon ti-green">⛓️</div><div><h3>Crypto &amp; DeFi AI</h3><p>On-chain analytics and protocol intelligence</p><span class="topic-link">Explore Crypto →</span></div></a>
+            <a href="fintech.html" class="topic-card"><div class="topic-icon ti-cyan">🏦</div><div><h3>Fintech &amp; Banking</h3><p>Banking automation, fraud detection, robo-advisory</p><span class="topic-link">Explore Fintech →</span></div></a>
         </div>
     </div>
 </section>
 
-<!-- Newsletter -->
+<!-- NEW: Why Trust CoinvestAI Section -->
+<section class="trust-section fade-in">
+    <div class="container">
+        <div class="trust-box">
+            <h2>Why Trust CoinvestAI?</h2>
+            <p>We believe that independent, evidence-based research is the foundation of informed financial decision-making. Here is what sets our publication apart:</p>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <span class="trust-item-icon">🔒</span>
+                    <h4>Editorial Independence</h4>
+                    <p>Software vendors cannot pay to influence our ratings, suppress negative findings, or dictate editorial conclusions.</p>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-item-icon">📊</span>
+                    <h4>7-Factor Scoring</h4>
+                    <p>Every tool is evaluated across seven weighted criteria using hands-on testing in sandbox and live environments.</p>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-item-icon">✅</span>
+                    <h4>Fact-Checked Content</h4>
+                    <p>All research is reviewed by our editorial team, with source citations and transparent methodology disclosures.</p>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-item-icon">🔄</span>
+                    <h4>Quarterly Updates</h4>
+                    <p>Reviews and guides are updated quarterly to reflect new model releases, pricing changes, and regulatory developments.</p>
+                </div>
+            </div>
+            <div class="trust-links">
+                <a href="editorial-guidelines.html" class="trust-link">📋 Editorial Guidelines →</a>
+                <a href="review-methodology.html" class="trust-link">⚖️ Review Methodology →</a>
+                <a href="about.html" class="trust-link">👥 About Our Team →</a>
+                <a href="authors.html" class="trust-link">✍️ Author Profiles →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="newsletter section">
     <div class="nl-content">
-        <div style="font-size:44px;margin-bottom:18px">📧</div>
+        <div style="font-size:44px;margin-bottom:18px" aria-hidden="true">📧</div>
         <h2>Stay Ahead of AI in Finance</h2>
         <p>Get independent research insights, tool reviews, and regulatory updates delivered to your inbox weekly.</p>
         <form class="nl-form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:rgba(255,255,255,.85);font-size:15px;\'>✓ Subscribed successfully!</p>';">
@@ -712,40 +533,40 @@
     </div>
 </section>
 
-<!-- FAQ -->
 <section class="section">
     <div class="container" style="max-width:750px">
         <h2 class="section-title">Common Questions</h2>
         <p class="section-subtitle">Understanding AI's role in modern finance</p>
-
-        <div class="faq-item active">
-            <button class="faq-q" onclick="this.parentElement.classList.toggle('active')" type="button">What is AI investing?<span class="faq-arr">▾</span></button>
-            <div class="faq-a"><div class="faq-ai">AI investing refers to using artificial intelligence and machine learning technologies to assist with financial analysis, investment research, portfolio optimization, and automated trading. AI tools can process vast amounts of market data, SEC filings, and alternative datasets to surface insights that would be impossible through manual analysis alone. However, AI should augment — not replace — human judgment in investment decisions.</div></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-q" onclick="this.parentElement.classList.toggle('active')" type="button">Can AI predict stock market movements?<span class="faq-arr">▾</span></button>
-            <div class="faq-a"><div class="faq-ai">AI models can analyze historical patterns, market microstructure, and sentiment signals to identify statistical probabilities — but cannot predict markets with certainty. Financial markets are influenced by complex, often unpredictable geopolitical, macroeconomic, and behavioral factors. AI tools should be used as analytical aids alongside human judgment, not as guaranteed prediction systems. Always approach AI-generated signals with appropriate skepticism.</div></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-q" onclick="this.parentElement.classList.toggle('active')" type="button">Are AI trading tools suitable for beginners?<span class="faq-arr">▾</span></button>
-            <div class="faq-a"><div class="faq-ai">Many AI trading platforms offer features for different experience levels, including free tiers with educational resources. Beginners should start with research-focused tools like <a href="ai-tools-chatgpt.html" style="color:var(--secondary);text-decoration:underline;">ChatGPT</a> or <a href="ai-tools-tradingview.html" style="color:var(--secondary);text-decoration:underline;">TradingView</a> before exploring automated trading systems. See our <a href="blog-beginners-guide-ai-investing.html" style="color:var(--secondary);text-decoration:underline;">Beginner's Guide to AI Investing</a> for a structured introduction.</div></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-q" onclick="this.parentElement.classList.toggle('active')" type="button">How does CoinvestAI evaluate AI finance tools?<span class="faq-arr">▾</span></button>
-            <div class="faq-a"><div class="faq-ai">CoinvestAI evaluates tools across seven weighted criteria: data accuracy, execution latency, risk safeguards, interface design, pricing transparency, backtesting quality, and regulatory compliance. Each tool is tested hands-on in sandbox and live environments by our independent research team. Vendors cannot influence scores or editorial conclusions. See our <a href="review-methodology.html" style="color:var(--secondary);text-decoration:underline;">Review Methodology</a> for full details.</div></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-q" onclick="this.parentElement.classList.toggle('active')" type="button">Is CoinvestAI free to use?<span class="faq-arr">▾</span></button>
-            <div class="faq-a"><div class="faq-ai">Yes. All CoinvestAI research articles, tool reviews, educational guides, and news dispatches are freely accessible with no registration required. Our independent research is supported by contextual advertising and clearly disclosed affiliate partnerships that never influence editorial content or tool ratings.</div></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-q" onclick="this.parentElement.classList.toggle('active')" type="button">Does CoinvestAI provide financial advice?<span class="faq-arr">▾</span></button>
-            <div class="faq-a"><div class="faq-ai">No. CoinvestAI is an educational and research publication. All content is intended strictly for informational and analytical purposes. Nothing published constitutes personalized financial, investment, trading, or legal advice. Always consult certified financial professionals before making investment decisions.</div></div>
-        </div>
+        <div class="faq-item active"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')" type="button">What is AI investing?<span class="faq-arr">▾</span></button><div class="faq-a"><div class="faq-ai">AI investing refers to using artificial intelligence and machine learning technologies to assist with financial analysis, investment research, portfolio optimization, and automated trading. AI tools can process vast amounts of market data, SEC filings, and alternative datasets to surface insights that would be impossible through manual analysis alone. However, AI should augment — not replace — human judgment in investment decisions.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')" type="button">Can AI predict stock market movements?<span class="faq-arr">▾</span></button><div class="faq-a"><div class="faq-ai">AI models can analyze historical patterns, market microstructure, and sentiment signals to identify statistical probabilities — but cannot predict markets with certainty. Financial markets are influenced by complex, often unpredictable geopolitical, macroeconomic, and behavioral factors. AI tools should be used as analytical aids alongside human judgment, not as guaranteed prediction systems.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')" type="button">Are AI trading tools suitable for beginners?<span class="faq-arr">▾</span></button><div class="faq-a"><div class="faq-ai">Many AI trading platforms offer features for different experience levels, including free tiers with educational resources. Beginners should start with research-focused tools like <a href="ai-tools-chatgpt.html" style="color:var(--secondary);text-decoration:underline">ChatGPT</a> or <a href="ai-tools-tradingview.html" style="color:var(--secondary);text-decoration:underline">TradingView</a> before exploring automated trading systems. See our <a href="blog-beginners-guide-ai-investing.html" style="color:var(--secondary);text-decoration:underline">Beginner's Guide to AI Investing</a> for a structured introduction.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')" type="button">How does CoinvestAI evaluate AI finance tools?<span class="faq-arr">▾</span></button><div class="faq-a"><div class="faq-ai">CoinvestAI evaluates tools across seven weighted criteria: data accuracy, execution latency, risk safeguards, interface design, pricing transparency, backtesting quality, and regulatory compliance. Each tool is tested hands-on by our independent research team. Vendors cannot influence scores. See our <a href="review-methodology.html" style="color:var(--secondary);text-decoration:underline">Review Methodology</a> for details.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')" type="button">Is CoinvestAI free to use?<span class="faq-arr">▾</span></button><div class="faq-a"><div class="faq-ai">Yes. All CoinvestAI research articles, tool reviews, educational guides, and news dispatches are freely accessible with no registration required. Our independent research is supported by contextual advertising and clearly disclosed affiliate partnerships that never influence editorial content.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')" type="button">Does CoinvestAI provide financial advice?<span class="faq-arr">▾</span></button><div class="faq-a"><div class="faq-ai">No. CoinvestAI is an educational and research publication. All content is intended strictly for informational purposes. Nothing published constitutes personalized financial, investment, trading, or legal advice. Always consult certified financial professionals before making investment decisions.</div></div></div>
     </div>
 </section>
 
-<!-- Disclaimer -->
+<!-- NEW: SEO Bottom Content -->
+<section>
+    <div class="seo-bottom">
+        <h2>About CoinvestAI: Independent AI Finance Research</h2>
+        <p>CoinvestAI was founded in 2026 with a singular mission: to provide transparent, evidence-based research at the intersection of artificial intelligence and modern finance. As quantitative algorithms, autonomous reasoning models, and AI-driven workflows reshape how capital is allocated, market participants need objective evaluations that cut through promotional hype to assess real-world tool performance, execution reliability, and compliance risk.</p>
+        <p>Our publication serves a diverse audience — from institutional equity analysts and hedge fund quant developers to fintech entrepreneurs and discerning retail investors seeking to understand AI's growing role in financial markets. Every review, guide, and news dispatch is produced with complete <a href="editorial-guidelines.html">editorial independence</a> from the software vendors we evaluate.</p>
+
+        <h2>What We Cover</h2>
+        <ul>
+            <li><strong>AI Trading & Investment Tools</strong> — Independent reviews of platforms like <a href="ai-tools-chatgpt.html">ChatGPT</a>, <a href="ai-tools-tradingview.html">TradingView</a>, <a href="ai-tools-alphasense.html">AlphaSense</a>, and <a href="ai-tools-deepseek.html">DeepSeek AI</a></li>
+            <li><strong>Fintech & Banking Automation</strong> — Research on <a href="fintech.html">AI-driven banking</a>, fraud detection, robo-advisory, and payment automation</li>
+            <li><strong>Crypto & DeFi Intelligence</strong> — Analysis of <a href="crypto-ai.html">on-chain analytics</a>, smart contract auditing, and algorithmic crypto trading</li>
+            <li><strong>Educational Guides</strong> — <a href="guides.html">12 step-by-step guides</a> covering AI investing fundamentals through advanced quantitative methodologies</li>
+            <li><strong>Market News & Regulation</strong> — Weekly <a href="news.html">regulatory dispatches</a> covering EU AI Act, SEC guidelines, and institutional adoption milestones</li>
+        </ul>
+
+        <h2>Our Editorial Standards</h2>
+        <p>CoinvestAI follows a strict <a href="review-methodology.html">7-factor scoring methodology</a> for all tool evaluations. Software vendors cannot purchase favorable ratings, suppress negative findings, or influence editorial conclusions. All affiliate relationships are transparently disclosed and never impact our analytical assessments. For full details, see our <a href="editorial-guidelines.html">Editorial Guidelines</a> and <a href="about.html">About page</a>.</p>
+    </div>
+</section>
+
 <div class="container">
     <div class="disclaimer-box">
         <strong>Site Disclaimer:</strong> CoinvestAI provides independent research and educational content only. This is not financial advice. All investment decisions involve risk and past performance does not guarantee future results. Always consult certified financial professionals before allocating capital.
@@ -754,7 +575,6 @@
 
 </main>
 
-<!-- Footer -->
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
@@ -803,7 +623,6 @@
 </footer>
 
 <script>
-// Search
 const sitePages=[
     {title:"Blog",url:"blog.html",kw:"blog articles research"},
     {title:"AI Tools Directory",url:"ai-tools.html",kw:"tools directory catalog"},
@@ -839,9 +658,8 @@ const sitePages=[
     {title:"Review Methodology",url:"review-methodology.html",kw:"methodology scoring rating criteria"},
     {title:"Editorial Guidelines",url:"editorial-guidelines.html",kw:"editorial guidelines standards"}
 ];
-function searchSite(){const input=document.getElementById('siteSearch');const results=document.getElementById('searchResults');if(!input||!results)return;const q=input.value.toLowerCase().trim();if(q.length<2){results.innerHTML='';return;}const found=sitePages.filter(p=>p.title.toLowerCase().includes(q)||p.kw.toLowerCase().includes(q));if(!found.length){results.innerHTML='<div style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;color:var(--gray);">No results for "'+q.replace(/</g,'&lt;')+'"</div>';return;}results.innerHTML=found.slice(0,8).map(p=>'<a href="'+p.url+'" style="display:block;padding:12px 18px;border:1px solid var(--border);border-radius:10px;margin-bottom:6px;background:var(--bg);color:var(--text);font-weight:500;font-size:14px;transition:border-color .2s;">'+p.title.replace(/</g,'&lt;')+'</a>').join('');}
+function searchSite(){var input=document.getElementById('siteSearch');var results=document.getElementById('searchResults');if(!input||!results)return;var q=input.value.toLowerCase().trim();if(q.length<2){results.innerHTML='';return;}var found=sitePages.filter(function(p){return p.title.toLowerCase().indexOf(q)!==-1||p.kw.toLowerCase().indexOf(q)!==-1;});if(!found.length){results.innerHTML='<div style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;color:var(--gray);">No results for "'+q.replace(/</g,'&lt;')+'"</div>';return;}results.innerHTML=found.slice(0,8).map(function(p){return'<a href="'+p.url+'" style="display:block;padding:12px 18px;border:1px solid var(--border);border-radius:10px;margin-bottom:6px;background:var(--bg);color:var(--text);font-weight:500;font-size:14px;">'+p.title.replace(/</g,'&lt;')+'</a>';}).join('');}
 
-// Scroll animations
 document.addEventListener('DOMContentLoaded',function(){
     var observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
     document.querySelectorAll('.fade-in').forEach(function(el){observer.observe(el);});
