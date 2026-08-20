@@ -7,7 +7,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-JPJ3YFPZJY');
     </script>
 
@@ -16,6 +15,14 @@
     <title>AI Finance & Trading Tools Directory 2026 — CoinvestAI</title>
     <meta name="description" content="Explore our curated 2026 directory of AI-powered finance, trading, research, and crypto analysis tools. Filter by category, compare ratings, and read independent reviews.">
     <link rel="canonical" href="https://coinvestai.com/ai-tools.html">
+    
+    <meta property="og:title" content="AI Finance & Trading Tools Directory 2026 — CoinvestAI">
+    <meta property="og:description" content="Explore our curated 2026 directory of AI-powered finance, trading, research, and crypto analysis tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://coinvestai.com/ai-tools.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0F172A">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -46,71 +53,550 @@
 
     <style>
         :root {
-            --primary: #0F172A; --secondary: #2563EB; --accent: #22C55E; --bg: #FFFFFF;
-            --text: #111827; --gray: #64748B; --light-gray: #f8fafc; --border: #e5e7eb; --radius: 12px;
+            --primary: #0F172A;
+            --secondary: #2563EB;
+            --accent: #22C55E;
+            --bg: #FFFFFF;
+            --text: #111827;
+            --gray: #64748B;
+            --light-gray: #f8fafc;
+            --border: #e5e7eb;
+            --radius: 12px;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
-        body.dark-mode { --primary: #F8FAFC; --bg: #0B0F19; --text: #F1F5F9; --gray: #94A3B8; --light-gray: #1E293B; --border: #334155; }
+        body.dark-mode {
+            --primary: #F8FAFC;
+            --bg: #0B0F19;
+            --text: #F1F5F9;
+            --gray: #94A3B8;
+            --light-gray: #1E293B;
+            --border: #334155;
+            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
         
-        * { margin:0; padding:0; box-sizing:border-box; transition: 0.3s; }
-        body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.8; }
+        * { margin:0; padding:0; box-sizing:border-box; transition: background-color 0.3s, border-color 0.3s, color 0.3s; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); color: var(--text); background: var(--bg); line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; color: var(--primary); }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        .gradient-text { background: linear-gradient(135deg, var(--secondary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-text { background: linear-gradient(135deg, var(--secondary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         
-        /* Nav & Header */
+        /* Header & Navigation */
         .header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+        body.dark-mode .header { background: rgba(11, 15, 25, 0.95); }
         .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
-        .nav-links { display: flex; gap: 15px; list-style: none; }
-        .nav-links a { color: var(--gray); text-decoration: none; font-size: 14px; font-weight: 500; }
-        #darkModeToggle { background: var(--light-gray); border: 1px solid var(--border); cursor: pointer; width: 38px; height: 38px; border-radius: 8px; }
+        .nav-container { display: flex; gap: 15px; align-items: center; }
+        .nav-links { display: flex; gap: 8px; list-style: none; align-items: center; }
+        .nav-links a { color: var(--gray); text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 8px; }
+        .nav-links a:hover, .nav-links a.active { background: rgba(37,99,235,0.08); color: var(--secondary); }
         
-        /* Grid */
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; margin: 40px 0; }
-        .tool-card { background: var(--light-gray); border: 1px solid var(--border); padding: 24px; border-radius: var(--radius); }
-        .tool-card h3 { font-family: 'Space Grotesk'; margin-bottom: 10px; color: var(--primary); }
-        .btn-link { color: var(--secondary); font-weight: 600; display: inline-block; margin-top: 15px; text-decoration: none; }
+        #darkModeToggle { 
+            background: var(--light-gray); 
+            border: 1px solid var(--border); 
+            cursor: pointer; 
+            width: 38px; 
+            height: 38px; 
+            border-radius: 8px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 16px; 
+        }
+        #darkModeToggle:hover { border-color: var(--secondary); }
+        .mobile-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 8px; }
+        .mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--primary); transition: .3s; }
+
+        /* Hero Directory Section */
+        .directory-hero { text-align: center; padding: 60px 0 40px; position: relative; overflow: hidden; }
+        .directory-hero h1 { font-size: 42px; margin-bottom: 12px; }
+        .directory-hero p { color: var(--gray); max-width: 600px; margin: 0 auto 24px; font-size: 16px; }
+
+        /* Search & Filter System */
+        .controls-wrapper { background: var(--light-gray); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 40px; box-shadow: var(--card-shadow); }
+        .search-box { position: relative; width: 100%; margin-bottom: 16px; }
+        .search-box input { 
+            width: 100%; 
+            padding: 14px 16px 14px 44px; 
+            border: 1px solid var(--border); 
+            border-radius: 8px; 
+            background: var(--bg); 
+            color: var(--text); 
+            font-size: 15px; 
+            outline: none; 
+            font-family: var(--font-body);
+        }
+        .search-box input:focus { border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+        .search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); fill: var(--gray); width: 18px; height: 18px; pointer-events: none; }
         
-        @media(max-width:768px){ .nav-links { display: none; } }
+        .filters-group { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+        .filter-pill { 
+            background: var(--bg); 
+            border: 1px solid var(--border); 
+            color: var(--text); 
+            padding: 8px 16px; 
+            border-radius: 50px; 
+            font-size: 13px; 
+            font-weight: 500; 
+            cursor: pointer; 
+        }
+        .filter-pill:hover, .filter-pill.active { border-color: var(--secondary); background: var(--secondary); color: white; }
+        
+        .results-info { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; color: var(--gray); font-size: 14px; }
+
+        /* Tools Grid Layout */
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        .tool-card { 
+            background: var(--light-gray); 
+            border: 1px solid var(--border); 
+            border-radius: var(--radius); 
+            padding: 24px; 
+            box-shadow: var(--card-shadow); 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        .tool-card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-color: var(--secondary); }
+        
+        /* Badge and Category Styling */
+        .tool-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px; }
+        .tool-icon-badge { 
+            width: 44px; 
+            height: 44px; 
+            border-radius: 8px; 
+            background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(34,197,94,0.1)); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-family: var(--font-heading); 
+            font-weight: 700; 
+            color: var(--secondary); 
+            font-size: 18px; 
+        }
+        .category-tag { background: rgba(37,99,235,0.08); color: var(--secondary); font-size: 11px; padding: 4px 10px; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        .tool-card h3 { font-size: 20px; margin-bottom: 6px; }
+        .tool-rating { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--gray); margin-bottom: 14px; }
+        .tool-rating span.stars { color: #EAB308; }
+        
+        .tool-desc { color: var(--gray); font-size: 14px; line-height: 1.5; margin-bottom: 20px; flex-grow: 1; }
+        
+        /* Inner Tags */
+        .tool-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+        .tool-tag { background: var(--bg); border: 1px solid var(--border); color: var(--gray); font-size: 11px; padding: 2px 8px; border-radius: 4px; }
+
+        .btn-link { 
+            color: white; 
+            background: var(--secondary); 
+            font-weight: 600; 
+            text-align: center; 
+            padding: 10px 18px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-size: 14px; 
+            display: block; 
+        }
+        .btn-link:hover { background: #1d4ed8; transform: translateY(-1px); }
+
+        /* Advertising Slot */
+        .ad-slot { margin: 40px 0; padding: 18px 0; text-align: center; background: var(--light-gray); border-radius: var(--radius); border: 1px dashed var(--border); }
+        .ad-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+
+        /* CTA Footer Section */
+        .submit-cta { background: linear-gradient(135deg, var(--primary), #1e293b); color: white; padding: 40px; border-radius: var(--radius); text-align: center; margin-bottom: 60px; }
+        .submit-cta h2 { color: white; font-size: 28px; margin-bottom: 8px; }
+        .submit-cta p { color: rgba(255,255,255,0.8); margin-bottom: 20px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .submit-cta .btn-submit { background: var(--accent); color: var(--primary); padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; font-size: 15px; }
+        .submit-cta .btn-submit:hover { transform: scale(1.02); }
+
+        /* Footer */
+        .footer { background: #0F172A; color: white; padding: 60px 0 30px; border-top: 1px solid rgba(255,255,255,0.08); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
+        .footer ul { list-style: none; }
+        .footer li { margin-bottom: 10px; }
+        .footer a { color: rgba(255,255,255,0.55); font-size: 14px; text-decoration: none; }
+        .footer a:hover { color: white; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; color: rgba(255,255,255,0.35); font-size: 13px; }
+
+        /* Mobile Adjustments */
+        @media(max-width:768px){ 
+            .nav-links { display: none; } 
+            .nav-links.show { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: var(--bg); padding: 16px 24px; border-bottom: 1px solid var(--border); z-index: 200; }
+            .mobile-toggle { display: flex; }
+            .directory-hero h1 { font-size: 32px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
     </style>
 </head>
 <body>
 
-<header class="header"><div class="container"><div class="header-inner">
-    <a href="index.html" class="logo gradient-text" style="font-family:'Space Grotesk'; font-size:24px; font-weight:700;">CoinvestAI</a>
-    <div style="display:flex; gap:15px; align-items:center;">
-        <nav><ul class="nav-links">
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="ai-tools.html" class="active">AI Tools</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul></nav>
-        <button id="darkModeToggle">🌙</button>
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="index.html" class="logo gradient-text" style="font-family:'Space Grotesk'; font-size:24px; font-weight:700; text-decoration:none;">CoinvestAI</a>
+            <div class="nav-container">
+                <nav aria-label="Main Navigation">
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="ai-tools.html" class="active">AI Tools</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+                <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+                <button class="mobile-toggle" aria-label="Toggle menu" onclick="document.getElementById('navLinks').classList.toggle('show')">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
     </div>
-</div></div></header>
+</header>
 
 <main class="container">
-    <div style="padding: 60px 0 30px; text-align: center;">
-        <h1>AI Finance Tools Directory</h1>
+    
+    <!-- Hero Directory -->
+    <section class="directory-hero">
+        <h1 class="gradient-text">AI Finance Tools Directory</h1>
+        <p>Your curated, expert-reviewed index of advanced Artificial Intelligence platforms transforming algorithmic trading, portfolio construction, quantitative analysis, and market research in 2026.</p>
+    </section>
+
+    <!-- Search & Filters Container -->
+    <section class="controls-wrapper">
+        <div class="search-box">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" id="toolSearch" placeholder="Search finance tools by name, features, or keyword...">
+        </div>
+        <div class="filters-group">
+            <button class="filter-pill active" data-category="all">All Tools</button>
+            <button class="filter-pill" data-category="trading">Algorithmic Trading</button>
+            <button class="filter-pill" data-category="research">Market Research</button>
+            <button class="filter-pill" data-category="portfolio">Portfolio Management</button>
+            <button class="filter-pill" data-category="assistants">AI Assistants</button>
+        </div>
+    </section>
+
+    <!-- Results Count -->
+    <div class="results-info">
+        <span id="resultCount">Showing 11 AI Finance Tools</span>
+        <span>Directory Version: 2026.1</span>
     </div>
 
-    <div class="tools-grid">
-        <!-- تحديث الروابط هنا -->
-        <div class="tool-card"><h3>Liquid Co-Invest</h3><a href="ai-tools-liquid-coinvest.html" class="btn-link">View Analysis →</a></div>
-        <div class="tool-card"><h3>Manus AI</h3><a href="ai-tools-manus-ai.html" class="btn-link">View Analysis →</a></div>
-        <div class="tool-card"><h3>DeepSeek AI</h3><a href="ai-tools-deepseek.html" class="btn-link">View Analysis →</a></div>
-        <div class="tool-card"><h3>ChatGPT</h3><a href="ai-tools-chatgpt.html" class="btn-link">View Analysis →</a></div>
-        <div class="tool-card"><h3>TradingView</h3><a href="ai-tools-tradingview.html" class="btn-link">View Analysis →</a></div>
-        <div class="tool-card"><h3>Trade Ideas</h3><a href="ai-tools-trade-ideas.html" class="btn-link">View Analysis →</a></div>
-        <div class="tool-card"><h3>Macroaxis</h3><a href="ai-tools-macroaxis.html" class="btn-link">View Analysis →</a></div>
-        <div class="tool-card"><h3>AlphaSense</h3><a href="ai-tools-alphasense.html" class="btn-link">View Analysis →</a></div>
-        <div class="tool-card"><h3>TrendSpider</h3><a href="ai-tools-trendspider.html" class="btn-link">View Analysis →</a></div>
-        <div class="tool-card"><h3>Kavout</h3><a href="ai-tools-kavout.html" class="btn-link">View Analysis →</a></div>
-        <div class="tool-card"><h3>Claude</h3><a href="ai-tools-claude.html" class="btn-link">View Analysis →</a></div>
+    <!-- Ad Slot -->
+    <div class="ad-slot">
+        <div class="ad-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7088247829787060" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
     </div>
+
+    <!-- Dynamic Tools Grid -->
+    <section class="tools-grid" id="toolsGrid">
+        
+        <!-- Tool 1 -->
+        <article class="tool-card" data-category="portfolio" data-name="liquid co-invest">
+            <div>
+                <div class="tool-header">
+                    <div class="tool-icon-badge">L</div>
+                    <span class="category-tag">Portfolio</span>
+                </div>
+                <h3>Liquid Co-Invest</h3>
+                <div class="tool-rating"><span class="stars">★★★★★</span> 4.8 / 5.0</div>
+                <p class="tool-desc">Autonomous machine learning system designed to optimize crypto liquidity pools, yields, and decentralized financial allocations.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">DeFi</span>
+                    <span class="tool-tag">Yield Optimizer</span>
+                    <span class="tool-tag">Crypto</span>
+                </div>
+            </div>
+            <a href="ai-tools-liquid-coinvest.html" class="btn-link">View Full Analysis →</a>
+        </article>
+
+        <!-- Tool 2 -->
+        <article class="tool-card" data-category="assistants" data-name="manus ai">
+            <div>
+                <div class="tool-header">
+                    <div class="tool-icon-badge">M</div>
+                    <span class="category-tag">AI Assistants</span>
+                </div>
+                <h3>Manus AI</h3>
+                <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 / 5.0</div>
+                <p class="tool-desc">Highly capable autonomous AI agent framework designed to conduct advanced multi-step financial analytics and reporting.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">Agents</span>
+                    <span class="tool-tag">Automation</span>
+                    <span class="tool-tag">Data Parsing</span>
+                </div>
+            </div>
+            <a href="ai-tools-manus-ai.html" class="btn-link">View Full Analysis →</a>
+        </article>
+
+        <!-- Tool 3 -->
+        <article class="tool-card" data-category="research" data-name="deepseek ai">
+            <div>
+                <div class="tool-header">
+                    <div class="tool-icon-badge">D</div>
+                    <span class="category-tag">Research</span>
+                </div>
+                <h3>DeepSeek AI</h3>
+                <div class="tool-rating"><span class="stars">★★★★★</span> 4.9 / 5.0</div>
+                <p class="tool-desc">Highly efficient LLM featuring deep technical reasoning capabilities adapted specifically for financial modeling and quantitative coding.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">Open Source</span>
+                    <span class="tool-tag">Reasoning</span>
+                    <span class="tool-tag">Modeling</span>
+                </div>
+            </div>
+            <a href="ai-tools-deepseek.html" class="btn-link">View Full Analysis →</a>
+        </article>
+
+        <!-- Tool 4 -->
+        <article class="tool-card" data-category="assistants" data-name="chatgpt">
+            <div>
+                <div class="tool-header">
+                    <div class="tool-icon-badge">C</div>
+                    <span class="category-tag">AI Assistants</span>
+                </div>
+                <h3>ChatGPT</h3>
+                <div class="tool-rating"><span class="stars">★★★★★</span> 4.8 / 5.0</div>
+                <p class="tool-desc">OpenAI's foundational model equipped with customizable GPT interfaces for fast market scanning, charting assistance, and script generation.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">Generalist LLM</span>
+                    <span class="tool-tag">Code Helper</span>
+                    <span class="tool-tag">Custom GPTs</span>
+                </div>
+            </div>
+            <a href="ai-tools-chatgpt.html" class="btn-link">View Full Analysis →</a>
+        </article>
+
+        <!-- Tool 5 -->
+        <article class="tool-card" data-category="trading" data-name="tradingview">
+            <div>
+                <div class="tool-header">
+                    <div class="tool-icon-badge">T</div>
+                    <span class="category-tag">Trading</span>
+                </div>
+                <h3>TradingView</h3>
+                <div class="tool-rating"><span class="stars">★★★★★</span> 4.9 / 5.0</div>
+                <p class="tool-desc">Industry-standard charting suite integrating AI-driven Pine Script assistance, visual machine learning indicators, and strategic backtesting.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">Charts</span>
+                    <span class="tool-tag">Pine Script</span>
+                    <span class="tool-tag">Backtests</span>
+                </div>
+            </div>
+            <a href="ai-tools-tradingview.html" class="btn-link">View Full Analysis →</a>
+        </article>
+
+        <!-- Tool 6 -->
+        <article class="tool-card" data-category="trading" data-name="trade ideas">
+            <div>
+                <div class="tool-header">
+                    <div class="tool-icon-badge">I</div>
+                    <span class="category-tag">Trading</span>
+                </div>
+                <h3>Trade Ideas</h3>
+                <div class="tool-rating"><span class="stars">★★★★☆</span> 4.6 / 5.0</div>
+                <p class="tool-desc">High-speed real-time stock scanning powered by "Holly AI," featuring simulated automated execution and dynamic trading signals.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">Day Trading</span>
+                    <span class="tool-tag">Live Signals</span>
+                    <span class="tool-tag">Equities</span>
+                </div>
+            </div>
+            <a href="ai-tools-trade-ideas.html" class="btn-link">View Full Analysis →</a>
+        </article>
+
+        <!-- Tool 7 -->
+        <article class="tool-card" data-category="portfolio" data-name="macroaxis">
+            <div>
+                <div class="tool-header">
+                    <div class="tool-icon-badge">A</div>
+                    <span class="category-tag">Portfolio</span>
+                </div>
+                <h3>Macroaxis</h3>
+                <div class="tool-rating"><span class="stars">★★★★☆</span> 4.4 / 5.0</div>
+                <p class="tool-desc">Quantitative asset valuation engine using mathematical optimizations to compute risk adjustments, correlation matrices, and diversifications.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">Quant</span>
+                    <span class="tool-tag">Risk Assessment</span>
+                    <span class="tool-tag">Equities</span>
+                </div>
+            </div>
+            <a href="ai-tools-macroaxis.html" class="btn-link">View Full Analysis →</a>
+        </article>
+
+        <!-- Tool 8 -->
+        <article class="tool-card" data-category="research" data-name="alphasense">
+            <div>
+                <div class="tool-header">
+                    <div class="tool-icon-badge">S</div>
+                    <span class="category-tag">Research</span>
+                </div>
+                <h3>AlphaSense</h3>
+                <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 / 5.0</div>
+                <p class="tool-desc">Enterprise-grade financial intelligence platform leveraging NLP search over filings, earning calls, and premium bank research.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">Enterprise</span>
+                    <span class="tool-tag">NLP Search</span>
+                    <span class="tool-tag">SEC Filings</span>
+                </div>
+            </div>
+            <a href="ai-tools-alphasense.html" class="btn-link">View Full Analysis →</a>
+        </article>
+
+        <!-- Tool 9 -->
+        <article class="tool-card" data-category="trading" data-name="trendspider">
+            <div>
+                <div class="tool-header">
+                    <div class="tool-icon-badge">U</div>
+                    <span class="category-tag">Trading</span>
+                </div>
+                <h3>TrendSpider</h3>
+                <div class="tool-rating"><span class="stars">★★★★★</span> 4.7 / 5.0</div>
+                <p class="tool-desc">Advanced technical charts featuring automated pattern recognition, trendline detection, and algorithmic multi-timeframe research.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">Technical Analysis</span>
+                    <span class="tool-tag">Chart Scanning</span>
+                    <span class="tool-tag">Stocks</span>
+                </div>
+            </div>
+            <a href="ai-tools-trendspider.html" class="btn-link">View Full Analysis →</a>
+        </article>
+
+        <!-- Tool 10 -->
+        <article class="tool-card" data-category="research" data-name="kavout">
+            <div>
+                <div class="tool-header">
+                    <div class="tool-icon-badge">K</div>
+                    <span class="category-tag">Research</span>
+                </div>
+                <h3>Kavout</h3>
+                <div class="tool-rating"><span class="stars">★★★★☆</span> 4.5 / 5.0</div>
+                <p class="tool-desc">Machine learning stock recommendation system utilizing an algorithmic "K-Score" rating model to grade growth equities.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">Quant Score</span>
+                    <span class="tool-tag">Machine Learning</span>
+                    <span class="tool-tag">Equity Rankings</span>
+                </div>
+            </div>
+            <a href="ai-tools-kavout.html" class="btn-link">View Full Analysis →</a>
+        </article>
+
+        <!-- Tool 11 -->
+        <article class="tool-card" data-category="assistants" data-name="claude">
+            <div>
+                <div class="tool-header">
+                    <div class="tool-icon-badge">P</div>
+                    <span class="category-tag">AI Assistants</span>
+                </div>
+                <h3>Claude</h3>
+                <div class="tool-rating"><span class="stars">★★★★★</span> 4.9 / 5.0</div>
+                <p class="tool-desc">Anthropic's leading LLM, highly regarded for long-context comprehension of complex legal filings and multi-tab financial worksheets.</p>
+                <div class="tool-tags">
+                    <span class="tool-tag">Context Window</span>
+                    <span class="tool-tag">Data Cleaning</span>
+                    <span class="tool-tag">Filings Reading</span>
+                </div>
+            </div>
+            <a href="ai-tools-claude.html" class="btn-link">View Full Analysis →</a>
+        </article>
+
+    </section>
+
+    <!-- Submission Card -->
+    <section class="submit-cta">
+        <h2>Submit an AI Financial Tool</h2>
+        <p>Are you the founder or developer of an AI-driven trading tool, portfolio engine, or algorithmic analysis protocol? Showcase your system to the CoinvestAI community.</p>
+        <a href="contact.html" class="btn-submit">Submit Your Tool Now</a>
+    </section>
+
 </main>
 
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h2 class="gradient-text" style="font-family:'Space Grotesk'; font-size:24px; font-weight:700; margin-bottom:12px;">CoinvestAI</h2>
+                <p style="color:rgba(255,255,255,0.5); font-size:14px; line-height:1.7;">Independent research on AI-driven financial tools, quantitative analytics, and fintech innovation.</p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="ai-tools.html">AI Tools</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="font-size:12px; color:rgba(255,255,255,0.4); max-width:800px; margin:0 auto 12px; line-height:1.6;"><strong>Disclaimer:</strong> CoinvestAI is an independent research publication. Algorithmic trading and financial AI implementations involve highly speculatives vectors. Past performance models never guarantee live futures.</p>
+            <p>© 2026 CoinvestAI. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
 <script>
+    // Search and Filtering Mechanism
+    const searchInput = document.getElementById('toolSearch');
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const toolCards = document.querySelectorAll('.tool-card');
+    const resultCount = document.getElementById('resultCount');
+
+    let currentCategory = 'all';
+    let searchQuery = '';
+
+    function filterTools() {
+        let visibleCount = 0;
+        
+        toolCards.forEach(card => {
+            const cardName = card.getAttribute('data-name');
+            const cardCategory = card.getAttribute('data-category');
+            
+            const matchesSearch = cardName.includes(searchQuery.toLowerCase());
+            const matchesCategory = currentCategory === 'all' || cardCategory === currentCategory;
+
+            if (matchesSearch && matchesCategory) {
+                card.style.display = 'flex';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        resultCount.textContent = `Showing ${visibleCount} AI Finance Tool${visibleCount !== 1 ? 's' : ''}`;
+    }
+
+    searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        filterTools();
+    });
+
+    filterPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            filterPills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+            currentCategory = pill.getAttribute('data-category');
+            filterTools();
+        });
+    });
+
+    // Dark Mode Controller
     const btn = document.getElementById('darkModeToggle');
-    if (localStorage.getItem('theme') === 'dark') { document.body.classList.add('dark-mode'); btn.textContent = '☀️'; }
+    if (localStorage.getItem('theme') === 'dark') { 
+        document.body.classList.add('dark-mode'); 
+        btn.textContent = '☀️'; 
+    }
     btn.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         const isDark = document.body.classList.contains('dark-mode');
