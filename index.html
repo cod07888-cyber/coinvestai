@@ -1,3 +1,12 @@
+إليك كود الصفحة الرئيسية (`index.html`) كاملاً بعد التحديث. 
+
+### 🛠️ التغييرات التي تم إجراؤها:
+1. **إضافة المقال الجديد في المقدمة:** تم إدراجه كأول مقال رئيسي تفاعلي في قسم **"Latest Research & Insights"** ببطاقة مميزة وتصنيف جديد (**Comparisons**) ووقت قراءة (**18 دقيقة**).
+2. **تحديث محرك البحث الداخلي:** تم إدراج المقال الجديد بالكلمات المفتاحية المناسبة (`comparison, platforms, wallets, strategies, trade ideas, trendspider, tradingview`) في مصفوفة البحث السريع `sitePages` لضمان ظهوره للزوار فوراً عند استخدام شريط البحث.
+
+انسخ الكود التالي واستخدمه مباشرة لملف `index.html`:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -444,11 +453,19 @@
         <h2 class="section-title">Latest Research &amp; Insights</h2>
         <p class="section-subtitle">Stay informed with our latest independent analysis of AI in finance</p>
         <div class="cards-grid fade-in">
+            <!-- New Featured Comparison Article Card -->
+            <article class="article-card"><div class="article-card-image aimg1"><span class="article-card-category">Comparisons</span><span class="article-card-badge">⏱ 18 min</span></div><div class="article-card-body"><h3>Best AI Trading Platforms Compared (2026)</h3><p>We spent three months testing six top AI trading platforms on strategy flexibility, digital wallets, and execution speed.</p><div class="article-card-meta">By <a href="authors.html">Research Team</a> · Aug 2026</div><a href="best-ai-trading-platforms-compared-2026.html" class="card-link">Read Comparison →</a></div></article>
+
             <article class="article-card"><div class="article-card-image aimg1"><span class="article-card-category">AI Tools</span><span class="article-card-badge">⏱ 10 min</span></div><div class="article-card-body"><h3>How to Evaluate AI Trading Platforms in 2026</h3><p>Key criteria and benchmarking frameworks for assessing AI-powered trading and investment research tools.</p><div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div><a href="blog-evaluate-ai-trading-platforms.html" class="card-link">Read Article →</a></div></article>
+            
             <article class="article-card"><div class="article-card-image aimg2"><span class="article-card-category">Fintech</span><span class="article-card-badge">⏱ 11 min</span></div><div class="article-card-body"><h3>The Rise of AI-Native Financial Services in 2026</h3><p>How AI is enabling a new generation of financial products built with algorithmic decision engines at their core.</p><div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div><a href="blog-ai-native-financial-services.html" class="card-link">Read Article →</a></div></article>
+            
             <article class="article-card"><div class="article-card-image aimg3"><span class="article-card-category">Crypto AI</span><span class="article-card-badge">⏱ 9 min</span></div><div class="article-card-body"><h3>ML Applications in Cryptocurrency Market Analysis</h3><p>How ML models process on-chain data, market signals, and sentiment for crypto investment research.</p><div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div><a href="blog-ml-crypto-market-analysis.html" class="card-link">Read Article →</a></div></article>
+            
             <article class="article-card"><div class="article-card-image aimg4"><span class="article-card-category">Guides</span><span class="article-card-badge">⏱ 12 min</span></div><div class="article-card-body"><h3>Beginner's Guide to AI Investing in 2026</h3><p>Step-by-step introduction to leveraging AI tools for investment research and portfolio allocation.</p><div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div><a href="blog-beginners-guide-ai-investing.html" class="card-link">Read Guide →</a></div></article>
+            
             <article class="article-card"><div class="article-card-image aimg5"><span class="article-card-category">DeFi</span><span class="article-card-badge">⏱ 15 min</span></div><div class="article-card-body"><h3>AI Risk Management in DeFi Protocols (2026)</h3><p>Real-time threat detection, oracle manipulation safeguards, and EU AI Act compliance in decentralized finance.</p><div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div><a href="blog-ai-risk-management-defi-2026.html" class="card-link">Read Research →</a></div></article>
+            
             <article class="article-card"><div class="article-card-image aimg6"><span class="article-card-category">NLP</span><span class="article-card-badge">⏱ 14 min</span></div><div class="article-card-body"><h3>NLP for Financial Document Analysis in 2026</h3><p>How NLP models automate extraction of quantitative insights from SEC filings and earnings transcripts.</p><div class="article-card-meta">By <a href="authors-coinvestai-editorial-team.html">Editorial Team</a> · Aug 2026</div><a href="blog-nlp-financial-document-analysis.html" class="card-link">Read Research →</a></div></article>
         </div>
         <div style="text-align:center;margin-top:40px"><a href="blog.html" class="btn btn-dark">View All Articles →</a></div>
@@ -634,6 +651,7 @@
 
 <script>
 const sitePages=[
+    {title:"Best AI Trading Platforms Compared (2026)",url:"best-ai-trading-platforms-compared-2026.html",kw:"comparison trading platforms digital wallets investing strategies trade ideas trendspider tradingview alphasense kavout liquid"},
     {title:"Blog",url:"blog.html",kw:"blog articles research"},
     {title:"AI Tools Directory",url:"ai-tools.html",kw:"tools directory catalog"},
     {title:"Independent Reviews",url:"reviews.html",kw:"reviews ratings software"},
@@ -678,3 +696,4 @@ document.addEventListener('DOMContentLoaded',function(){
 
 </body>
 </html>
+```
