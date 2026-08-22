@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPJ3YFPZJY"></script>
+    <!-- ============================================================
+         CONSENT MODE v2 — MUST load before any Google tag.
+         Defaults are DENIED until the visitor accepts cookies.
+         If consent is not 'granted', AdSense serves
+         non-personalized ads only (requestNonPersonalizedAds=1).
+         ============================================================ -->
     <script>
+      function __getConsent(){try{return localStorage.getItem('cookieConsent');}catch(e){return null;}}
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+      });
+      (function(){
+        var c = __getConsent();
+        if (c === 'granted') {
+          gtag('consent', 'update', {
+            ad_storage: 'granted',
+            ad_user_data: 'granted',
+            ad_personalization: 'granted',
+            analytics_storage: 'granted'
+          });
+        } else {
+          window.adsbygoogle = window.adsbygoogle || {};
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      })();
+    </script>
+
+    <!-- Google tag (gtag.js) — loads under Consent Mode above -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPJ3YFPZJY"></script>
+    <script>
       gtag('js', new Date());
       gtag('config', 'G-JPJ3YFPZJY');
     </script>
@@ -27,13 +57,16 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://coinvestai.com/">
 
+    <!-- AdSense ownership verification -->
+    <meta name="google-adsense-account" content="ca-pub-7088247829787060">
+
     <meta name="theme-color" content="#0F172A">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
-    <!-- AdSense -->
+    <!-- AdSense (personalized only after consent; see Consent Mode block) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7088247829787060" crossorigin="anonymous"></script>
 
     <script type="application/ld+json">
@@ -44,8 +77,7 @@
         "name":"CoinvestAI",
         "url":"https://coinvestai.com/",
         "description":"Independent publication covering AI-powered investing tools, fintech innovation, and cryptocurrency intelligence.",
-        "publisher":{"@type":"Organization","name":"CoinvestAI","url":"https://coinvestai.com/","logo":{"@type":"ImageObject","url":"https://coinvestai.com/logo.png"}},
-        "potentialAction":{"@type":"SearchAction","target":"https://coinvestai.com/search?q={search_term_string}","query-input":"required name=search_term_string"}
+        "publisher":{"@type":"Organization","name":"CoinvestAI","url":"https://coinvestai.com/","logo":{"@type":"ImageObject","url":"https://coinvestai.com/logo.png"}}
       },
       {
         "@context":"https://schema.org",
@@ -55,7 +87,7 @@
         "logo":"https://coinvestai.com/logo.png",
         "foundingDate":"2026",
         "sameAs":["https://twitter.com/CoinvestAI_HQ"],
-        "contactPoint":{"@type":"ContactPoint","email":"contact@coinvestai.com","contactType":"general inquiries"},
+        "contactPoint":{"@type":"ContactPoint","email":"info@coinvestai.com","contactType":"general inquiries"},
         "knowsAbout":["Artificial Intelligence in Finance","Algorithmic Trading","Quantitative Research","Fintech Automation","Cryptocurrency Intelligence","DeFi Risk Management"]
       }
     ]
@@ -71,17 +103,18 @@
     }
     </script>
 
+    <!-- FAQ structured data mirrors the visible on-page answers verbatim (Google requirement) -->
     <script type="application/ld+json">
     {
       "@context":"https://schema.org",
       "@type":"FAQPage",
       "mainEntity":[
-        {"@type":"Question","name":"What is AI investing?","acceptedAnswer":{"@type":"Answer","text":"AI investing refers to using artificial intelligence and machine learning technologies to assist with financial analysis, investment research, portfolio optimization, and automated trading."}},
-        {"@type":"Question","name":"Can AI predict stock market movements?","acceptedAnswer":{"@type":"Answer","text":"AI models can analyze historical data patterns and sentiment signals to identify statistical probabilities, but cannot predict markets with certainty."}},
-        {"@type":"Question","name":"Are AI trading tools suitable for beginners?","acceptedAnswer":{"@type":"Answer","text":"Many AI trading platforms offer features for different experience levels. Beginners should start with research-focused tools before exploring automated trading systems."}},
-        {"@type":"Question","name":"How does CoinvestAI evaluate AI finance tools?","acceptedAnswer":{"@type":"Answer","text":"CoinvestAI evaluates tools across seven weighted criteria: data accuracy, execution latency, risk safeguards, interface design, pricing transparency, backtesting quality, and regulatory compliance."}},
-        {"@type":"Question","name":"Is CoinvestAI free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. All CoinvestAI research articles, tool reviews, educational guides, and news dispatches are freely accessible."}},
-        {"@type":"Question","name":"Does CoinvestAI provide financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. CoinvestAI is an educational and research publication. Nothing published constitutes personalized financial advice."}}
+        {"@type":"Question","name":"What is AI investing?","acceptedAnswer":{"@type":"Answer","text":"AI investing refers to using artificial intelligence and machine learning technologies to assist with financial analysis, investment research, portfolio optimization, and automated trading. AI tools can process vast amounts of market data, SEC filings, and alternative datasets to surface insights that would be impossible through manual analysis alone. However, AI should augment — not replace — human judgment in investment decisions."}},
+        {"@type":"Question","name":"Can AI predict stock market movements?","acceptedAnswer":{"@type":"Answer","text":"AI models can analyze historical patterns, market microstructure, and sentiment signals to identify statistical probabilities — but cannot predict markets with certainty. Financial markets are influenced by complex, often unpredictable geopolitical, macroeconomic, and behavioral factors. AI tools should be used as analytical aids alongside human judgment, not as guaranteed prediction systems."}},
+        {"@type":"Question","name":"Are AI trading tools suitable for beginners?","acceptedAnswer":{"@type":"Answer","text":"Many AI trading platforms offer features for different experience levels, including free tiers with educational resources. Beginners should start with research-focused tools like ChatGPT or TradingView before exploring automated trading systems. See our Beginner's Guide to AI Investing for a structured introduction."}},
+        {"@type":"Question","name":"How does CoinvestAI evaluate AI finance tools?","acceptedAnswer":{"@type":"Answer","text":"CoinvestAI evaluates tools across seven weighted criteria: data accuracy, execution latency, risk safeguards, interface design, pricing transparency, backtesting quality, and regulatory compliance. Each tool is tested hands-on by our independent research team. Vendors cannot influence scores. See our Review Methodology for details."}},
+        {"@type":"Question","name":"Is CoinvestAI free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. All CoinvestAI research articles, tool reviews, educational guides, and news dispatches are freely accessible with no registration required. Our independent research is supported by contextual advertising and clearly disclosed affiliate partnerships that never influence editorial content."}},
+        {"@type":"Question","name":"Does CoinvestAI provide financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. CoinvestAI is an educational and research publication. All content is intended strictly for informational purposes. Nothing published constitutes personalized financial, investment, trading, or legal advice. Always consult certified financial professionals before making investment decisions."}}
       ]
     }
     </script>
@@ -99,6 +132,9 @@
         a{text-decoration:none;color:inherit}
         .container{max-width:1100px;margin:0 auto;padding:0 24px}
         .gradient-text{background:linear-gradient(135deg,var(--secondary),var(--accent));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+        .skip-link{position:absolute;left:-9999px;top:0;background:var(--secondary);color:#fff;padding:10px 18px;border-radius:0 0 8px 0;font-weight:600;z-index:5000}
+        .skip-link:focus{left:0}
 
         .header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
         .header-inner{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
@@ -258,6 +294,7 @@
         .nl-form{display:flex;gap:10px;max-width:460px;margin:0 auto}
         .nl-form input{flex:1;padding:14px 20px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:white;font-size:15px;outline:none}
         .nl-form input::placeholder{color:rgba(255,255,255,.4)}
+        .nl-msg{display:none;max-width:460px;margin:0 auto;padding:14px 20px;border:1px solid rgba(34,197,94,.35);background:rgba(34,197,94,.08);border-radius:var(--radius);color:rgba(255,255,255,.85);font-size:14px;line-height:1.6}
         .nl-privacy{font-size:13px;color:rgba(255,255,255,.4);margin-top:12px}
         .nl-privacy a{color:rgba(255,255,255,.55);text-decoration:underline}
 
@@ -278,6 +315,7 @@
         .seo-bottom li{margin-bottom:8px;line-height:1.7}
         .seo-bottom a{color:var(--secondary);font-weight:600}
         .seo-bottom a:hover{text-decoration:underline}
+        .last-updated{font-size:13px;color:var(--gray)}
 
         .ad-slot{margin:32px 0;padding:18px 0;text-align:center;background:var(--light-gray);border-radius:var(--radius);border:1px dashed var(--border)}
         .ad-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gray);margin-bottom:8px}
@@ -292,9 +330,23 @@
         .footer a{color:rgba(255,255,255,.55);font-size:14px;transition:color .2s}
         .footer a:hover{color:white}
         .footer-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding-top:24px;text-align:center;color:rgba(255,255,255,.35);font-size:14px}
+        .cookie-settings{background:none;border:none;padding:0;cursor:pointer;font-family:var(--font-body);color:rgba(255,255,255,.55);font-size:14px;transition:color .2s}
+        .cookie-settings:hover{color:white;text-decoration:underline}
 
         .fade-in{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
         .fade-in.visible{opacity:1;transform:translateY(0)}
+
+        /* Cookie consent banner (GDPR) — matches site identity */
+        .consent-banner{position:fixed;bottom:0;left:0;right:0;z-index:4000;padding:16px 16px 20px;background:linear-gradient(160deg,#0F172A,#1e293b);border-top:1px solid rgba(255,255,255,.1);box-shadow:0 -10px 40px rgba(0,0,0,.35);display:none}
+        .consent-banner.show{display:block}
+        .consent-inner{max-width:1100px;margin:0 auto;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+        .consent-text{color:rgba(255,255,255,.75);font-size:13px;line-height:1.6;max-width:640px}
+        .consent-text a{color:#7da7ff;text-decoration:underline}
+        .consent-btns{display:flex;gap:10px;flex-wrap:wrap}
+        .btn-consent-accept{background:var(--secondary);color:#fff;border:none;border-radius:10px;padding:11px 24px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;transition:background .2s}
+        .btn-consent-accept:hover{background:#1d4ed8}
+        .btn-consent-reject{background:transparent;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:11px 24px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;transition:all .2s}
+        .btn-consent-reject:hover{border-color:rgba(255,255,255,.6);color:#fff}
 
         @media(max-width:768px){
             .nav-links{display:none}
@@ -312,6 +364,7 @@
             .footer-grid{grid-template-columns:1fr 1fr}
             .stats-grid{grid-template-columns:repeat(2,1fr)}
             .trust-grid{grid-template-columns:1fr 1fr}
+            .consent-inner{flex-direction:column;align-items:flex-start}
         }
         @media(max-width:480px){
             .footer-grid{grid-template-columns:1fr}
@@ -322,17 +375,19 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to main content</a>
+
 <div class="ticker">
     <div class="ticker-content">
         <span><span class="ticker-dot">●</span>NEW: Best AI Trading Platforms Compared 2026 — Read Now</span>
-        <span><span class="ticker-dot">●</span>150+ AI tools independently reviewed</span>
-        <span><span class="ticker-dot">●</span>73% of institutions now use AI research tools</span>
-        <span><span class="ticker-dot">●</span>EU AI Act financial provisions take effect Q4 2026</span>
+        <span><span class="ticker-dot">●</span>11 AI finance tools independently tested &amp; scored</span>
+        <span><span class="ticker-dot">●</span>12 expert guides — from beginner to advanced</span>
+        <span><span class="ticker-dot">●</span>7-factor scoring methodology on every review</span>
         <span><span class="ticker-dot">●</span>Weekly newsletter — subscribe free</span>
         <span><span class="ticker-dot">●</span>NEW: Best AI Trading Platforms Compared 2026 — Read Now</span>
-        <span><span class="ticker-dot">●</span>150+ AI tools independently reviewed</span>
-        <span><span class="ticker-dot">●</span>73% of institutions now use AI research tools</span>
-        <span><span class="ticker-dot">●</span>EU AI Act financial provisions take effect Q4 2026</span>
+        <span><span class="ticker-dot">●</span>11 AI finance tools independently tested &amp; scored</span>
+        <span><span class="ticker-dot">●</span>12 expert guides — from beginner to advanced</span>
+        <span><span class="ticker-dot">●</span>7-factor scoring methodology on every review</span>
         <span><span class="ticker-dot">●</span>Weekly newsletter — subscribe free</span>
     </div>
 </div>
@@ -359,7 +414,7 @@
     </div>
 </header>
 
-<main>
+<main id="main">
 
 <section class="hero">
     <div class="hero-content">
@@ -371,8 +426,8 @@
             <a href="ai-tools.html" class="btn btn-outline">Browse AI Tools →</a>
         </div>
         <div class="hero-stats">
-            <div class="hero-stat"><div class="hero-stat-num gradient-text">150+</div><div class="hero-stat-lbl">Tools Reviewed</div></div>
-            <div class="hero-stat"><div class="hero-stat-num gradient-text">500+</div><div class="hero-stat-lbl">Articles</div></div>
+            <div class="hero-stat"><div class="hero-stat-num gradient-text">11</div><div class="hero-stat-lbl">Tools Tested</div></div>
+            <div class="hero-stat"><div class="hero-stat-num gradient-text">23</div><div class="hero-stat-lbl">Articles &amp; Reviews</div></div>
             <div class="hero-stat"><div class="hero-stat-num gradient-text">12</div><div class="hero-stat-lbl">Expert Guides</div></div>
             <div class="hero-stat"><div class="hero-stat-num gradient-text">100%</div><div class="hero-stat-lbl">Independent</div></div>
         </div>
@@ -380,7 +435,7 @@
             <div class="hero-trust-item">🔒 Editorially Independent</div>
             <div class="hero-trust-item">📊 Data-Driven</div>
             <div class="hero-trust-item">✅ Fact-Checked</div>
-            <div class="hero-trust-item">🔄 Updated Weekly</div>
+            <div class="hero-trust-item">🔄 Regularly Updated</div>
         </div>
     </div>
 </section>
@@ -410,6 +465,8 @@
     </div>
 </section>
 
+<!-- AD UNIT 1 — ⚠️ Replace data-ad-slot with your REAL ad unit ID from AdSense,
+     or delete this whole block if you use Auto Ads only. -->
 <div class="container">
     <div class="ad-slot">
         <div class="ad-label">Advertisement</div>
@@ -433,14 +490,15 @@
     </div>
 </section>
 
+<!-- Real, verifiable site metrics (replaced unsourced industry claims) -->
 <section class="stats-section fade-in">
     <div class="container">
         <div class="stats-grid">
-            <div class="stat-card"><span class="stat-icon">🤖</span><div class="stat-number gradient-text">73%</div><div class="stat-label">Institutional AI tool adoption in 2026</div></div>
-            <div class="stat-card"><span class="stat-icon">📊</span><div class="stat-number gradient-text">6.2×</div><div class="stat-label">Faster research with AI vs. manual</div></div>
-            <div class="stat-card"><span class="stat-icon">🛡️</span><div class="stat-number gradient-text">67%</div><div class="stat-label">Fraud reduction from AI detection</div></div>
-            <div class="stat-card"><span class="stat-icon">💰</span><div class="stat-number gradient-text">$4.1B</div><div class="stat-label">Global fintech AI investment 2025</div></div>
-            <div class="stat-card"><span class="stat-icon">📑</span><div class="stat-number gradient-text">1,400+</div><div class="stat-label">Avg. pages per S&P 500 annual filing</div></div>
+            <div class="stat-card"><span class="stat-icon">🤖</span><div class="stat-number gradient-text">11</div><div class="stat-label">AI tools tested hands-on by our research team</div></div>
+            <div class="stat-card"><span class="stat-icon">📊</span><div class="stat-number gradient-text">7</div><div class="stat-label">Weighted scoring factors in every single review</div></div>
+            <div class="stat-card"><span class="stat-icon">📑</span><div class="stat-number gradient-text">23</div><div class="stat-label">In-depth articles, guides &amp; reviews published</div></div>
+            <div class="stat-card"><span class="stat-icon">🗂️</span><div class="stat-number gradient-text">6</div><div class="stat-label">Core research categories covered</div></div>
+            <div class="stat-card"><span class="stat-icon">🔓</span><div class="stat-number gradient-text">100%</div><div class="stat-label">Free access — no registration required</div></div>
         </div>
     </div>
 </section>
@@ -548,6 +606,8 @@
     </div>
 </section>
 
+<!-- AD UNIT 2 — ⚠️ Replace data-ad-slot with your REAL ad unit ID from AdSense,
+     or delete this whole block if you use Auto Ads only. -->
 <div class="container">
     <div class="ad-slot">
         <div class="ad-label">Advertisement</div>
@@ -594,8 +654,8 @@
                 </div>
                 <div class="trust-item">
                     <span class="trust-item-icon">🔄</span>
-                    <h4>Quarterly Updates</h4>
-                    <p>Reviews and guides are updated quarterly to reflect new model releases, pricing changes, and regulatory developments.</p>
+                    <h4>Regular Updates</h4>
+                    <p>Reviews and guides are updated to reflect new model releases, pricing changes, and regulatory developments.</p>
                 </div>
             </div>
             <div class="trust-links">
@@ -608,15 +668,19 @@
     </div>
 </section>
 
+<!-- Newsletter — honest, working email subscription.
+     TODO (optional): connect to a real email provider (Brevo / Mailchimp / Formspree)
+     and replace the mailto fallback below. -->
 <section class="newsletter section">
     <div class="nl-content">
         <div style="font-size:44px;margin-bottom:18px" aria-hidden="true">📧</div>
         <h2>Stay Ahead of AI in Finance</h2>
         <p>Get independent research insights, tool reviews, and regulatory updates delivered to your inbox weekly.</p>
-        <form class="nl-form" onsubmit="event.preventDefault();this.innerHTML='<p style=color:rgba(255,255,255,.85);font-size:15px;>✓ Subscribed successfully!</p>';">
-            <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <form class="nl-form" id="nlForm">
+            <input type="email" id="nlEmail" placeholder="Your email address" required aria-label="Email address">
             <button type="submit" class="btn btn-primary">Subscribe</button>
         </form>
+        <div class="nl-msg" id="nlMsg" role="status">📬 <strong>Almost done!</strong> Your email app is opening — press <em>send</em> to confirm your subscription. We'll add you to the weekly dispatch.</div>
         <p class="nl-privacy">No spam. Unsubscribe anytime. <a href="privacy-policy.html">Privacy Policy</a></p>
     </div>
 </section>
@@ -652,6 +716,7 @@
 
         <h2>Our Editorial Standards</h2>
         <p>CoinvestAI follows a strict <a href="review-methodology.html">7-factor scoring methodology</a> for all tool evaluations. Software vendors cannot purchase favorable ratings, suppress negative findings, or influence editorial conclusions. All affiliate relationships are transparently disclosed and never impact our analytical assessments. For full details, see our <a href="editorial-guidelines.html">Editorial Guidelines</a> and <a href="about.html">About page</a>.</p>
+        <p class="last-updated"><em>Last updated: August 2026</em></p>
     </div>
 </section>
 
@@ -706,10 +771,65 @@
         </div>
         <div class="footer-bottom">
             <p style="font-size:12px;color:rgba(255,255,255,.45);max-width:700px;margin:0 auto 12px;line-height:1.6"><strong>Disclaimer:</strong> CoinvestAI provides independent news, research, and analysis for educational purposes only. Nothing herein constitutes financial or investment advice.</p>
+            <p style="margin-bottom:10px"><button type="button" class="cookie-settings" onclick="resetCookieConsent()">Cookie Settings</button></p>
             <p>© 2026 CoinvestAI. All rights reserved.</p>
         </div>
     </div>
 </footer>
+
+<!-- GDPR / ePrivacy cookie consent banner (works with Consent Mode v2 in <head>) -->
+<div class="consent-banner" id="consentBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <div class="consent-inner">
+        <p class="consent-text">🍪 We use cookies to support contextual advertising, measure site traffic, and improve your experience. With your consent, ads and analytics can be personalized. You can change your choice anytime via <a href="cookie-policy.html">Cookie Policy</a> / “Cookie Settings” in the footer.</p>
+        <div class="consent-btns">
+            <button type="button" class="btn-consent-accept" onclick="setCookieConsent('granted')">Accept all cookies</button>
+            <button type="button" class="btn-consent-reject" onclick="setCookieConsent('denied')">Essential only</button>
+        </div>
+    </div>
+</div>
+
+<script>
+/* ---------- Cookie consent ---------- */
+function __setConsent(v){try{localStorage.setItem('cookieConsent',v);}catch(e){}}
+function setCookieConsent(v){
+  __setConsent(v);
+  if (typeof gtag === 'function') {
+    if (v === 'granted') {
+      gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
+    } else {
+      gtag('consent','update',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+    }
+  }
+  var b=document.getElementById('consentBanner');
+  if(b){b.classList.remove('show');}
+}
+function resetCookieConsent(){
+  try{localStorage.removeItem('cookieConsent');}catch(e){}
+  location.reload();
+}
+(function(){
+  var c=__getConsent();
+  if(c!=='granted'&&c!=='denied'){
+    var b=document.getElementById('consentBanner');
+    if(b){b.classList.add('show');}
+  }
+})();
+
+/* ---------- Newsletter (working email subscription — see TODO note above) ---------- */
+(function(){
+  var f=document.getElementById('nlForm');
+  if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var em=document.getElementById('nlEmail').value.trim();
+    var msg=document.getElementById('nlMsg');
+    f.style.display='none';
+    if(msg){msg.style.display='block';}
+    var body='Please subscribe me to the CoinvestAI weekly newsletter.\n\nEmail: '+em;
+    window.location.href='mailto:info@coinvestai.com?subject='+encodeURIComponent('Newsletter Subscription Request')+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
 
 <script>
 var sitePages = [
@@ -785,5 +905,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-</body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2f138fed9b68a03',t:'MTc4NzM5NDg0MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
