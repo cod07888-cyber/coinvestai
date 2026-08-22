@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Consent Mode v2 — MUST load before any Google tag -->
+    <script>
+      function __getConsent(){try{return localStorage.getItem('cookieConsent');}catch(e){return null;}}
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+      (function(){
+        var c = __getConsent();
+        if (c === 'granted') {
+          gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
+        } else {
+          window.adsbygoogle = window.adsbygoogle || {};
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      })();
+    </script>
     <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-7088247829787060">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kavout Review 2026: AI K-Score Stock Ranking, Portfolio Management & Investment Screening | CoinvestAI</title>
     <meta name="description" content="Comprehensive 2026 review of Kavout: Machine learning K-Score equity ranking for stock selection, multi-factor portfolio optimization, Kai AI assistant, swing trading applications, pricing breakdown, and independent rating 4.4/5.">
@@ -21,11 +38,11 @@
       "@context":"https://schema.org","@type":"Review",
       "name":"Kavout AI Equity Screening & K-Score Portfolio Management Review 2026",
       "reviewBody":"Comprehensive evaluation of Kavout's machine learning K-Score equity ranking engine, multi-factor portfolio optimization, Kai AI assistant, swing trading applications, and quantitative stock screening capabilities for retail and institutional investors.",
-      "datePublished":"2026-08-08","dateModified":"2026-08-15",
+      "datePublished":"2026-07-07","dateModified":"2026-08-11",
       "author":{"@type":"Organization","name":"CoinvestAI Editorial Team","url":"https://coinvestai.com/authors-coinvestai-editorial-team.html"},
       "publisher":{"@type":"Organization","name":"CoinvestAI","url":"https://coinvestai.com","logo":{"@type":"ImageObject","url":"https://coinvestai.com/logo.png"}},
       "itemReviewed":{"@type":"SoftwareApplication","name":"Kavout","applicationCategory":"FinanceApplication","operatingSystem":"Web, Cloud, REST API",
-        "offers":{"@type":"Offer","price":"49.00","priceCurrency":"USD","description":"Pro tier from $49/month with free tier and enterprise API options"}},
+        "offers":{"@type":"Offer","priceCurrency":"USD","description":"Quote-based enterprise pricing; contact Kavout for current tiers and API access"}},
       "reviewRating":{"@type":"Rating","ratingValue":"4.4","bestRating":"5.0","worstRating":"1.0"}
     }
     </script>
@@ -39,7 +56,7 @@
         {"@type":"Question","name":"How does the Kavout K-Score work?","acceptedAnswer":{"@type":"Answer","text":"The K-Score is a machine learning ranking system (1-9 scale) that synthesizes four multi-factor dimensions: fundamental quality and valuation, technical price momentum, volatility and downside risk assessment, and market sentiment/money flow analysis. Deep neural networks and gradient boosting decision trees process millions of data points daily to generate forward-looking 1-3 month outperformance probability scores for US equities."}},
         {"@type":"Question","name":"Does Kavout support cryptocurrency ranking?","acceptedAnswer":{"@type":"Answer","text":"No. Kavout focuses predominantly on US equities and ETFs. The K-Score methodology is calibrated for traditional equity market factors that do not directly translate to cryptocurrency market dynamics. For dedicated crypto AI analytics, explore specialized tools in the CoinvestAI crypto AI directory."}},
         {"@type":"Question","name":"Can Kavout connect directly to my brokerage account?","acceptedAnswer":{"@type":"Answer","text":"Kavout is a research and screening platform — it does not execute trades automatically on external brokerages. Users receive K-Score signals and portfolio recommendations, then execute trades manually on their chosen brokerage platform. This human-in-the-loop model is actually beneficial for risk management, as it prevents fully automated algorithmic execution."}},
-        {"@type":"Question","name":"Is Kavout worth the $49/month for retail investors?","acceptedAnswer":{"@type":"Answer","text":"For active swing traders and investors who make 4+ equity decisions per month, the $49/month Pro tier delivers substantial value through its K-Score screening, AI portfolio templates, and Kai assistant. The price-to-feature ratio is competitive compared to alternatives like Trade Ideas ($84/month) or institutional research subscriptions. The free tier allows meaningful evaluation before committing."}},
+        {"@type":"Question","name":"Is Kavout accessible to retail investors?","acceptedAnswer":{"@type":"Answer","text":"Kavout is aimed at professional desks; investors who make 4+ equity decisions per month may find value in its K-Score screening, AI portfolio templates, and Kai assistant — though pricing is quote-based. The price-to-feature ratio is competitive compared to alternatives like Trade Ideas (from $89/month) or institutional research subscriptions. The free tier allows meaningful evaluation before committing."}},
         {"@type":"Question","name":"How does Kavout compare to traditional stock screeners?","acceptedAnswer":{"@type":"Answer","text":"Traditional screeners like Finviz or Stock Rover rely on static fundamental and technical filters that analysts apply manually. Kavout differentiates by using machine learning to synthesize these factors into a single predictive score — automating the multi-factor weighting decision that would otherwise require significant quantitative expertise. It essentially pre-ranks stocks based on a trained model's assessment of outperformance probability."}}
       ]
     }
@@ -292,6 +309,19 @@
             .kscore-cell{width:44px}.pricing-cards{grid-template-columns:1fr}
         }
         @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+            /* GDPR cookie consent banner */
+        .consent-banner{position:fixed;bottom:0;left:0;right:0;z-index:4000;padding:16px 16px 20px;background:linear-gradient(160deg,#0F172A,#1e293b);border-top:1px solid rgba(255,255,255,.1);box-shadow:0 -10px 40px rgba(0,0,0,.35);display:none}
+        .consent-banner.show{display:block}
+        .consent-inner{max-width:1100px;margin:0 auto;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+        .consent-text{color:rgba(255,255,255,.75);font-size:13px;line-height:1.6;max-width:640px;margin:0}
+        .consent-text a{color:#7da7ff;text-decoration:underline}
+        .consent-btns{display:flex;gap:10px;flex-wrap:wrap}
+        .btn-consent-accept{background:#2563EB;color:#fff;border:none;border-radius:10px;padding:11px 24px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:background .2s}
+        .btn-consent-accept:hover{background:#1d4ed8}
+        .btn-consent-reject{background:transparent;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:11px 24px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s}
+        .btn-consent-reject:hover{border-color:rgba(255,255,255,.6);color:#fff}
+        .cookie-settings{background:none;border:none;padding:0;cursor:pointer;font-family:inherit;color:rgba(255,255,255,.55);font-size:14px;transition:color .2s}
+        .cookie-settings:hover{color:#fff;text-decoration:underline}
     </style>
 </head>
 <body>
@@ -323,10 +353,10 @@
         <div class="category">AI K-Score Equity Ranking · Multi-Factor Portfolio Optimization · Quantitative Stock Screening · Swing Trading</div>
         <div class="rating-badge">CoinvestAI Rating: ★ 4.4 / 5.0 <a href="review-methodology.html">Methodology</a></div>
         <div class="meta-badges">
-            <span class="meta-badge">📅 Updated: Aug 15, 2026</span>
+            <span class="meta-badge">📅 Updated: Aug 11, 2026</span>
             <span class="meta-badge">✍️ <a href="authors-coinvestai-editorial-team.html" style="color:var(--secondary)">Editorial Team</a></span>
             <span class="meta-badge">⏱️ 16 min read</span>
-            <span class="meta-badge">💰 From $49/mo</span>
+            <span class="meta-badge">💰 Custom (quote-based)</span>
             <span class="meta-badge">🆓 Free Tier Available</span>
         </div>
     </div>
@@ -340,7 +370,8 @@
     <p>Built by former quantitative researchers from Google and Microsoft, <strong>Kavout</strong> processes millions of market data points daily through its proprietary machine learning engine to generate forward-looking equity rankings across the US market. For swing traders, portfolio managers, and active retail investors who want the analytical power of institutional factor models without building one from scratch, Kavout represents a genuinely compelling — and accessible — middle ground.</p>
 
     <div class="ad-slot"><div class="ad-label">Advertisement</div>
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7088247829787060" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <!-- AD UNIT — replace data-ad-slot with your REAL ad unit ID from AdSense, or delete this block if using Auto Ads -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7088247829787060" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
     </div>
 
@@ -443,7 +474,7 @@
     <h2 id="proscons">5. Pros & Cons Analysis</h2>
     <div class="pros-cons-grid fade-in">
         <div class="pc-box pros"><h4>✅ Key Strengths</h4><ul>
-            <li><span>✓</span> <strong>Democratizes quant factor investing:</strong> Delivers institutional multi-factor model outputs to retail investors at $49/month — functionality that previously required Bloomberg Terminal + proprietary quant team</li>
+            <li><span>✓</span> <strong>Democratizes quant factor investing:</strong> Delivers institutional-style multi-factor model outputs — functionality that previously required a Bloomberg Terminal + proprietary quant team — with quote-based pricing for professional user</li>
             <li><span>✓</span> <strong>Multi-dimensional synthesis:</strong> Combines fundamentals, momentum, volatility, and sentiment rather than relying on any single factor — more robust across market regimes</li>
             <li><span>✓</span> <strong>Intuitive 1-9 scoring:</strong> Complex quantitative modeling compressed into an accessible format usable by investors without quant backgrounds</li>
             <li><span>✓</span> <strong>Survivorship-bias-free backtesting:</strong> Historical K-Score data constructed using point-in-time methodology, avoiding the inflated backtest returns that plague many retail screening tools</li>
@@ -477,7 +508,7 @@
             <tr><td>Features & Scope</td><td>25%</td><td>★ 4.5</td><td>K-Score engine, Kai assistant, model portfolios, screener — solid feature depth</td></tr>
             <tr><td>Ease of Use</td><td>20%</td><td>★ 4.6</td><td>Clean dashboard, color-coded scoring, intuitive for non-quant investors</td></tr>
             <tr><td>Signal Accuracy</td><td>20%</td><td>★ 4.3</td><td>Strong 1-3 month backtested performance; regime shift lag is the key risk</td></tr>
-            <tr><td>Pricing & Value</td><td>15%</td><td>★ 4.5</td><td>$49/mo delivers institutional-grade quant signals at accessible retail pricing</td></tr>
+            <tr><td>Pricing & Value</td><td>15%</td><td>★ 4.5</td><td>K-Score delivers institutional-grade quant signals for professional workflows</td></tr>
             <tr><td>Security & Privacy</td><td>10%</td><td>★ 4.4</td><td>Standard cloud encryption; secure credential management</td></tr>
             <tr><td>API & Integration</td><td>5%</td><td>★ 4.2</td><td>Solid REST API; lacks native direct brokerage execution webhooks</td></tr>
             <tr><td>Innovation</td><td>5%</td><td>★ 4.3</td><td>Pioneered ML factor scoring for retail equity screening</td></tr>
@@ -486,7 +517,8 @@
     </table>
 
     <div class="ad-slot"><div class="ad-label">Advertisement</div>
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7088247829787060" data-ad-slot="0987654321" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <!-- AD UNIT — replace data-ad-slot with your REAL ad unit ID from AdSense, or delete this block if using Auto Ads -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7088247829787060" data-ad-slot="0987654321" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
     </div>
 
@@ -501,11 +533,11 @@
     <h2 id="pricing">8. Pricing & Subscription Tiers</h2>
     <div class="pricing-cards fade-in">
         <div class="pricing-card"><div class="pricing-name">Free Tier</div><div class="pricing-price">$0<span>/mo</span></div><ul><li>✓ Limited K-Score searches</li><li>✓ Sample rankings daily</li><li>✓ Market overview</li><li>✗ No screener filters</li><li>✗ No model portfolios</li><li>✗ No alerts</li></ul></div>
-        <div class="pricing-card recommended"><div class="pricing-name">Pro</div><div class="pricing-price">$49<span>/mo</span></div><ul><li>✓ Full K-Score screener</li><li>✓ Kai AI assistant</li><li>✓ Model portfolios</li><li>✓ Daily market alerts</li><li>✓ Portfolio analytics</li><li>✓ Sector intelligence</li></ul></div>
+        <div class="pricing-card recommended"><div class="pricing-name">Pro</div><div class="pricing-price">Custom<span>/mo</span></div><ul><li>✓ Full K-Score screener</li><li>✓ Kai AI assistant</li><li>✓ Model portfolios</li><li>✓ Daily market alerts</li><li>✓ Portfolio analytics</li><li>✓ Sector intelligence</li></ul></div>
         <div class="pricing-card"><div class="pricing-name">Institutional API</div><div class="pricing-price">Custom</div><ul><li>✓ REST API data feeds</li><li>✓ Historical K-Score data</li><li>✓ Portfolio-level signals</li><li>✓ Dedicated support</li><li>✓ SLA guarantees</li><li>✓ Custom integration</li></ul></div>
     </div>
 
-    <div class="info-box"><strong>💰 Value Assessment:</strong> At $49/month, the Kavout Pro tier delivers multi-factor machine learning equity screening that institutional quant teams spend tens of thousands of dollars replicating internally. For active retail investors making 4+ investment decisions per month, the K-Score signals alone justify the cost relative to the alternative of manual factor analysis.</div>
+    <div class="info-box"><strong>💰 Value Assessment:</strong> Kavout delivers multi-factor machine learning equity screening that institutional quant teams spend tens of thousands of dollars replicating internally. For active retail investors making 4+ investment decisions per month, the K-Score signals alone justify the cost relative to the alternative of manual factor analysis.</div>
 
     <h2 id="takeaways">9. Key Takeaways</h2>
     <div class="takeaways-box">
@@ -528,7 +560,7 @@
         <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')">How does the K-Score engine actually work?<span class="faq-arrow">▾</span></button><div class="faq-a"><div class="faq-ai">The K-Score is generated by deep neural networks and gradient boosting decision trees that synthesize four multi-factor dimensions: fundamental quality and valuation metrics, technical price momentum signals, volatility and downside risk assessment, and market sentiment/money flow indicators. The model processes millions of data points daily to generate forward-looking 1-3 month outperformance probability rankings on a 1-9 scale for US equities. Specific factor weights are proprietary.</div></div></div>
         <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')">Does Kavout support cryptocurrency ranking?<span class="faq-arrow">▾</span></button><div class="faq-a"><div class="faq-ai">No. Kavout focuses exclusively on US equities and ETFs. The K-Score methodology is calibrated for traditional equity market factors that do not directly translate to cryptocurrency market dynamics. For dedicated crypto AI analytics, explore our <a href="crypto-ai.html">Crypto AI section</a> for specialized tools.</div></div></div>
         <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')">Can Kavout connect directly to my brokerage account?<span class="faq-arrow">▾</span></button><div class="faq-a"><div class="faq-ai">Kavout is a research and screening platform — it does not execute trades automatically on external brokerages. Users receive K-Score signals and portfolio recommendations, then execute trades manually on their chosen brokerage platform. This human-in-the-loop model is beneficial for risk management, as it prevents fully automated algorithmic execution without investor review and approval.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')">Is Kavout worth $49/month for retail investors?<span class="faq-arrow">▾</span></button><div class="faq-a"><div class="faq-ai">For active swing traders and portfolio investors making 4+ equity investment decisions per month, the $49/month Pro tier delivers substantial value through its K-Score screening, AI portfolio templates, and Kai assistant. The price-to-feature ratio is competitive compared to alternatives like Trade Ideas ($84/month). The free tier allows meaningful evaluation of the platform mechanics before committing to a paid subscription.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')">Is Kavout accessible to retail investors?<span class="faq-arrow">▾</span></button><div class="faq-a"><div class="faq-ai">Kavout is primarily an institutional and professional platform with quote-based pricing. Retail investors interested in AI equity scoring should request current pricing directly or consider alternatives with published rates such as Trade Ideas, and Kai assistant. The price-to-feature ratio is competitive compared to alternatives like Trade Ideas ($84/month). The free tier allows meaningful evaluation of the platform mechanics before committing to a paid subscription.</div></div></div>
         <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('active')">How does Kavout compare to traditional stock screeners?<span class="faq-arrow">▾</span></button><div class="faq-a"><div class="faq-ai">Traditional screeners like Finviz or Stock Rover rely on static fundamental and technical filters that analysts apply and weight manually. Kavout differentiates by using machine learning to synthesize these factors into a single predictive score — automating the multi-factor weighting decision that would otherwise require significant quantitative expertise. It essentially pre-ranks stocks based on a trained model's assessment of statistically favored outperformance probability, saving investors hours of manual screening analysis.</div></div></div>
     </div>
 
@@ -563,7 +595,7 @@
     <div class="sidebar-item"><div class="label">Category</div><div class="value">AI Equity Screening / Factor Investing</div></div>
     <div class="sidebar-score"><div class="big-score">4.4</div><div class="score-label">CoinvestAI Score · Very Good</div></div>
     <div class="sidebar-item"><div class="label">Best For</div><div class="value">Swing Traders, Portfolio Managers, Factor Investors</div></div>
-    <div class="sidebar-item"><div class="label">Pricing</div><div class="value">Free / $49/mo Pro / Enterprise API</div></div>
+    <div class="sidebar-item"><div class="label">Pricing</div><div class="value">Free tools / Enterprise API (quote-based)</div></div>
     <div class="sidebar-item"><div class="label">Core Signal</div><div class="value">K-Score (1–9 ML Equity Ranking)</div></div>
     <div class="sidebar-item"><div class="label">Market Coverage</div><div class="value">US Equities & ETFs</div></div>
     <div class="sidebar-item"><div class="label">Key Strength</div><div class="value">Multi-factor synthesis → single actionable score</div></div>
@@ -581,11 +613,46 @@
     <div><h3>Explore</h3><ul><li><a href="blog.html">Blog</a></li><li><a href="ai-tools.html">AI Tools</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="guides.html">Guides</a></li><li><a href="news.html">News</a></li></ul></div>
     <div><h3>Topics</h3><ul><li><a href="fintech.html">Fintech AI</a></li><li><a href="crypto-ai.html">Crypto AI</a></li><li><a href="authors.html">Authors</a></li></ul></div>
     <div><h3>Company</h3><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="editorial-guidelines.html">Editorial Guidelines</a></li><li><a href="review-methodology.html">Review Methodology</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li></ul></div>
-</div><div class="footer-bottom"><p style="font-size:12px;color:rgba(255,255,255,.45);max-width:700px;margin:0 auto 12px;line-height:1.6"><strong>Disclaimer:</strong> CoinvestAI provides independent research and analysis for educational purposes only. Nothing herein is financial, investment, or legal advice.</p><p>© 2026 CoinvestAI. All rights reserved.</p></div></div></footer>
+</div><div class="footer-bottom"><p style="font-size:12px;color:rgba(255,255,255,.45);max-width:700px;margin:0 auto 12px;line-height:1.6"><strong>Disclaimer:</strong> CoinvestAI provides independent research and analysis for educational purposes only. Nothing herein is financial, investment, or legal advice.</p><p style="margin-bottom:10px"><button type="button" class="cookie-settings" onclick="resetCookieConsent()">Cookie Settings</button></p>            <p>© 2026 CoinvestAI. All rights reserved.</p></div></div></footer>
 
 <script>
 window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressBar').style.width=(window.scrollY/h)*100+'%';},{passive:true});
 document.addEventListener('DOMContentLoaded',function(){var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el);});});
 </script>
-</body>
+
+<!-- GDPR / ePrivacy cookie consent banner (works with Consent Mode v2 in <head>) -->
+<div class="consent-banner" id="consentBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <div class="consent-inner">
+        <p class="consent-text">🍪 We use cookies to support contextual advertising, measure site traffic, and improve your experience. With your consent, ads and analytics can be personalized. You can change your choice anytime via <a href="cookie-policy.html">Cookie Policy</a> or “Cookie Settings” in the footer.</p>
+        <div class="consent-btns">
+            <button type="button" class="btn-consent-accept" onclick="setCookieConsent('granted')">Accept all cookies</button>
+            <button type="button" class="btn-consent-reject" onclick="setCookieConsent('denied')">Essential only</button>
+        </div>
+    </div>
+</div>
+<script>
+function __setConsent(v){try{localStorage.setItem('cookieConsent',v);}catch(e){}}
+function setCookieConsent(v){
+  __setConsent(v);
+  if (typeof gtag === 'function') {
+    var s = (v === 'granted') ? 'granted' : 'denied';
+    gtag('consent','update',{ad_storage:s,ad_user_data:s,ad_personalization:s,analytics_storage:s});
+  }
+  var b = document.getElementById('consentBanner');
+  if (b) { b.classList.remove('show'); }
+}
+function resetCookieConsent(){
+  try{localStorage.removeItem('cookieConsent');}catch(e){}
+  location.reload();
+}
+(function(){
+  var c = __getConsent();
+  if (c !== 'granted' && c !== 'denied') {
+    var b = document.getElementById('consentBanner');
+    if (b) { b.classList.add('show'); }
+  }
+})();
+</script>
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2f18a18197ee1d9',t:'MTc4NzM5ODE2Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
