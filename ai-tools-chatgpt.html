@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Consent Mode v2 — MUST load before any Google tag -->
+    <script>
+      function __getConsent(){try{return localStorage.getItem('cookieConsent');}catch(e){return null;}}
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+      (function(){
+        var c = __getConsent();
+        if (c === 'granted') {
+          gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});
+        } else {
+          window.adsbygoogle = window.adsbygoogle || {};
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+        }
+      })();
+    </script>
     <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-7088247829787060">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatGPT Review 2026: AI Investment Research, Financial Analysis & Trading | CoinvestAI</title>
     <meta name="description" content="Comprehensive 2026 review of ChatGPT for financial research, quantitative trading analysis, SEC filing parsing, Python code execution, prompt engineering strategies, and portfolio modeling. Independent rating: 4.8/5.">
@@ -21,7 +38,7 @@
       "@context":"https://schema.org","@type":"Review",
       "name":"ChatGPT Financial Analysis & Investment Research Review 2026",
       "reviewBody":"Comprehensive quantitative evaluation of ChatGPT for financial due diligence, SEC filing parsing, algorithmic trading scaffolding, Python data modeling, portfolio optimization, and macro research synthesis.",
-      "datePublished":"2026-08-08","dateModified":"2026-08-15",
+      "datePublished":"2026-05-12","dateModified":"2026-06-30",
       "author":{"@type":"Organization","name":"CoinvestAI Editorial Team","url":"https://coinvestai.com/authors-coinvestai-editorial-team.html"},
       "publisher":{"@type":"Organization","name":"CoinvestAI","url":"https://coinvestai.com","logo":{"@type":"ImageObject","url":"https://coinvestai.com/logo.png"}},
       "itemReviewed":{"@type":"SoftwareApplication","name":"ChatGPT","applicationCategory":"FinanceApplication","operatingSystem":"Web, iOS, Android, macOS, Windows, API",
@@ -272,6 +289,19 @@
             .pricing-grid{grid-template-columns:1fr 1fr}.compare-grid{grid-template-columns:1fr}
         }
         @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr}}
+            /* GDPR cookie consent banner */
+        .consent-banner{position:fixed;bottom:0;left:0;right:0;z-index:4000;padding:16px 16px 20px;background:linear-gradient(160deg,#0F172A,#1e293b);border-top:1px solid rgba(255,255,255,.1);box-shadow:0 -10px 40px rgba(0,0,0,.35);display:none}
+        .consent-banner.show{display:block}
+        .consent-inner{max-width:1100px;margin:0 auto;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+        .consent-text{color:rgba(255,255,255,.75);font-size:13px;line-height:1.6;max-width:640px;margin:0}
+        .consent-text a{color:#7da7ff;text-decoration:underline}
+        .consent-btns{display:flex;gap:10px;flex-wrap:wrap}
+        .btn-consent-accept{background:#2563EB;color:#fff;border:none;border-radius:10px;padding:11px 24px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:background .2s}
+        .btn-consent-accept:hover{background:#1d4ed8}
+        .btn-consent-reject{background:transparent;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:11px 24px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s}
+        .btn-consent-reject:hover{border-color:rgba(255,255,255,.6);color:#fff}
+        .cookie-settings{background:none;border:none;padding:0;cursor:pointer;font-family:inherit;color:rgba(255,255,255,.55);font-size:14px;transition:color .2s}
+        .cookie-settings:hover{color:#fff;text-decoration:underline}
     </style>
 </head>
 <body>
@@ -301,7 +331,7 @@
         <div class="category">General-Purpose LLM · Quantitative Research · Financial Analysis · Trading Scaffolding</div>
         <div class="rating-badge">CoinvestAI Rating: ★ 4.8 / 5.0 <a href="review-methodology.html">Methodology</a></div>
         <div class="meta-badges">
-            <span class="meta-badge">📅 Updated: Aug 15, 2026</span>
+            <span class="meta-badge">📅 Updated: Jun 30, 2026</span>
             <span class="meta-badge">✍️ <a href="authors-coinvestai-editorial-team.html" style="color:var(--secondary)">Editorial Team</a></span>
             <span class="meta-badge">⏱️ 18 min read</span>
             <span class="meta-badge">📊 ~4,500 words</span>
@@ -322,7 +352,8 @@
     <p>Developed by <strong>OpenAI</strong>, ChatGPT is not purpose-built exclusively for finance — but its advanced reasoning capabilities, multi-modal document parsing, sandboxed <strong>Python Code Interpreter</strong>, and massive custom GPT ecosystem make it an indispensable acceleration layer across virtually every financial research workflow. In this comprehensive review, we evaluate ChatGPT's specific strengths and limitations for investment professionals using our <a href="review-methodology.html">7-factor scoring methodology</a>.</p>
 
     <div class="ad-slot"><div class="ad-label">Advertisement</div>
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7088247829787060" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <!-- AD UNIT — replace data-ad-slot with your REAL ad unit ID from AdSense, or delete this block if using Auto Ads -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7088247829787060" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
     </div>
 
@@ -355,7 +386,7 @@
     </div>
 
     <h2 id="usecases">2. Key Financial & Research Use Cases</h2>
-    <p>During our multi-week hands-on evaluation, the CoinvestAI editorial team tested ChatGPT across 12 real-world financial workflows:</p>
+    <p>Drawing on our multi-week research evaluation, the CoinvestAI editorial team assessed ChatGPT across 12 real-world financial workflows:</p>
 
     <div class="usecase-grid fade-in">
         <div class="usecase-card"><div class="usecase-num">1</div><h4>SEC Filing Analysis</h4><p>Upload quarterly filings for differential analysis — pinpoint subtle accounting footnote changes, executive compensation shifts, and new litigation disclosures.</p></div>
@@ -466,7 +497,8 @@ If any figure is not explicitly stated in the document, output 'N/A' — do not 
     </div>
 
     <div class="ad-slot"><div class="ad-label">Advertisement</div>
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7088247829787060" data-ad-slot="0987654321" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <!-- AD UNIT — replace data-ad-slot with your REAL ad unit ID from AdSense, or delete this block if using Auto Ads -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7088247829787060" data-ad-slot="0987654321" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
     </div>
 
@@ -550,12 +582,47 @@ If any figure is not explicitly stated in the document, output 'N/A' — do not 
     <div><h3>Explore</h3><ul><li><a href="blog.html">Blog</a></li><li><a href="ai-tools.html">AI Tools</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="guides.html">Guides</a></li><li><a href="news.html">News</a></li></ul></div>
     <div><h3>Topics</h3><ul><li><a href="fintech.html">Fintech AI</a></li><li><a href="crypto-ai.html">Crypto AI</a></li><li><a href="authors.html">Authors</a></li></ul></div>
     <div><h3>Company</h3><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="editorial-guidelines.html">Editorial Guidelines</a></li><li><a href="review-methodology.html">Review Methodology</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li></ul></div>
-</div><div class="footer-bottom"><p style="font-size:12px;color:rgba(255,255,255,.45);max-width:700px;margin:0 auto 12px;line-height:1.6"><strong>Disclaimer:</strong> CoinvestAI provides independent research and analysis for educational purposes only. Nothing herein is financial, investment, or legal advice.</p><p>© 2026 CoinvestAI. All rights reserved.</p></div></div></footer>
+</div><div class="footer-bottom"><p style="font-size:12px;color:rgba(255,255,255,.45);max-width:700px;margin:0 auto 12px;line-height:1.6"><strong>Disclaimer:</strong> CoinvestAI provides independent research and analysis for educational purposes only. Nothing herein is financial, investment, or legal advice.</p><p style="margin-bottom:10px"><button type="button" class="cookie-settings" onclick="resetCookieConsent()">Cookie Settings</button></p>            <p>© 2026 CoinvestAI. All rights reserved.</p></div></div></footer>
 
 <script>
 window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressBar').style.width=(window.scrollY/h)*100+'%';},{passive:true});
 document.addEventListener('DOMContentLoaded',function(){var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el);});});
 </script>
 
-</body>
+
+<!-- GDPR / ePrivacy cookie consent banner (works with Consent Mode v2 in <head>) -->
+<div class="consent-banner" id="consentBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <div class="consent-inner">
+        <p class="consent-text">🍪 We use cookies to support contextual advertising, measure site traffic, and improve your experience. With your consent, ads and analytics can be personalized. You can change your choice anytime via <a href="cookie-policy.html">Cookie Policy</a> or “Cookie Settings” in the footer.</p>
+        <div class="consent-btns">
+            <button type="button" class="btn-consent-accept" onclick="setCookieConsent('granted')">Accept all cookies</button>
+            <button type="button" class="btn-consent-reject" onclick="setCookieConsent('denied')">Essential only</button>
+        </div>
+    </div>
+</div>
+<script>
+function __setConsent(v){try{localStorage.setItem('cookieConsent',v);}catch(e){}}
+function setCookieConsent(v){
+  __setConsent(v);
+  if (typeof gtag === 'function') {
+    var s = (v === 'granted') ? 'granted' : 'denied';
+    gtag('consent','update',{ad_storage:s,ad_user_data:s,ad_personalization:s,analytics_storage:s});
+  }
+  var b = document.getElementById('consentBanner');
+  if (b) { b.classList.remove('show'); }
+}
+function resetCookieConsent(){
+  try{localStorage.removeItem('cookieConsent');}catch(e){}
+  location.reload();
+}
+(function(){
+  var c = __getConsent();
+  if (c !== 'granted' && c !== 'denied') {
+    var b = document.getElementById('consentBanner');
+    if (b) { b.classList.add('show'); }
+  }
+})();
+</script>
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2f18783ad94e1d9',t:'MTc4NzM5ODA1Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
